@@ -40,7 +40,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1153659839953148}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.712, y: -0.491, z: 0}
+  m_LocalPosition: {x: -2.277, y: -0.491, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -135,7 +135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _groundTrigger: {fileID: 61702665924388410}
-  _jumpImpulse: 35
+  _jumpImpulse: 50
   _animHorizontalSpeed: 0
   _animHorizontalForcedSpeed: 0
 --- !u!114 &114894123962370206
