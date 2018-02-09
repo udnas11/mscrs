@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
     Collider2D _groundTrigger;
     [SerializeField]
     float _jumpImpulse;
+    [SerializeField]
+    float _groundRaycastDistance;
 
 
     // driven by Animation custom property
@@ -39,6 +41,18 @@ public class PlayerController : MonoBehaviour
 
 
     #region private protected methods
+    bool RaycastIsGroundBeneath()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(this.transform.position, Vector2.down, _groundRaycastDistance, LayerMask.GetMask("Ground"));
+        Debug.DrawRay(transform.position, Vector2.down * _groundRaycastDistance, hit.collider == null ? Color.red : Color.green, 1f);
+        return hit.collider != null;
+    }
+    
+    bool GetIsFlipAvailable()
+    {
+        bool result = ! _unitAnimator.GetPhaseState(UnitAnimatorController.EAnimationPhase.Roll);
+        return result;
+    }
     #endregion
 
 
@@ -46,11 +60,13 @@ public class PlayerController : MonoBehaviour
     private void OnHorizontalInputChange(float horizontal)
     {
         _unitAnimator.SetRunning(horizontal != 0f);
-        if (horizontal != 0f)
+        /*
+        if (horizontal != 0f && GetIsFlipAvailable())
         {
             _facingRight = horizontal > 0;
             _unitAnimator.SetFlipX(!_facingRight);
         }
+        */
         _horizontalInput = horizontal;
     }
 
@@ -59,6 +75,11 @@ public class PlayerController : MonoBehaviour
         if (InAir == false)
         {
             _unitAnimator.Jump();
+        }
+        else
+        {
+            if (RaycastIsGroundBeneath())
+                _unitAnimator.Jump();
         }
     }
 
@@ -75,6 +96,11 @@ public class PlayerController : MonoBehaviour
         if (InAir == false)
         {
             _unitAnimator.Roll();
+        }
+        else
+        {
+            if (RaycastIsGroundBeneath())
+                _unitAnimator.Roll();
         }
     }
 
@@ -115,13 +141,14 @@ public class PlayerController : MonoBehaviour
     }
 
     private void FixedUpdate()
-    {/*
-        bool newInAir = !_rigidBody2d.IsTouchingLayers(LayerMask.GetMask("Ground"));
-        if (newInAir != _inAir)
+    {
+        if (_horizontalInput != 0f &&
+            (_horizontalInput > 0) != _facingRight &&
+            GetIsFlipAvailable())
         {
-            _inAir = newInAir;
-            _unitAnimator.SetInAir(_inAir);
-        }*/
+            _facingRight = _horizontalInput > 0;
+            _unitAnimator.SetFlipX(!_facingRight);
+        }
 
         float resultHorizontalVelocity = _animHorizontalSpeed * _horizontalInput + _animHorizontalForcedSpeed * (_facingRight?1f:-1f);
 
@@ -136,7 +163,8 @@ public class PlayerController : MonoBehaviour
 
         if (_queueJump)
         {
-            _rigidBody2d.AddForce(new Vector2(0f, _jumpImpulse), ForceMode2D.Impulse);
+            //_rigidBody2d.AddForce(new Vector2(0f, _jumpImpulse), ForceMode2D.Impulse);
+            _rigidBody2d.velocity = new Vector2(_rigidBody2d.velocity.x, _jumpImpulse);
             _queueJump = false;
         }
     }
