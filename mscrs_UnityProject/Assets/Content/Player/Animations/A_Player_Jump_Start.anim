@@ -112,7 +112,7 @@ AnimationClip:
   m_GenerateMotionCurves: 0
   m_Events:
   - time: 0.09090909
-    functionName: OnAnimCallbackJumpApplyforce
+    functionName: OnAnimEventJumpApplyforce
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

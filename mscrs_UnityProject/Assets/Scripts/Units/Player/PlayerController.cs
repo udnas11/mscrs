@@ -50,8 +50,8 @@ public class PlayerController : MonoBehaviour
     
     bool GetIsFlipAvailable()
     {
-        bool result = ! _unitAnimator.GetPhaseState(UnitAnimatorController.EAnimationPhase.Roll);
-        return result;
+        bool result = _unitAnimator.GetPhaseState(UnitAnimatorController.EAnimationPhase.Roll) || _unitAnimator.GetPhaseState(UnitAnimatorController.EAnimationPhase.Attacking);
+        return !result;
     }
     #endregion
 

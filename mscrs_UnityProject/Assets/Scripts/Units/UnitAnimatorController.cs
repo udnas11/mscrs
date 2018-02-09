@@ -14,7 +14,9 @@ public class UnitAnimatorController : MonoBehaviour
     {
         None,
         Roll,
-        Jump
+        Jump,
+        Attacking,
+        ComboZone
     }
 
     #region public serialised vars
@@ -24,9 +26,6 @@ public class UnitAnimatorController : MonoBehaviour
 
 
     #region private protected vars
-    private bool _isJumpPhase;
-    public bool IsJumpPhase { get { return _isJumpPhase; } }
-
     Animator _animator;
     SpriteRenderer _spriteRenderer;
     List<string> _triggerQueue = new List<string>();
@@ -58,7 +57,9 @@ public class UnitAnimatorController : MonoBehaviour
 
     public void Attack()
     {
-        _animator.SetTrigger("doAttack");
+        TriggerOnce("doAttack");
+        if (GetPhaseState(EAnimationPhase.ComboZone))
+            _animator.SetTrigger("doCombo");
     }
 
     public void Roll()
@@ -76,27 +77,29 @@ public class UnitAnimatorController : MonoBehaviour
 
 
     #region pub callback methods
-    public void OnAnimCallbackJumpApplyforce() // unity even from jump start animation when to apply force
+    public void OnAnimEventJumpApplyforce() // unity even from jump start animation when to apply force
     {
         if (OnAnimCallbackApplyForce != null)
             OnAnimCallbackApplyForce();
     }
 
-    public void OnStatePhaseChange(EAnimationPhase state, bool newStatus)
+    public void OnAnimEventComboAvailable() // unity event from attack animations when input for combo chain is available
+    {
+        OnStatePhaseChange(EAnimationPhase.ComboZone, true);
+    }
+
+    public void OnAnimEventComboUnavailable()
+    {
+        OnStatePhaseChange(EAnimationPhase.ComboZone, false);
+    }
+
+    public void OnStatePhaseChange(EAnimationPhase state, bool newStatus) // callbacks from animator state machine script
     {
         var oldState = GetPhaseState(state);
         if (oldState != newStatus)
         {
             _phaseStates[state] = newStatus;
         }
-    }
-
-    public void SetJumpPhaseActive(bool newVal) // state machine callback from anmator when jump anim started
-    {
-        if (newVal != _isJumpPhase)
-            if (OnJumpPhaseActive != null)
-                OnJumpPhaseActive(newVal);
-        _isJumpPhase = newVal;
     }
     #endregion
 
@@ -126,6 +129,15 @@ public class UnitAnimatorController : MonoBehaviour
         for (int i = 0; i < _triggerQueue.Count; i++)
             _animator.ResetTrigger(_triggerQueue[i]);
         _triggerQueue.Clear();
+    }
+
+    private void OnGUI()
+    {
+        string statesOn = "Active phases: ";
+        foreach (var pair in _phaseStates)
+            if (pair.Value)
+                statesOn += pair.Key.ToString() + " ";
+        GUI.Label(new Rect(0, Screen.height-20, 300, 20), statesOn);
     }
     #endregion
 }
