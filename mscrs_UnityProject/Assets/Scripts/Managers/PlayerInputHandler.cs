@@ -54,19 +54,22 @@ public class PlayerInputHandler : Singleton<PlayerInputHandler>
                 OnHorizontalChange(_horizontal);
         }
 
-        if (Input.GetKeyDown(_jumpKey))
+        //if (Input.GetKeyDown(_jumpKey))
+        if (Input.GetButtonDown("Jump"))
         {
             if (OnJump != null)
                 OnJump();
         }
 
-        if (Input.GetKeyDown(_attackKey))
+        //if (Input.GetKeyDown(_attackKey))
+        if (Input.GetButtonDown("Attack1"))
         {
             if (OnAttack != null)
                 OnAttack();
         }
 
-        if (Input.GetKeyDown(_rollKey))
+        //if (Input.GetKeyDown(_rollKey))
+        if (Input.GetButtonDown("Roll"))
         {
             if (OnRoll != null)
                 OnRoll();

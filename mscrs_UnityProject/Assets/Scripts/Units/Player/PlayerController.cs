@@ -85,7 +85,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnAttackInput()
     {
-        if (InAir == false)
+        //if (InAir == false)
         {
             _unitAnimator.Attack();
         }
@@ -172,7 +172,7 @@ public class PlayerController : MonoBehaviour
     private void OnGUI()
     {
         GUILayout.Label("Player velocity: " + _rigidBody2d.velocity);
-        GUILayout.Label("In air: " + _groundTriggersActive);
+        GUILayout.Label("Ground collisions: " + _groundTriggersActive);
         GUILayout.Label("Horizontal Input: " + _horizontalInput);
         GUILayout.Label("Anim Horizontal Speed: " + _animHorizontalSpeed);
         GUILayout.Label("Anim Horizontal Forced: " + _animHorizontalForcedSpeed);
