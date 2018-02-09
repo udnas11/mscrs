@@ -31,7 +31,10 @@ public class PlayerController : MonoBehaviour
     float _horizontalInput;
     bool _facingRight = true;
     bool _queueJump = false;
+    bool _queueAirdrop = false;
     int _groundTriggersActive = 0;
+
+    Coroutine _physicsInhibitorCoroutine;
     #endregion
 
 
@@ -52,6 +55,18 @@ public class PlayerController : MonoBehaviour
     {
         bool result = _unitAnimator.GetPhaseState(UnitAnimatorController.EAnimationPhase.Roll) || _unitAnimator.GetPhaseState(UnitAnimatorController.EAnimationPhase.Attacking);
         return !result;
+    }
+
+    IEnumerator IVelocityInhibitor()
+    {
+        float timeStart = Time.time;
+        _rigidBody2d.gravityScale = 0.2f;
+        while (Time.time < timeStart + 3f) // fail-safe. Effect interrupted by _queueAirdrop
+        {
+            yield return new WaitForFixedUpdate();
+            _rigidBody2d.velocity = _rigidBody2d.velocity * 0.5f;
+        }
+        _rigidBody2d.gravityScale = 1f;
     }
     #endregion
 
@@ -108,6 +123,16 @@ public class PlayerController : MonoBehaviour
     {
         _queueJump = true;
     }
+
+    private void OnAnimationCallbackInhibitPhysics()
+    {
+        _physicsInhibitorCoroutine = StartCoroutine(IVelocityInhibitor());
+    }
+
+    private void OnAnimationCallbackAirdrop()
+    {
+        _queueAirdrop = true;
+    }
     #endregion
 
 
@@ -125,7 +150,9 @@ public class PlayerController : MonoBehaviour
         PlayerInputHandler.Instance.OnAttack += OnAttackInput;
         PlayerInputHandler.Instance.OnRoll += OnRollInput;
 
-        _unitAnimator.OnAnimCallbackApplyForce += OnAnimationCallbackJumpForce;
+        _unitAnimator.OnAnimEventJumpApplyForceAction += OnAnimationCallbackJumpForce;
+        _unitAnimator.OnAnimEventAirdropInhibitPhysicsAction += OnAnimationCallbackInhibitPhysics;
+        _unitAnimator.OnAnimEventAirdropAction += OnAnimationCallbackAirdrop;
     }
 
     private void OnTriggerEnter2D(Collider2D trigger)
@@ -166,6 +193,15 @@ public class PlayerController : MonoBehaviour
             //_rigidBody2d.AddForce(new Vector2(0f, _jumpImpulse), ForceMode2D.Impulse);
             _rigidBody2d.velocity = new Vector2(_rigidBody2d.velocity.x, _jumpImpulse);
             _queueJump = false;
+        }
+        if (_queueAirdrop)
+        {
+            Debug.Log("airdropququ");
+            StopCoroutine(_physicsInhibitorCoroutine);
+            _physicsInhibitorCoroutine = null;
+            _rigidBody2d.gravityScale = 1f;
+            _rigidBody2d.velocity = new Vector2(_rigidBody2d.velocity.x, -6f);
+            _queueAirdrop = false;
         }
     }
 

@@ -20,7 +20,9 @@ public class UnitAnimatorController : MonoBehaviour
     }
 
     #region public serialised vars
-    public event Action OnAnimCallbackApplyForce;
+    public event Action OnAnimEventJumpApplyForceAction;
+    public event Action OnAnimEventAirdropInhibitPhysicsAction;
+    public event Action OnAnimEventAirdropAction;
     public event Action<bool> OnJumpPhaseActive;
     #endregion
 
@@ -79,8 +81,8 @@ public class UnitAnimatorController : MonoBehaviour
     #region pub callback methods
     public void OnAnimEventJumpApplyforce() // unity even from jump start animation when to apply force
     {
-        if (OnAnimCallbackApplyForce != null)
-            OnAnimCallbackApplyForce();
+        if (OnAnimEventJumpApplyForceAction != null)
+            OnAnimEventJumpApplyForceAction();
     }
 
     public void OnAnimEventComboAvailable() // unity event from attack animations when input for combo chain is available
@@ -91,6 +93,18 @@ public class UnitAnimatorController : MonoBehaviour
     public void OnAnimEventComboUnavailable()
     {
         OnStatePhaseChange(EAnimationPhase.ComboZone, false);
+    }
+
+    public void OnAnimEventAirdropInhibitPhsyics()
+    {
+        if (OnAnimEventAirdropInhibitPhysicsAction != null)
+            OnAnimEventAirdropInhibitPhysicsAction();
+    }
+
+    public void OnAnimEventAirDrop()
+    {
+        if (OnAnimEventAirdropAction != null)
+            OnAnimEventAirdropAction();
     }
 
     public void OnStatePhaseChange(EAnimationPhase state, bool newStatus) // callbacks from animator state machine script
