@@ -196,7 +196,6 @@ public class PlayerController : MonoBehaviour
         }
         if (_queueAirdrop)
         {
-            Debug.Log("airdropququ");
             StopCoroutine(_physicsInhibitorCoroutine);
             _physicsInhibitorCoroutine = null;
             _rigidBody2d.gravityScale = 1f;
