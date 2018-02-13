@@ -13,4 +13,22 @@ public class StateSO : ScriptableObject
     ActionBaseSO[] _actions;
     [SerializeField]
     Transition[] _transitions;
+
+    public void StateUpdate(UnitController unitController)
+    {
+        // do actions
+        for (int i = 0; i < _actions.Length; i++)
+            _actions[i].Act(unitController);
+
+        // check transitions
+        for (int i = 0; i < _transitions.Length; i++)
+        {
+            StateSO newState = _transitions[i].QueryTransition(unitController);
+            if (newState != null)
+            {
+                unitController.SetBehaviourState(newState);
+                return;
+            }
+        }
+    }
 }

@@ -6,9 +6,15 @@ using UnityEngine;
 using UnityEngine.Assertions;
 using UnityRandom = UnityEngine.Random;
 
-[System.Serializable]
+[Serializable]
 public class Transition
 {
     public QueryBaseSO Query;
     public StateSO[] ResultStates;
+
+    public StateSO QueryTransition(UnitController unitController)
+    {
+        int result = Query.DoQuery(unitController);
+        return ResultStates[result];
+    }
 }

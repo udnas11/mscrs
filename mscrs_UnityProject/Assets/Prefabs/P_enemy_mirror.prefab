@@ -22,8 +22,8 @@ GameObject:
   - component: {fileID: 114578153325178550}
   - component: {fileID: 114951176426361420}
   - component: {fileID: 114777773529459632}
-  - component: {fileID: 212135912064247852}
   - component: {fileID: 95224549102432158}
+  - component: {fileID: 212135912064247852}
   - component: {fileID: 70227153224704440}
   - component: {fileID: 50071463371391358}
   m_Layer: 0
@@ -120,6 +120,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c73714718cc823446b0fa6809671e244, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BehaviourSettings:
+    DetectRange: 3
+  _startState: {fileID: 11400000, guid: c9b6013fb175f2b44842c328c5dc1d7c, type: 2}
 --- !u!114 &114951176426361420
 MonoBehaviour:
   m_ObjectHideFlags: 1

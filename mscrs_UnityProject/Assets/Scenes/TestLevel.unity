@@ -666,5 +666,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbc63030dff257b4a92d8bc925f13456, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UnitSceneName: 
+  _unitSceneName: TestLevel_units
   PlayerController: {fileID: 0}
