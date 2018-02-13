@@ -6,9 +6,9 @@ using UnityEngine;
 using UnityEngine.Assertions;
 using UnityRandom = UnityEngine.Random;
 
-public class UnitAnimatorController : MonoBehaviour
+public class EnemyPlayerMirrorController : UnitController
 {
-	#region public serialised vars
+    #region public serialised vars
     #endregion
 
 

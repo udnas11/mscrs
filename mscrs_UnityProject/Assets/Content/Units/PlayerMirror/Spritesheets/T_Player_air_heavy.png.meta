@@ -1,0 +1,294 @@
+fileFormatVersion: 2
+guid: f760a796eaf9f5944a5e7e5e297c4b23
+timeCreated: 1518189750
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: T_Player_air_heavy_0
+    21300002: T_Player_air_heavy_1
+    21300004: T_Player_air_heavy_2
+    21300006: T_Player_air_heavy_3
+    21300008: T_Player_air_heavy_4
+    21300010: T_Player_air_heavy_5
+    21300012: T_Player_air_heavy_6
+    21300014: T_Player_air_heavy_7
+    21300016: T_Player_air_heavy_8
+    21300018: T_Player_air_heavy_9
+    21300020: T_Player_air_heavy_10
+    21300022: T_Player_air_heavy_11
+    21300024: T_Player_air_heavy_12
+    21300026: T_Player_air_heavy_13
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: T_Player_air_heavy_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 132
+        width: 141
+        height: 124
+      alignment: 9
+      pivot: {x: 0.31, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Player_air_heavy_1
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 132
+        width: 141
+        height: 124
+      alignment: 9
+      pivot: {x: 0.31, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Player_air_heavy_2
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 132
+        width: 141
+        height: 124
+      alignment: 9
+      pivot: {x: 0.31, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Player_air_heavy_3
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 132
+        width: 141
+        height: 124
+      alignment: 9
+      pivot: {x: 0.31, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Player_air_heavy_4
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 132
+        width: 141
+        height: 124
+      alignment: 9
+      pivot: {x: 0.31, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Player_air_heavy_5
+      rect:
+        serializedVersion: 2
+        x: 705
+        y: 132
+        width: 141
+        height: 124
+      alignment: 9
+      pivot: {x: 0.31, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Player_air_heavy_6
+      rect:
+        serializedVersion: 2
+        x: 846
+        y: 132
+        width: 141
+        height: 124
+      alignment: 9
+      pivot: {x: 0.31, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Player_air_heavy_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8
+        width: 141
+        height: 124
+      alignment: 9
+      pivot: {x: 0.31, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Player_air_heavy_8
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 8
+        width: 141
+        height: 124
+      alignment: 9
+      pivot: {x: 0.31, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Player_air_heavy_9
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 8
+        width: 141
+        height: 124
+      alignment: 9
+      pivot: {x: 0.31, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Player_air_heavy_10
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 8
+        width: 141
+        height: 124
+      alignment: 9
+      pivot: {x: 0.31, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Player_air_heavy_11
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 8
+        width: 141
+        height: 124
+      alignment: 9
+      pivot: {x: 0.31, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

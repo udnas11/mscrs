@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
 
 
     #region private protected vars
-    UnitAnimatorController _unitAnimator;
+    PlayerAnimatorController _unitAnimator;
     Rigidbody2D _rigidBody2d;
     float _horizontalInput;
     bool _facingRight = true;
@@ -53,7 +53,7 @@ public class PlayerController : MonoBehaviour
     
     bool GetIsFlipAvailable()
     {
-        bool result = _unitAnimator.GetPhaseState(UnitAnimatorController.EAnimationPhase.Roll) || _unitAnimator.GetPhaseState(UnitAnimatorController.EAnimationPhase.Attacking);
+        bool result = _unitAnimator.GetPhaseState(PlayerAnimatorController.EAnimationPhase.Roll) || _unitAnimator.GetPhaseState(PlayerAnimatorController.EAnimationPhase.Attacking);
         return !result;
     }
 
@@ -139,12 +139,14 @@ public class PlayerController : MonoBehaviour
     #region mono events
     private void Awake()
     {
-        _unitAnimator = GetComponent<UnitAnimatorController>();
+        _unitAnimator = GetComponent<PlayerAnimatorController>();
         _rigidBody2d = GetComponent<Rigidbody2D>();
     }
 
     private void Start()
     {
+        SceneController.Instance.PlayerController = this;
+
         PlayerInputHandler.Instance.OnHorizontalChange += OnHorizontalInputChange;
         PlayerInputHandler.Instance.OnJump += OnJumpInput;
         PlayerInputHandler.Instance.OnAttack += OnAttackInput;
