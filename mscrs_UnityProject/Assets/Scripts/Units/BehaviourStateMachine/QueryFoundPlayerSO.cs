@@ -14,13 +14,17 @@ public class QueryFoundPlayerSO : QueryBaseSO
         float detectRange = unitController.BehaviourSettings.DetectRange;
         Transform playerTransform = SceneController.Instance.PlayerController.EnemyRaycastTarget;
         Transform unitTransform = unitController.BehaviourRaycastTarget;
-
-        if (Vector2.Distance(unitTransform.position, playerTransform.position) > detectRange)
-            return 0;
-
         Vector2 unitToPlayer = playerTransform.position - unitTransform.position;
-        RaycastHit2D hit = Physics2D.Raycast(unitTransform.position, unitToPlayer, detectRange, LayerMask.GetMask("Ground"));
-        Debug.DrawRay(unitTransform.position, unitToPlayer, hit.collider == null ? Color.yellow : Color.red, 1f);
+
+        //if (Vector2.Distance(unitTransform.position, playerTransform.position) > detectRange)
+        if (unitToPlayer.magnitude > detectRange)
+        {
+            Debug.DrawRay(unitTransform.position, unitToPlayer.normalized*detectRange, Color.gray);
+            return 0;
+        }
+
+        RaycastHit2D hit = Physics2D.Raycast(unitTransform.position, unitToPlayer, unitToPlayer.magnitude, LayerMask.GetMask("Ground"));
+        Debug.DrawRay(unitTransform.position, unitToPlayer, hit.collider == null ? Color.green : Color.blue, 1f);
         return (hit.collider == null)?1:0;
     }
 }

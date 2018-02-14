@@ -29,6 +29,7 @@ public class PlayerController : MonoBehaviour
     #region private protected vars
     PlayerAnimatorController _unitAnimator;
     Rigidbody2D _rigidBody2d;
+    SpriteRenderer _spriteRenderer;
     float _horizontalInput;
     bool _facingRight = true;
     bool _queueJump = false;
@@ -143,6 +144,7 @@ public class PlayerController : MonoBehaviour
     {
         _unitAnimator = GetComponent<PlayerAnimatorController>();
         _rigidBody2d = GetComponent<Rigidbody2D>();
+        _spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void Start()
@@ -178,7 +180,8 @@ public class PlayerController : MonoBehaviour
             GetIsFlipAvailable())
         {
             _facingRight = _horizontalInput > 0;
-            _unitAnimator.SetFlipX(!_facingRight);
+            //_unitAnimator.SetFlipX(!_facingRight);
+            _spriteRenderer.flipX = !_facingRight;
         }
 
         float resultHorizontalVelocity = _animHorizontalSpeed * _horizontalInput + _animHorizontalForcedSpeed * (_facingRight?1f:-1f);

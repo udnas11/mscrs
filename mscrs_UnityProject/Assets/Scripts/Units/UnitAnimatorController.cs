@@ -6,26 +6,22 @@ using UnityEngine;
 using UnityEngine.Assertions;
 using UnityRandom = UnityEngine.Random;
 
-public class UnitAnimatorController : MonoBehaviour
+public class UnitAnimatorController : BaseAnimatorController
 {
     #region public serialised vars
     #endregion
 
 
     #region private protected vars
-    Animator _animator;
     #endregion
 
 
     #region pub methods
-    public void SetRunning(bool newState)
+    public override void Attack()
     {
-        _animator.SetBool("isRunning", newState);
-    }
-
-    public void Attack()
-    {
-        _animator.SetTrigger("doAttack");
+        //base.Attack();
+        if (GetPhaseState(EAnimationPhase.Attacking) == false)
+            base.Attack();
     }
     #endregion
 
@@ -39,9 +35,5 @@ public class UnitAnimatorController : MonoBehaviour
 
 
     #region mono events
-    private void Awake()
-    {
-        _animator = GetComponent<Animator>();
-    }
     #endregion
 }

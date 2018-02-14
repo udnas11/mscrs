@@ -11,19 +11,19 @@ public class StateMachinePhaseController : StateMachineBehaviour
 {
 
     [SerializeField]
-    PlayerAnimatorController.EAnimationPhase _onStateEnterActivate;
+    BaseAnimatorController.EAnimationPhase _onStateEnterActivate;
     [SerializeField]
-    PlayerAnimatorController.EAnimationPhase _onStateExitDeactivate;
+    BaseAnimatorController.EAnimationPhase _onStateExitDeactivate;
 
     [Space]
     [SerializeField]
-    PlayerAnimatorController.EAnimationPhase _onMachineEnterActivate;
+    BaseAnimatorController.EAnimationPhase _onMachineEnterActivate;
     [SerializeField]
-    PlayerAnimatorController.EAnimationPhase _onMachineExitDeactivate;
+    BaseAnimatorController.EAnimationPhase _onMachineExitDeactivate;
 
-    private void ChangeState(Animator animator, PlayerAnimatorController.EAnimationPhase phase, bool newValue)
+    private void ChangeState(Animator animator, BaseAnimatorController.EAnimationPhase phase, bool newValue)
     {
-        var unitAnimController = animator.GetComponent<PlayerAnimatorController>();
+        var unitAnimController = animator.GetComponent<BaseAnimatorController>();
         if (unitAnimController != null)
         {
             unitAnimController.OnStatePhaseChange(phase, newValue);
@@ -34,7 +34,7 @@ public class StateMachinePhaseController : StateMachineBehaviour
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
 
-        if (_onStateEnterActivate != PlayerAnimatorController.EAnimationPhase.None)
+        if (_onStateEnterActivate != BaseAnimatorController.EAnimationPhase.None)
             ChangeState(animator, _onStateEnterActivate, true);
     }
 
@@ -42,7 +42,7 @@ public class StateMachinePhaseController : StateMachineBehaviour
     {
         base.OnStateExit(animator, stateInfo, layerIndex);
 
-        if (_onStateExitDeactivate != PlayerAnimatorController.EAnimationPhase.None)
+        if (_onStateExitDeactivate != BaseAnimatorController.EAnimationPhase.None)
             ChangeState(animator, _onStateExitDeactivate, false);
     }
 
@@ -50,7 +50,7 @@ public class StateMachinePhaseController : StateMachineBehaviour
     {
         base.OnStateMachineEnter(animator, stateMachinePathHash);
 
-        if (_onMachineEnterActivate != PlayerAnimatorController.EAnimationPhase.None)
+        if (_onMachineEnterActivate != BaseAnimatorController.EAnimationPhase.None)
             ChangeState(animator, _onMachineEnterActivate, true);
     }
 
@@ -58,7 +58,7 @@ public class StateMachinePhaseController : StateMachineBehaviour
     {
         base.OnStateMachineExit(animator, stateMachinePathHash);
 
-        if (_onMachineExitDeactivate != PlayerAnimatorController.EAnimationPhase.None)
+        if (_onMachineExitDeactivate != BaseAnimatorController.EAnimationPhase.None)
             ChangeState(animator, _onMachineExitDeactivate, false);
     }
 }

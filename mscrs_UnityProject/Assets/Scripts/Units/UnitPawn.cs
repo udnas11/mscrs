@@ -41,8 +41,10 @@ public class UnitPawn : MonoBehaviour
         }
     }
 
-    public void Attack()
+    public void Attack(Vector2 targetPos)
     {
+        if (_unitAnimatorController.GetPhaseState(BaseAnimatorController.EAnimationPhase.Attacking) == false)
+            SetFlipLeft(targetPos.x < transform.position.x);
         _unitAnimatorController.Attack();
     }
     #endregion
@@ -72,13 +74,13 @@ public class UnitPawn : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D trigger)
     {
         _groundTriggersActive++;
-        //_unitAnimatorController.SetInAir(InAir);
+        _unitAnimatorController.SetInAir(InAir);
     }
 
     private void OnTriggerExit2D(Collider2D trigger)
     {
         _groundTriggersActive--;
-        //_unitAnimatorController.SetInAir(InAir);
+        _unitAnimatorController.SetInAir(InAir);
     }
 
     private void FixedUpdate()
@@ -92,7 +94,7 @@ public class UnitPawn : MonoBehaviour
 
         float resultHorizontalVelocity = _animHorizontalSpeed * (_flipLeft ? -1f : 1f);
 
-        if (InAir == false)// && _unitAnimator.GetPhaseState(UnitAnimatorController.EAnimationPhase.Jump) == false)
+        if (InAir == false)
         {
             _rigidBody2d.velocity = new Vector2(resultHorizontalVelocity, _rigidBody2d.velocity.y);
         }

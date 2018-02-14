@@ -18,5 +18,9 @@ MonoBehaviour:
     ResultStates:
     - {fileID: 0}
     - {fileID: 11400000, guid: ff013e6123c53764cada797f578c4386, type: 2}
+  - Query: {fileID: 11400000, guid: 61b3f16b191ee054799ee09c9c8b8636, type: 2}
+    ResultStates:
+    - {fileID: 11400000, guid: c9b6013fb175f2b44842c328c5dc1d7c, type: 2}
+    - {fileID: 0}
   _onExitActions:
   - {fileID: 11400000, guid: d1a4b39025f3da94fba9ef9d43d30e24, type: 2}

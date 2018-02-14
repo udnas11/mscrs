@@ -11,6 +11,6 @@ public class ActionAttackSO : ActionBaseSO
 {
     public override void Act(UnitController unitController)
     {
-        unitController.Attack();
+        unitController.Attack(SceneController.Instance.PlayerController.transform.position);
     }
 }

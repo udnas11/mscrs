@@ -38,9 +38,9 @@ abstract public class UnitController : MonoBehaviour
 
 
     #region public methods
-    public virtual void Attack()
+    public virtual void Attack(Vector2 targetPos)
     {
-        _unitPawn.Attack();
+        _unitPawn.Attack(targetPos);
     }
 
     public virtual void SetMoveTarget(Vector3 target)
