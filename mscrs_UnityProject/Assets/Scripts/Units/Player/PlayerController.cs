@@ -15,7 +15,8 @@ public class PlayerController : MonoBehaviour
     float _jumpImpulse;
     [SerializeField]
     float _groundRaycastDistance;
-
+    [SerializeField]
+    Transform _enemyRaycastTarget;
 
     // driven by Animation custom property
     [HideInInspector, SerializeField]
@@ -26,8 +27,9 @@ public class PlayerController : MonoBehaviour
 
 
     #region private protected vars
-    UnitAnimatorController _unitAnimator;
+    PlayerAnimatorController _unitAnimator;
     Rigidbody2D _rigidBody2d;
+    SpriteRenderer _spriteRenderer;
     float _horizontalInput;
     bool _facingRight = true;
     bool _queueJump = false;
@@ -40,6 +42,7 @@ public class PlayerController : MonoBehaviour
 
     #region pub methods
     public bool InAir { get { return _groundTriggersActive == 0; } }
+    public Transform EnemyRaycastTarget { get { return _enemyRaycastTarget; } }
     #endregion
 
 
@@ -53,7 +56,7 @@ public class PlayerController : MonoBehaviour
     
     bool GetIsFlipAvailable()
     {
-        bool result = _unitAnimator.GetPhaseState(UnitAnimatorController.EAnimationPhase.Roll) || _unitAnimator.GetPhaseState(UnitAnimatorController.EAnimationPhase.Attacking);
+        bool result = _unitAnimator.GetPhaseState(PlayerAnimatorController.EAnimationPhase.Roll) || _unitAnimator.GetPhaseState(PlayerAnimatorController.EAnimationPhase.Attacking);
         return !result;
     }
 
@@ -139,12 +142,15 @@ public class PlayerController : MonoBehaviour
     #region mono events
     private void Awake()
     {
-        _unitAnimator = GetComponent<UnitAnimatorController>();
+        _unitAnimator = GetComponent<PlayerAnimatorController>();
         _rigidBody2d = GetComponent<Rigidbody2D>();
+        _spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void Start()
     {
+        SceneController.Instance.PlayerController = this;
+
         PlayerInputHandler.Instance.OnHorizontalChange += OnHorizontalInputChange;
         PlayerInputHandler.Instance.OnJump += OnJumpInput;
         PlayerInputHandler.Instance.OnAttack += OnAttackInput;
@@ -174,7 +180,8 @@ public class PlayerController : MonoBehaviour
             GetIsFlipAvailable())
         {
             _facingRight = _horizontalInput > 0;
-            _unitAnimator.SetFlipX(!_facingRight);
+            //_unitAnimator.SetFlipX(!_facingRight);
+            _spriteRenderer.flipX = !_facingRight;
         }
 
         float resultHorizontalVelocity = _animHorizontalSpeed * _horizontalInput + _animHorizontalForcedSpeed * (_facingRight?1f:-1f);
