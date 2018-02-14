@@ -12,7 +12,10 @@ public class StateSO : ScriptableObject
     [SerializeField]
     ActionBaseSO[] _actions;
     [SerializeField]
-    Transition[] _transitions;
+    TransitionSO[] _transitions;
+
+    [SerializeField, Space]
+    ActionBaseSO[] _onExitActions;
 
     public void StateUpdate(UnitController unitController)
     {
@@ -30,5 +33,11 @@ public class StateSO : ScriptableObject
                 return;
             }
         }
+    }
+
+    public void OnExit(UnitController unitController)
+    {
+        for (int i = 0; i < _onExitActions.Length; i++)
+            _onExitActions[i].Act(unitController);
     }
 }

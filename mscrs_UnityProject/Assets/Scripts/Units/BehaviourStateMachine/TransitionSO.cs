@@ -7,7 +7,7 @@ using UnityEngine.Assertions;
 using UnityRandom = UnityEngine.Random;
 
 [Serializable]
-public class Transition
+public class TransitionSO
 {
     public QueryBaseSO Query;
     public StateSO[] ResultStates;

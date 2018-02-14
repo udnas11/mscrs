@@ -360,16 +360,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114626945109260866, guid: 409511605f5899342bbdb1258ae65e3c,
-        type: 2}
-      propertyPath: _jumpImpulse
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 212558443439516754, guid: 409511605f5899342bbdb1258ae65e3c,
-        type: 2}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 409511605f5899342bbdb1258ae65e3c, type: 2}
   m_IsPrefabParent: 0

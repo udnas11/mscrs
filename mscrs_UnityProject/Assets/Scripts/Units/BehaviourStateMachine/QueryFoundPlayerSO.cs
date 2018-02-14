@@ -6,14 +6,14 @@ using UnityEngine;
 using UnityEngine.Assertions;
 using UnityRandom = UnityEngine.Random;
 
-[CreateAssetMenu(fileName = "QueryFoundPlayer", menuName = "Behaviour State Machine/Query Found Player")]
+[CreateAssetMenu(fileName = "QueryFoundPlayer", menuName = "Behaviour State Machine/Query - Found Player")]
 public class QueryFoundPlayerSO : QueryBaseSO
 {
     public override int DoQuery(UnitController unitController)
     {
         float detectRange = unitController.BehaviourSettings.DetectRange;
-        Transform playerTransform = SceneController.Instance.PlayerController.transform;
-        Transform unitTransform = unitController.transform;
+        Transform playerTransform = SceneController.Instance.PlayerController.EnemyRaycastTarget;
+        Transform unitTransform = unitController.BehaviourRaycastTarget;
 
         if (Vector2.Distance(unitTransform.position, playerTransform.position) > detectRange)
             return 0;

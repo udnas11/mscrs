@@ -15,7 +15,8 @@ public class PlayerController : MonoBehaviour
     float _jumpImpulse;
     [SerializeField]
     float _groundRaycastDistance;
-
+    [SerializeField]
+    Transform _enemyRaycastTarget;
 
     // driven by Animation custom property
     [HideInInspector, SerializeField]
@@ -40,6 +41,7 @@ public class PlayerController : MonoBehaviour
 
     #region pub methods
     public bool InAir { get { return _groundTriggersActive == 0; } }
+    public Transform EnemyRaycastTarget { get { return _enemyRaycastTarget; } }
     #endregion
 
 
