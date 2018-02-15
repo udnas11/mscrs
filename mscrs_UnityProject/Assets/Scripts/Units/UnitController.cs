@@ -19,9 +19,12 @@ abstract public class UnitController : MonoBehaviour
     public UnitBehaviourSettings BehaviourSettings;
 
     [SerializeField]
+    protected Transform _behaviourRaycastTarget;
+
+    [SerializeField, Header("State machine")]
     protected StateSO _startState;
     [SerializeField]
-    protected Transform _behaviourRaycastTarget;
+    protected StateSO _deadState;
     #endregion
 
 
@@ -29,11 +32,14 @@ abstract public class UnitController : MonoBehaviour
     protected StateSO _currentState;
     protected PlayerController _player;
     protected UnitPawn _unitPawn;
+    protected HealthEntity _healthEntity;
 
     protected Vector2 _moveTarget;
     protected bool _isMoveTargetSet;
+    protected bool _dead;
 
     public Transform BehaviourRaycastTarget { get { return _behaviourRaycastTarget; } }
+    public bool IsDead { get { return _dead; } }
     #endregion
 
 
@@ -52,10 +58,19 @@ abstract public class UnitController : MonoBehaviour
 
     public virtual void SetBehaviourState(StateSO newState)
     {
-        Debug.Log("New state: " + newState.name);
         if (_currentState != null)
             _currentState.OnExit(this);
         _currentState = newState;
+    }
+    #endregion
+
+
+    #region events
+    private void OnDeath()
+    {
+        _dead = true;
+        SetBehaviourState(_deadState);
+        _unitPawn.Die();
     }
     #endregion
 
@@ -64,6 +79,7 @@ abstract public class UnitController : MonoBehaviour
     protected virtual void Awake()
     {
         _unitPawn = GetComponent<UnitPawn>();
+        _healthEntity = GetComponent<HealthEntity>();
 
         SetBehaviourState(_startState);
     }
@@ -71,6 +87,7 @@ abstract public class UnitController : MonoBehaviour
     protected virtual void Start()
     {
         _player = SceneController.Instance.PlayerController;
+        _healthEntity.OnDeath += OnDeath;
     }
 
     protected virtual void Update()

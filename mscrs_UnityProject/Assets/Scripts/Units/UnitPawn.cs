@@ -11,6 +11,8 @@ public class UnitPawn : MonoBehaviour
     #region public serialised vars
     [SerializeField, HideInInspector]
     float _animHorizontalSpeed;
+    [SerializeField]
+    GameObject _damageDealers;
     #endregion
 
 
@@ -38,6 +40,7 @@ public class UnitPawn : MonoBehaviour
         {
             _flipLeft = newState;
             _spriteRenderer.flipX = newState;
+            _damageDealers.transform.localScale = new Vector3(newState?-1f:1f, 1f, 1f);
         }
     }
 
@@ -46,6 +49,11 @@ public class UnitPawn : MonoBehaviour
         if (_unitAnimatorController.GetPhaseState(BaseAnimatorController.EAnimationPhase.Attacking) == false)
             SetFlipLeft(targetPos.x < transform.position.x);
         _unitAnimatorController.Attack();
+    }
+
+    public void Die()
+    {
+        _unitAnimatorController.SetDead(true);
     }
     #endregion
 
@@ -64,11 +72,6 @@ public class UnitPawn : MonoBehaviour
         _unitAnimatorController = GetComponent<UnitAnimatorController>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _rigidBody2d = GetComponent<Rigidbody2D>();
-    }
-
-    private void Update()
-    {
-        
     }
 
     private void OnTriggerEnter2D(Collider2D trigger)

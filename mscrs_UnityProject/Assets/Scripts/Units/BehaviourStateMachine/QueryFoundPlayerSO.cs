@@ -11,8 +11,12 @@ public class QueryFoundPlayerSO : QueryBaseSO
 {
     public override int DoQuery(UnitController unitController)
     {
+        PlayerController playerController = SceneController.Instance.PlayerController;
+        if (playerController.IsDead)
+            return 0;
+
         float detectRange = unitController.BehaviourSettings.DetectRange;
-        Transform playerTransform = SceneController.Instance.PlayerController.EnemyRaycastTarget;
+        Transform playerTransform = playerController.EnemyRaycastTarget;
         Transform unitTransform = unitController.BehaviourRaycastTarget;
         Vector2 unitToPlayer = playerTransform.position - unitTransform.position;
 

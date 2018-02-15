@@ -17,6 +17,8 @@ public class PlayerController : MonoBehaviour
     float _groundRaycastDistance;
     [SerializeField]
     Transform _enemyRaycastTarget;
+    [SerializeField]
+    GameObject _damageDealers;
 
     // driven by Animation custom property
     [HideInInspector, SerializeField]
@@ -30,11 +32,13 @@ public class PlayerController : MonoBehaviour
     PlayerAnimatorController _unitAnimator;
     Rigidbody2D _rigidBody2d;
     SpriteRenderer _spriteRenderer;
+    HealthEntity _healthEntity;
     float _horizontalInput;
     bool _facingRight = true;
     bool _queueJump = false;
     bool _queueAirdrop = false;
     int _groundTriggersActive = 0;
+    bool _dead;
 
     Coroutine _physicsInhibitorCoroutine;
     #endregion
@@ -43,6 +47,7 @@ public class PlayerController : MonoBehaviour
     #region pub methods
     public bool InAir { get { return _groundTriggersActive == 0; } }
     public Transform EnemyRaycastTarget { get { return _enemyRaycastTarget; } }
+    public bool IsDead { get { return _dead; } }
     #endregion
 
 
@@ -56,7 +61,7 @@ public class PlayerController : MonoBehaviour
     
     bool GetIsFlipAvailable()
     {
-        bool result = _unitAnimator.GetPhaseState(PlayerAnimatorController.EAnimationPhase.Roll) || _unitAnimator.GetPhaseState(PlayerAnimatorController.EAnimationPhase.Attacking);
+        bool result = _unitAnimator.GetPhaseState(BaseAnimatorController.EAnimationPhase.Roll) || _unitAnimator.GetPhaseState(BaseAnimatorController.EAnimationPhase.Attacking);
         return !result;
     }
 
@@ -136,6 +141,12 @@ public class PlayerController : MonoBehaviour
     {
         _queueAirdrop = true;
     }
+
+    private void OnDying()
+    {
+        _dead = true;
+        _unitAnimator.SetDead(true);
+    }
     #endregion
 
 
@@ -145,6 +156,7 @@ public class PlayerController : MonoBehaviour
         _unitAnimator = GetComponent<PlayerAnimatorController>();
         _rigidBody2d = GetComponent<Rigidbody2D>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
+        _healthEntity = GetComponent<HealthEntity>();
     }
 
     private void Start()
@@ -159,6 +171,8 @@ public class PlayerController : MonoBehaviour
         _unitAnimator.OnAnimEventJumpApplyForceAction += OnAnimationCallbackJumpForce;
         _unitAnimator.OnAnimEventAirdropInhibitPhysicsAction += OnAnimationCallbackInhibitPhysics;
         _unitAnimator.OnAnimEventAirdropAction += OnAnimationCallbackAirdrop;
+
+        _healthEntity.OnDeath += OnDying;
     }
 
     private void OnTriggerEnter2D(Collider2D trigger)
@@ -175,13 +189,16 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (_dead)
+            return;
+
         if (_horizontalInput != 0f &&
             (_horizontalInput > 0) != _facingRight &&
             GetIsFlipAvailable())
         {
             _facingRight = _horizontalInput > 0;
-            //_unitAnimator.SetFlipX(!_facingRight);
             _spriteRenderer.flipX = !_facingRight;
+            _damageDealers.transform.localScale = new Vector3(_facingRight ? 1f : -1f, 1f, 1f);
         }
 
         float resultHorizontalVelocity = _animHorizontalSpeed * _horizontalInput + _animHorizontalForcedSpeed * (_facingRight?1f:-1f);
@@ -197,7 +214,6 @@ public class PlayerController : MonoBehaviour
 
         if (_queueJump)
         {
-            //_rigidBody2d.AddForce(new Vector2(0f, _jumpImpulse), ForceMode2D.Impulse);
             _rigidBody2d.velocity = new Vector2(_rigidBody2d.velocity.x, _jumpImpulse);
             _queueJump = false;
         }

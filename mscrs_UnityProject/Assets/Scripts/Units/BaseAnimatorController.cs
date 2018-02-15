@@ -40,6 +40,11 @@ public class BaseAnimatorController : MonoBehaviour
         _animator.SetBool("isRunning", newState);
     }
 
+    public virtual void SetDead(bool newState)
+    {
+        _animator.SetBool("isDead", newState);
+    }
+
     public virtual void Attack()
     {
         TriggerOnce("doAttack");

@@ -15,6 +15,8 @@ public class StateSO : ScriptableObject
     TransitionSO[] _transitions;
 
     [SerializeField, Space]
+    ActionBaseSO[] _onEnterActions;
+    [SerializeField]
     ActionBaseSO[] _onExitActions;
 
     public void StateUpdate(UnitController unitController)
