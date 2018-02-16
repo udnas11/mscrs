@@ -72,6 +72,12 @@ abstract public class UnitController : MonoBehaviour
         SetBehaviourState(_deadState);
         _unitPawn.Die();
     }
+
+    private void OnPushForceReceived(Vector2 vector, float physicsDuration)
+    {
+        if (!_dead)
+            _unitPawn.ApplyPushForce(vector, physicsDuration);
+    }
     #endregion
 
 
@@ -87,7 +93,9 @@ abstract public class UnitController : MonoBehaviour
     protected virtual void Start()
     {
         _player = SceneController.Instance.PlayerController;
+
         _healthEntity.OnDeath += OnDeath;
+        _healthEntity.OnPushForceReceived += OnPushForceReceived;
     }
 
     protected virtual void Update()

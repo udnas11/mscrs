@@ -39,6 +39,7 @@ public class PlayerController : MonoBehaviour
     bool _queueAirdrop = false;
     int _groundTriggersActive = 0;
     bool _dead;
+    float _physicsPenaltyOverTimestamp;
 
     Coroutine _physicsInhibitorCoroutine;
     #endregion
@@ -173,6 +174,15 @@ public class PlayerController : MonoBehaviour
         _unitAnimator.OnAnimEventAirdropAction += OnAnimationCallbackAirdrop;
 
         _healthEntity.OnDeath += OnDying;
+        _healthEntity.OnPushForceReceived += OnPushForceReceived;
+    }
+
+    private void OnPushForceReceived(Vector2 force, float physicsDuration)
+    {
+        Debug.Log("applyng force to player");
+
+        _rigidBody2d.AddForce(force, ForceMode2D.Impulse);
+        _physicsPenaltyOverTimestamp = Time.time + physicsDuration;
     }
 
     private void OnTriggerEnter2D(Collider2D trigger)
@@ -202,8 +212,8 @@ public class PlayerController : MonoBehaviour
         }
 
         float resultHorizontalVelocity = _animHorizontalSpeed * _horizontalInput + _animHorizontalForcedSpeed * (_facingRight?1f:-1f);
-
-        if (InAir == false)// && _unitAnimator.GetPhaseState(UnitAnimatorController.EAnimationPhase.Jump) == false)
+        
+        if (InAir == false && Time.time > _physicsPenaltyOverTimestamp)
         {
             _rigidBody2d.velocity = new Vector2(resultHorizontalVelocity, _rigidBody2d.velocity.y);
         }

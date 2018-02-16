@@ -26,6 +26,11 @@ public class DamageReceiver : MonoBehaviour
     {
         _healthEntity.TakeDamage(damageCount);
     }
+
+    public void TakePushForce(Vector2 pushForce, float physicsDuration)
+    {
+        _healthEntity.TakePushForce(pushForce, physicsDuration);
+    }
     #endregion
 
 

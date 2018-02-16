@@ -9,6 +9,7 @@ using UnityRandom = UnityEngine.Random;
 public class HealthEntity : MonoBehaviour
 {
 
+    public event Action<Vector2, float> OnPushForceReceived;
     public event Action OnDeath;
 
     #region public serialised vars
@@ -35,6 +36,12 @@ public class HealthEntity : MonoBehaviour
         _currentHP -= damage;
         if (_currentHP <= 0)
             Die();
+    }
+
+    public void TakePushForce(Vector2 force, float physicsDuration)
+    {
+        if (OnPushForceReceived != null)
+            OnPushForceReceived(force, physicsDuration);
     }
 
     public void Die()

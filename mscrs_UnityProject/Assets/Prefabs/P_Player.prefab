@@ -194,7 +194,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1153659839953148}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.529, y: -0.531, z: 0}
+  m_LocalPosition: {x: 0.095, y: -1.182, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4630942114074044}
@@ -404,11 +404,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1878129249527606}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35907be1c350d0c4b961c815d307465b, type: 3}
+  m_Script: {fileID: 11500000, guid: 76dc360f05f53fa45a0ad8109db6a92c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   MaskDamageType: -2
   _damage: 15
+  _pushForce: {x: 40, y: 10}
+  _physicsDuration: 0.3
 --- !u!114 &114260997796308458
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -417,11 +419,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1227535662577990}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35907be1c350d0c4b961c815d307465b, type: 3}
+  m_Script: {fileID: 11500000, guid: 76dc360f05f53fa45a0ad8109db6a92c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   MaskDamageType: -2
   _damage: 25
+  _pushForce: {x: 25, y: 25}
+  _physicsDuration: 0.5
 --- !u!114 &114600008291051498
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -473,11 +477,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1330649919086590}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35907be1c350d0c4b961c815d307465b, type: 3}
+  m_Script: {fileID: 11500000, guid: 76dc360f05f53fa45a0ad8109db6a92c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   MaskDamageType: -2
   _damage: 8
+  _pushForce: {x: 10, y: 10}
+  _physicsDuration: 0.2
 --- !u!114 &114950405042466896
 MonoBehaviour:
   m_ObjectHideFlags: 1

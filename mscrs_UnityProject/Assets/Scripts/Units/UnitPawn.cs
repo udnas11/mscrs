@@ -23,6 +23,7 @@ public class UnitPawn : MonoBehaviour
     private Vector2 _targetMovePos;
     private bool _flipLeft;
     private int _groundTriggersActive;
+    private float _physicsPenaltyOverTimestamp;
     #endregion
 
 
@@ -55,6 +56,14 @@ public class UnitPawn : MonoBehaviour
     {
         _unitAnimatorController.SetDead(true);
     }
+
+    public void ApplyPushForce(Vector2 force, float physicsDuration)
+    {
+        Debug.Log("applying force");
+
+        _rigidBody2d.AddForce(force, ForceMode2D.Impulse);
+        _physicsPenaltyOverTimestamp = Time.time + physicsDuration;
+}
     #endregion
 
 
@@ -96,8 +105,8 @@ public class UnitPawn : MonoBehaviour
         _unitAnimatorController.SetRunning(_targetMovePos != Vector2.zero);
 
         float resultHorizontalVelocity = _animHorizontalSpeed * (_flipLeft ? -1f : 1f);
-
-        if (InAir == false)
+        
+        if (InAir == false && Time.time > _physicsPenaltyOverTimestamp)
         {
             _rigidBody2d.velocity = new Vector2(resultHorizontalVelocity, _rigidBody2d.velocity.y);
         }

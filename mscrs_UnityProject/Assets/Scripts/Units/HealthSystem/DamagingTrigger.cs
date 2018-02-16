@@ -32,6 +32,10 @@ public class DamagingTrigger : MonoBehaviour
 
 
     #region private protected methods
+    virtual protected void OnProcessDamage(DamageReceiver receiver)
+    {
+        receiver.TakeDamage(_damage);
+    }
     #endregion
 
 
@@ -44,13 +48,13 @@ public class DamagingTrigger : MonoBehaviour
     {
         var receiverTarget = receiverTrigger.GetComponent<DamageReceiver>();
         if (receiverTarget == null)
-            return; // collided with another damage dealer
+            return; // collided with another damage dealer        
 
         int maskThis = (int)MaskDamageType;
         int maskTarget = (int)receiverTarget.MaskDamageType;
         if ((maskThis & maskTarget) != 0)
         {
-            receiverTarget.TakeDamage(_damage);
+            OnProcessDamage(receiverTarget);
         }
     }
     #endregion
