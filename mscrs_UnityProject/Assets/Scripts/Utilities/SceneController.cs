@@ -20,6 +20,8 @@ public class SceneController : Singleton<SceneController>
 
     [SerializeField, Header("DEBUG TO BE REMOVED")]
     bool _loadUnits = true;
+    [SerializeField]
+    bool _loadPlayer = true;
 
     [HideInInspector]
     public PlayerController PlayerControllerInstance;
@@ -34,6 +36,9 @@ public class SceneController : Singleton<SceneController>
     [ContextMenu("Respawn Player")]
     public void RespawnPlayer()
     {
+        if (_loadPlayer == false)
+            return;
+
         if (PlayerControllerInstance != null)
         {
             PlayerControllerInstance.HealthEntity.OnDeath -= OnPlayerDeath;

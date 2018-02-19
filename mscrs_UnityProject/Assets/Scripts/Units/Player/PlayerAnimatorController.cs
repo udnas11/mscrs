@@ -35,6 +35,13 @@ public class PlayerAnimatorController : BaseAnimatorController
             _animator.SetTrigger("doCombo");
     }
 
+    public override void Attack2()
+    {
+        base.Attack2();
+        if (GetPhaseState(EAnimationPhase.ComboZone))
+            _animator.SetTrigger("doCombo2");
+    }
+
     public void Roll()
     {
         TriggerOnce("doRoll");
