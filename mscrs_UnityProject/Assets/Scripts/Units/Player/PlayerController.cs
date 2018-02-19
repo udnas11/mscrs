@@ -84,13 +84,6 @@ public class PlayerController : MonoBehaviour
     private void OnHorizontalInputChange(float horizontal)
     {
         _unitAnimator.SetRunning(horizontal != 0f);
-        /*
-        if (horizontal != 0f && GetIsFlipAvailable())
-        {
-            _facingRight = horizontal > 0;
-            _unitAnimator.SetFlipX(!_facingRight);
-        }
-        */
         _horizontalInput = horizontal;
     }
 
@@ -109,10 +102,12 @@ public class PlayerController : MonoBehaviour
 
     private void OnAttackInput()
     {
-        //if (InAir == false)
-        {
-            _unitAnimator.Attack();
-        }
+        _unitAnimator.Attack();
+    }
+
+    private void OnAttack2Input()
+    {
+        _unitAnimator.Attack2();
     }
 
     private void OnRollInput()
@@ -143,10 +138,10 @@ public class PlayerController : MonoBehaviour
         _queueAirdrop = true;
     }
 
-    private void OnDying()
+    private void OnDying(int deathAnimationIndex)
     {
         _dead = true;
-        _unitAnimator.SetDead(true);
+        _unitAnimator.SetDead(true, deathAnimationIndex);
     }
     #endregion
 
@@ -167,6 +162,7 @@ public class PlayerController : MonoBehaviour
         PlayerInputHandler.Instance.OnHorizontalChange += OnHorizontalInputChange;
         PlayerInputHandler.Instance.OnJump += OnJumpInput;
         PlayerInputHandler.Instance.OnAttack += OnAttackInput;
+        PlayerInputHandler.Instance.OnAttack2 += OnAttack2Input;
         PlayerInputHandler.Instance.OnRoll += OnRollInput;
 
         _unitAnimator.OnAnimEventJumpApplyForceAction += OnAnimationCallbackJumpForce;
@@ -179,8 +175,6 @@ public class PlayerController : MonoBehaviour
 
     private void OnPushForceReceived(Vector2 force, float physicsDuration)
     {
-        Debug.Log("applyng force to player");
-
         _rigidBody2d.AddForce(force, ForceMode2D.Impulse);
         _physicsPenaltyOverTimestamp = Time.time + physicsDuration;
     }

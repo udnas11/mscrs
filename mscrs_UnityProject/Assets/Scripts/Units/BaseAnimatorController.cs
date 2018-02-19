@@ -40,14 +40,20 @@ public class BaseAnimatorController : MonoBehaviour
         _animator.SetBool("isRunning", newState);
     }
 
-    public virtual void SetDead(bool newState)
+    public virtual void SetDead(bool newState, int deathAnimationIndex = 0)
     {
+        _animator.SetFloat("indexDeathAnim", deathAnimationIndex);
         _animator.SetBool("isDead", newState);
     }
 
     public virtual void Attack()
     {
         TriggerOnce("doAttack");
+    }
+
+    public virtual void Attack2()
+    {
+        TriggerOnce("doAttack2");
     }
 
     public bool GetPhaseState(EAnimationPhase state)

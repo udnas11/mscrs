@@ -22,9 +22,9 @@ public class DamageReceiver : MonoBehaviour
 
 
     #region pub methods
-    public void TakeDamage(int damageCount)
+    public void TakeDamage(int damageCount, int deathAnimationIndex)
     {
-        _healthEntity.TakeDamage(damageCount);
+        _healthEntity.TakeDamage(damageCount, deathAnimationIndex);
     }
 
     public void TakePushForce(Vector2 pushForce, float physicsDuration)

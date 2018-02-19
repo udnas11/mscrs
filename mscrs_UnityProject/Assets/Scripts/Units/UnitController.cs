@@ -40,6 +40,7 @@ abstract public class UnitController : MonoBehaviour
 
     public Transform BehaviourRaycastTarget { get { return _behaviourRaycastTarget; } }
     public bool IsDead { get { return _dead; } }
+    public bool IsFlipX { get { return _unitPawn.IsFlipX; } }
     #endregion
 
 
@@ -66,11 +67,11 @@ abstract public class UnitController : MonoBehaviour
 
 
     #region events
-    private void OnDeath()
+    private void OnDeath(int deathAnimationIndex)
     {
         _dead = true;
         SetBehaviourState(_deadState);
-        _unitPawn.Die();
+        _unitPawn.Die(deathAnimationIndex);
     }
 
     private void OnPushForceReceived(Vector2 vector, float physicsDuration)

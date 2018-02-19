@@ -10,7 +10,7 @@ public class HealthEntity : MonoBehaviour
 {
 
     public event Action<Vector2, float> OnPushForceReceived;
-    public event Action OnDeath;
+    public event Action<int> OnDeath;
 
     #region public serialised vars
     [SerializeField]
@@ -27,15 +27,14 @@ public class HealthEntity : MonoBehaviour
 
 
     #region pub methods
-    public void TakeDamage(int damage)
+    public void TakeDamage(int damage, int deathAnimationIndex)
     {
         if (_dead)
             return;
-
-        Debug.Log(gameObject.name + " took damage: " + damage);
+        
         _currentHP -= damage;
         if (_currentHP <= 0)
-            Die();
+            Die(deathAnimationIndex);
     }
 
     public void TakePushForce(Vector2 force, float physicsDuration)
@@ -44,15 +43,14 @@ public class HealthEntity : MonoBehaviour
             OnPushForceReceived(force, physicsDuration);
     }
 
-    public void Die()
+    public void Die(int deathAnimationIndex)
     {
         if (_dead)
             return;
-
-        Debug.Log("Dead: " + gameObject.name);
+        
         _dead = true;
         if (OnDeath != null)
-            OnDeath();
+            OnDeath(deathAnimationIndex);
     }
     #endregion
 

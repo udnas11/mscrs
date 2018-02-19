@@ -29,6 +29,7 @@ public class UnitPawn : MonoBehaviour
 
     #region pub methods
     public bool InAir { get { return _groundTriggersActive == 0; } }
+    public bool IsFlipX { get { return _flipLeft; } }
 
     public void SetTargetMove(Vector2 pos)
     {
@@ -52,15 +53,13 @@ public class UnitPawn : MonoBehaviour
         _unitAnimatorController.Attack();
     }
 
-    public void Die()
+    public void Die(int deathAnimationIndex = 0)
     {
-        _unitAnimatorController.SetDead(true);
+        _unitAnimatorController.SetDead(true, deathAnimationIndex);
     }
 
     public void ApplyPushForce(Vector2 force, float physicsDuration)
     {
-        Debug.Log("applying force");
-
         _rigidBody2d.AddForce(force, ForceMode2D.Impulse);
         _physicsPenaltyOverTimestamp = Time.time + physicsDuration;
 }

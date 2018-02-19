@@ -5,7 +5,7 @@ AnimationClip:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: A_Player_Jump_AttackHeavy_land
+  m_Name: A_Player_Jump_AttackLight
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -22,12 +22,6 @@ AnimationClip:
       - serializedVersion: 2
         time: 0
         value: 2
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-      - serializedVersion: 2
-        time: 0.07692308
-        value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -57,19 +51,17 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: DamageDealers/Attack_Airdrop
+    path: DamageDealers/Attack_JumpLight
     classID: 1
     script: {fileID: 0}
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300006, guid: 8f7f835b0cd89614f97520cb37b6f44b, type: 3}
+      value: {fileID: 21300000, guid: 55c25310aeefe474a8194ecf2ead5ab3, type: 3}
     - time: 0.07692308
-      value: {fileID: 21300008, guid: 8f7f835b0cd89614f97520cb37b6f44b, type: 3}
+      value: {fileID: 21300002, guid: 55c25310aeefe474a8194ecf2ead5ab3, type: 3}
     - time: 0.15384616
-      value: {fileID: 21300010, guid: 8f7f835b0cd89614f97520cb37b6f44b, type: 3}
-    - time: 0.23076923
-      value: {fileID: 21300012, guid: 8f7f835b0cd89614f97520cb37b6f44b, type: 3}
+      value: {fileID: 21300004, guid: 55c25310aeefe474a8194ecf2ead5ab3, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -82,14 +74,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 0
-      attribute: 2888044821
-      script: {fileID: 11500000, guid: ac05f29cccb520c46b05f10ea102311e, type: 3}
-      typeID: 114
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 3564841040
+      path: 3055066493
       attribute: 2086281974
       script: {fileID: 0}
       typeID: 1
@@ -102,17 +87,23 @@ AnimationClip:
       typeID: 212
       customType: 23
       isPPtrCurve: 1
+    - serializedVersion: 2
+      path: 0
+      attribute: 2888044821
+      script: {fileID: 11500000, guid: ac05f29cccb520c46b05f10ea102311e, type: 3}
+      typeID: 114
+      customType: 0
+      isPPtrCurve: 0
     pptrCurveMapping:
-    - {fileID: 21300006, guid: 8f7f835b0cd89614f97520cb37b6f44b, type: 3}
-    - {fileID: 21300008, guid: 8f7f835b0cd89614f97520cb37b6f44b, type: 3}
-    - {fileID: 21300010, guid: 8f7f835b0cd89614f97520cb37b6f44b, type: 3}
-    - {fileID: 21300012, guid: 8f7f835b0cd89614f97520cb37b6f44b, type: 3}
+    - {fileID: 21300000, guid: 55c25310aeefe474a8194ecf2ead5ab3, type: 3}
+    - {fileID: 21300002, guid: 55c25310aeefe474a8194ecf2ead5ab3, type: 3}
+    - {fileID: 21300004, guid: 55c25310aeefe474a8194ecf2ead5ab3, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.30769232
+    m_StopTime: 0.23076925
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -137,12 +128,6 @@ AnimationClip:
         inSlope: 0
         outSlope: 0
         tangentMode: 136
-      - serializedVersion: 2
-        time: 0.07692308
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -169,7 +154,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: DamageDealers/Attack_Airdrop
+    path: DamageDealers/Attack_JumpLight
     classID: 1
     script: {fileID: 0}
   m_EulerEditorCurves: []

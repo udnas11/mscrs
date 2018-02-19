@@ -9,15 +9,10 @@ public class PlayerInputHandler : Singleton<PlayerInputHandler>
     public event Action<float> OnHorizontalChange;
     public event Action OnJump;
     public event Action OnAttack;
+    public event Action OnAttack2;
     public event Action OnRoll;
 
     #region public serialised vars
-    [SerializeField]
-    KeyCode _jumpKey;
-    [SerializeField]
-    KeyCode _attackKey;
-    [SerializeField]
-    KeyCode _rollKey;
     #endregion
 
 
@@ -53,22 +48,25 @@ public class PlayerInputHandler : Singleton<PlayerInputHandler>
             if (OnHorizontalChange != null)// && _horizontal != 0f)
                 OnHorizontalChange(_horizontal);
         }
-
-        //if (Input.GetKeyDown(_jumpKey))
+        
         if (Input.GetButtonDown("Jump"))
         {
             if (OnJump != null)
                 OnJump();
         }
-
-        //if (Input.GetKeyDown(_attackKey))
+        
         if (Input.GetButtonDown("Attack1"))
         {
             if (OnAttack != null)
                 OnAttack();
         }
 
-        //if (Input.GetKeyDown(_rollKey))
+        if (Input.GetButtonDown("Attack2"))
+        {
+            if (OnAttack2 != null)
+                OnAttack2();
+        }
+
         if (Input.GetButtonDown("Roll"))
         {
             if (OnRoll != null)

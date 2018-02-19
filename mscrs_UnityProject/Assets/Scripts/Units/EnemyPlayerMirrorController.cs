@@ -9,6 +9,8 @@ using UnityRandom = UnityEngine.Random;
 public class EnemyPlayerMirrorController : UnitController
 {
     #region public serialised vars
+    [SerializeField, Header("Player Mirror")]
+    GibsController _gibsPrefab;
     #endregion
 
 
@@ -17,6 +19,11 @@ public class EnemyPlayerMirrorController : UnitController
 
 
     #region pub methods
+    public void SpawnGibs()
+    {
+        var gibs = Instantiate(_gibsPrefab, _behaviourRaycastTarget.position, Quaternion.identity) as GibsController;
+        gibs.SetFlipX(!_unitPawn.IsFlipX);
+    }
     #endregion
 
 

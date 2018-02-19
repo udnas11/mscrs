@@ -20,6 +20,8 @@ public class DamagingTrigger : MonoBehaviour
     
     [SerializeField]
     int _damage;
+    [SerializeField]
+    int _deathAnim;
     #endregion
 
 
@@ -34,7 +36,7 @@ public class DamagingTrigger : MonoBehaviour
     #region private protected methods
     virtual protected void OnProcessDamage(DamageReceiver receiver)
     {
-        receiver.TakeDamage(_damage);
+        receiver.TakeDamage(_damage, _deathAnim);
     }
     #endregion
 
