@@ -83,7 +83,7 @@ public class SceneController : Singleton<SceneController>
     #region events
     private void OnPlayerDeath(int deathAnim)
     {
-        Invoke("RespawnPlayer", 3f);
+        Invoke("RespawnPlayer", 1.5f);
     }
     #endregion
 
