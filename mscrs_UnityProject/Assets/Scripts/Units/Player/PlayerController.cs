@@ -50,6 +50,7 @@ public class PlayerController : MonoBehaviour
     public Transform EnemyRaycastTarget { get { return _enemyRaycastTarget; } }
     public bool IsDead { get { return _dead; } }
     public HealthEntity HealthEntity { get { return _healthEntity; } }
+    public Vector2 VelocityRigidbody { get { return _rigidBody2d.velocity; } }
     #endregion
 
 

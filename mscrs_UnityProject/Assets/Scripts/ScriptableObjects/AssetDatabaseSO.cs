@@ -11,6 +11,7 @@ public class AssetDatabaseSO : ScriptableObject
 {
 
     public PlayerController PlayerPrefab;
+    public CameraSettingsSO CameraSettings;
 
 
     #region pseudo singleton

@@ -9,6 +9,9 @@ using UnityRandom = UnityEngine.Random;
 
 public class SceneController : Singleton<SceneController>
 {
+
+    public Action<PlayerController> OnPlayerSpawned;
+
     #region public serialised vars
     [SerializeField]
     string _unitSceneName;
@@ -39,6 +42,9 @@ public class SceneController : Singleton<SceneController>
 
         PlayerControllerInstance = Instantiate(AssetDatabaseSO.Instance.PlayerPrefab, _playerSpawnPos.position, Quaternion.identity) as PlayerController;
         PlayerControllerInstance.HealthEntity.OnDeath += OnPlayerDeath;
+
+        if (OnPlayerSpawned != null)
+            OnPlayerSpawned(PlayerControllerInstance);
     }
 
     [ContextMenu("Respawn enemies")]
