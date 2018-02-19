@@ -42,7 +42,8 @@ public class MobSpawn : MonoBehaviour
         for (;;)
         {
             yield return new WaitForSeconds(2f);
-            _activeMob = Instantiate(_mobPrefab, transform.position, Quaternion.identity) as HealthEntity;
+            _activeMob = Instantiate(_mobPrefab, transform.position, Quaternion.identity, this.transform) as HealthEntity;
+            _activeMob.transform.SetParent(null);
             _activeMob.OnDeath += OnActiveMobDeath;
             _activeMobAlive = true;
 

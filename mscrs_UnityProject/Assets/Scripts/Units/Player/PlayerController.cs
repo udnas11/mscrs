@@ -49,6 +49,7 @@ public class PlayerController : MonoBehaviour
     public bool InAir { get { return _groundTriggersActive == 0; } }
     public Transform EnemyRaycastTarget { get { return _enemyRaycastTarget; } }
     public bool IsDead { get { return _dead; } }
+    public HealthEntity HealthEntity { get { return _healthEntity; } }
     #endregion
 
 
@@ -70,12 +71,13 @@ public class PlayerController : MonoBehaviour
     {
         float timeStart = Time.time;
         _rigidBody2d.gravityScale = 0.2f;
-        while (Time.time < timeStart + 3f) // fail-safe. Effect interrupted by _queueAirdrop
+        while (Time.time < timeStart + 1f) // fail-safe. Effect interrupted by _queueAirdrop
         {
             yield return new WaitForFixedUpdate();
             _rigidBody2d.velocity = _rigidBody2d.velocity * 0.5f;
         }
         _rigidBody2d.gravityScale = 1f;
+        Debug.LogWarning("Player physics inhibitor fail-safe triggered.");
     }
     #endregion
 
@@ -157,8 +159,6 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
-        SceneController.Instance.PlayerController = this;
-
         PlayerInputHandler.Instance.OnHorizontalChange += OnHorizontalInputChange;
         PlayerInputHandler.Instance.OnJump += OnJumpInput;
         PlayerInputHandler.Instance.OnAttack += OnAttackInput;
@@ -171,6 +171,22 @@ public class PlayerController : MonoBehaviour
 
         _healthEntity.OnDeath += OnDying;
         _healthEntity.OnPushForceReceived += OnPushForceReceived;
+    }
+
+    private void OnDestroy()
+    {
+        PlayerInputHandler.Instance.OnHorizontalChange -= OnHorizontalInputChange;
+        PlayerInputHandler.Instance.OnJump -= OnJumpInput;
+        PlayerInputHandler.Instance.OnAttack -= OnAttackInput;
+        PlayerInputHandler.Instance.OnAttack2 -= OnAttack2Input;
+        PlayerInputHandler.Instance.OnRoll -= OnRollInput;
+
+        _unitAnimator.OnAnimEventJumpApplyForceAction -= OnAnimationCallbackJumpForce;
+        _unitAnimator.OnAnimEventAirdropInhibitPhysicsAction -= OnAnimationCallbackInhibitPhysics;
+        _unitAnimator.OnAnimEventAirdropAction -= OnAnimationCallbackAirdrop;
+
+        _healthEntity.OnDeath -= OnDying;
+        _healthEntity.OnPushForceReceived -= OnPushForceReceived;
     }
 
     private void OnPushForceReceived(Vector2 force, float physicsDuration)

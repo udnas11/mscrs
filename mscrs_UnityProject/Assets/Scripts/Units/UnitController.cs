@@ -30,7 +30,6 @@ abstract public class UnitController : MonoBehaviour
 
     #region private protected variables
     protected StateSO _currentState;
-    protected PlayerController _player;
     protected UnitPawn _unitPawn;
     protected HealthEntity _healthEntity;
 
@@ -93,8 +92,6 @@ abstract public class UnitController : MonoBehaviour
 
     protected virtual void Start()
     {
-        _player = SceneController.Instance.PlayerController;
-
         _healthEntity.OnDeath += OnDeath;
         _healthEntity.OnPushForceReceived += OnPushForceReceived;
     }

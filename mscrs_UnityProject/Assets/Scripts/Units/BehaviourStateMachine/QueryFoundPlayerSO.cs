@@ -11,7 +11,10 @@ public class QueryFoundPlayerSO : QueryBaseSO
 {
     public override int DoQuery(UnitController unitController)
     {
-        PlayerController playerController = SceneController.Instance.PlayerController;
+        PlayerController playerController = SceneController.Instance.PlayerControllerInstance;
+        if (playerController == null)
+            return 0;
+
         if (playerController.IsDead)
             return 0;
 

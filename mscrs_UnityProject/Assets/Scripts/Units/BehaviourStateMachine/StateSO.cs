@@ -39,6 +39,7 @@ public class StateSO : ScriptableObject
 
     public void OnExit(UnitController unitController)
     {
+        Assert.IsNotNull(unitController, "Exiting state with null Unit Controller parameter. State: " + this.name);
         for (int i = 0; i < _onExitActions.Length; i++)
             _onExitActions[i].Act(unitController);
     }

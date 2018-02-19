@@ -11,7 +11,7 @@ public class QueryWithinAttackReachSO : QueryBaseSO
 {
     public override int DoQuery(UnitController unitController)
     {
-        float playerPosX = SceneController.Instance.PlayerController.transform.position.x;
+        float playerPosX = SceneController.Instance.PlayerControllerInstance.transform.position.x;
         float distanceX = Mathf.Abs(playerPosX - unitController.transform.position.x);
         return (distanceX <= unitController.BehaviourSettings.AttackRange) ? 1 : 0;
     }

@@ -11,7 +11,7 @@ public class ActionGotoPlayerSO : ActionBaseSO
 {
     public override void Act(UnitController unitController)
     {
-        Vector2 targetPos = SceneController.Instance.PlayerController.transform.position;
+        Vector2 targetPos = SceneController.Instance.PlayerControllerInstance.transform.position;
         unitController.SetMoveTarget(targetPos);
     }
 }
