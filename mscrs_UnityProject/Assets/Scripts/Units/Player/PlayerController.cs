@@ -113,6 +113,11 @@ public class PlayerController : MonoBehaviour
         _unitAnimator.Attack2();
     }
 
+    private void OnAttack2ChargedInput()
+    {
+        _unitAnimator.Attack2Charged();
+    }
+
     private void OnRollInput()
     {
         if (InAir == false)
@@ -163,7 +168,8 @@ public class PlayerController : MonoBehaviour
         PlayerInputHandler.Instance.OnHorizontalChange += OnHorizontalInputChange;
         PlayerInputHandler.Instance.OnJump += OnJumpInput;
         PlayerInputHandler.Instance.OnAttack += OnAttackInput;
-        PlayerInputHandler.Instance.OnAttack2 += OnAttack2Input;
+        PlayerInputHandler.Instance.OnAttack2Combo += OnAttack2Input;
+        PlayerInputHandler.Instance.OnAttack2Charged += OnAttack2ChargedInput;
         PlayerInputHandler.Instance.OnRoll += OnRollInput;
 
         _unitAnimator.OnAnimEventJumpApplyForceAction += OnAnimationCallbackJumpForce;
@@ -179,7 +185,8 @@ public class PlayerController : MonoBehaviour
         PlayerInputHandler.Instance.OnHorizontalChange -= OnHorizontalInputChange;
         PlayerInputHandler.Instance.OnJump -= OnJumpInput;
         PlayerInputHandler.Instance.OnAttack -= OnAttackInput;
-        PlayerInputHandler.Instance.OnAttack2 -= OnAttack2Input;
+        PlayerInputHandler.Instance.OnAttack2Combo -= OnAttack2Input;
+        PlayerInputHandler.Instance.OnAttack2Charged -= OnAttack2ChargedInput;
         PlayerInputHandler.Instance.OnRoll -= OnRollInput;
 
         _unitAnimator.OnAnimEventJumpApplyForceAction -= OnAnimationCallbackJumpForce;

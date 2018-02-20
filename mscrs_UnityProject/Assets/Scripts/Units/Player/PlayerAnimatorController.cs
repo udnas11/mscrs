@@ -42,6 +42,11 @@ public class PlayerAnimatorController : BaseAnimatorController
             _animator.SetTrigger("doCombo2");
     }
 
+    public virtual void Attack2Charged()
+    {
+        TriggerOnce("doChargedHeavy");
+    }
+
     public void Roll()
     {
         TriggerOnce("doRoll");

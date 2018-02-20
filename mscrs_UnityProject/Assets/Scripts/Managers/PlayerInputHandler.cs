@@ -9,14 +9,19 @@ public class PlayerInputHandler : Singleton<PlayerInputHandler>
     public event Action<float> OnHorizontalChange;
     public event Action OnJump;
     public event Action OnAttack;
-    public event Action OnAttack2;
+    public event Action OnAttack2Combo;
+    public event Action OnAttack2Charged;
     public event Action OnRoll;
 
     #region public serialised vars
+    public const float cHoldDuration = 0.3f;
     #endregion
 
 
     #region private protected vars
+    float _horizontal = 0f;
+    Dictionary<string, float> _buttonHoldTimes;
+    List<string> _buttonHoldActiveList;
     #endregion
 
 
@@ -25,7 +30,6 @@ public class PlayerInputHandler : Singleton<PlayerInputHandler>
 
 
     #region private protected methods
-    float _horizontal = 0f;
     #endregion
 
 
@@ -37,6 +41,8 @@ public class PlayerInputHandler : Singleton<PlayerInputHandler>
     private void Awake()
     {
         RegisterSingleton(this);
+        _buttonHoldTimes = new Dictionary<string, float>();
+        _buttonHoldActiveList = new List<string>();
     }
 
     private void Update()
@@ -63,8 +69,28 @@ public class PlayerInputHandler : Singleton<PlayerInputHandler>
 
         if (Input.GetButtonDown("Attack2"))
         {
-            if (OnAttack2 != null)
-                OnAttack2();
+            _buttonHoldTimes["Attack2"] = Time.time;
+        }
+        if (Input.GetButton("Attack2"))
+        {
+            float time = Time.time - _buttonHoldTimes["Attack2"];
+            if (time > cHoldDuration && _buttonHoldActiveList.Contains("Attack2") == false)
+            {
+                _buttonHoldActiveList.Add("Attack2");
+                if (OnAttack2Charged != null)
+                    OnAttack2Charged();
+            }
+        }
+        if (Input.GetButtonUp("Attack2"))
+        {
+            _buttonHoldActiveList.Remove("Attack2");
+
+            float time = Time.time - _buttonHoldTimes["Attack2"];
+            if (time < cHoldDuration)
+            {
+                if (OnAttack2Combo != null)
+                    OnAttack2Combo();
+            }
         }
 
         if (Input.GetButtonDown("Roll"))
