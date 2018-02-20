@@ -19,7 +19,6 @@ public class UnitAnimatorController : BaseAnimatorController
     #region pub methods
     public override void Attack()
     {
-        //base.Attack();
         if (GetPhaseState(EAnimationPhase.Attacking) == false)
             base.Attack();
     }

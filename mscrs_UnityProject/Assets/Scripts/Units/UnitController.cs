@@ -86,6 +86,11 @@ public class UnitController : MonoBehaviour
         if (!_dead)
             _unitPawn.ApplyPushForce(vector, physicsDuration);
     }
+
+    private void OnPlayGetHitAnimation()
+    {
+        _unitPawn.PlayGotHitAnimation();
+    }
     #endregion
 
 
@@ -102,6 +107,7 @@ public class UnitController : MonoBehaviour
     {
         _healthEntity.OnDeath += OnDeath;
         _healthEntity.OnPushForceReceived += OnPushForceReceived;
+        _healthEntity.OnPlayGetHitAnimation += OnPlayGetHitAnimation;
     }
 
     protected virtual void Update()

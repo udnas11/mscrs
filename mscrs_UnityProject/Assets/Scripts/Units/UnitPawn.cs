@@ -62,7 +62,12 @@ public class UnitPawn : MonoBehaviour
     {
         _rigidBody2d.AddForce(force, ForceMode2D.Impulse);
         _physicsPenaltyOverTimestamp = Time.time + physicsDuration;
-}
+    }
+
+    public void PlayGotHitAnimation()
+    {
+        _unitAnimatorController.GetHit();
+    }
     #endregion
 
 

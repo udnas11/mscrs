@@ -18,13 +18,14 @@ public class DamageReceiver : MonoBehaviour
 
 
     #region private protected vars
+    UnitPawn _unitPawn;
     #endregion
 
 
     #region pub methods
-    public void TakeDamage(int damageCount, int deathAnimationIndex)
+    public void TakeDamage(int damageCount, int deathAnimationIndex, bool triggerHitAnimation)
     {
-        _healthEntity.TakeDamage(damageCount, deathAnimationIndex);
+        _healthEntity.TakeDamage(damageCount, deathAnimationIndex, triggerHitAnimation);
     }
 
     public void TakePushForce(Vector2 pushForce, float physicsDuration)
@@ -43,5 +44,9 @@ public class DamageReceiver : MonoBehaviour
 
 
     #region mono events
+    private void Awake()
+    {
+        _unitPawn = _healthEntity.GetComponent<UnitPawn>();
+    }
     #endregion
 }

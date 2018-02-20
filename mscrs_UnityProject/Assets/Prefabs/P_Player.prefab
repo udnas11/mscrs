@@ -689,7 +689,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaskDamageType: -2
   _damage: 15
-  _deathAnim: 0
+  _deathAnim: 1
+  _triggerHitAnimation: 1
   _pushForce: {x: 100, y: 0}
   _physicsDuration: 0.3
 --- !u!114 &114231486517972620
@@ -705,7 +706,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaskDamageType: -2
   _damage: 25
-  _deathAnim: 0
+  _deathAnim: 1
+  _triggerHitAnimation: 1
   _pushForce: {x: 5, y: 25}
   _physicsDuration: 0.2
 --- !u!114 &114260997796308458
@@ -722,6 +724,7 @@ MonoBehaviour:
   MaskDamageType: -2
   _damage: 10
   _deathAnim: 0
+  _triggerHitAnimation: 0
   _pushForce: {x: 40, y: 0}
   _physicsDuration: 0.5
 --- !u!114 &114328337454597648
@@ -738,6 +741,7 @@ MonoBehaviour:
   MaskDamageType: -2
   _damage: 15
   _deathAnim: 0
+  _triggerHitAnimation: 0
   _pushForce: {x: 10, y: 15}
   _physicsDuration: 0.2
 --- !u!114 &114474905649628520
@@ -754,6 +758,7 @@ MonoBehaviour:
   MaskDamageType: -2
   _damage: 8
   _deathAnim: 0
+  _triggerHitAnimation: 0
   _pushForce: {x: 10, y: 10}
   _physicsDuration: 0.2
 --- !u!114 &114600008291051498
@@ -783,7 +788,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _groundTrigger: {fileID: 61702665924388410}
   _jumpImpulse: 5
-  _groundRaycastDistance: 0.5
+  _groundRaycastDistance: 0.25
   _enemyRaycastTarget: {fileID: 4630942114074044}
   _damageDealers: {fileID: 1603633842306928}
   _animHorizontalSpeed: 0
@@ -801,7 +806,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaskDamageType: -2
   _damage: 10
-  _deathAnim: 1
+  _deathAnim: 0
+  _triggerHitAnimation: 0
   _pushForce: {x: 0, y: 40}
   _physicsDuration: 0.5
 --- !u!114 &114894123962370206
@@ -829,6 +835,7 @@ MonoBehaviour:
   MaskDamageType: -2
   _damage: 20
   _deathAnim: 1
+  _triggerHitAnimation: 1
   _pushForce: {x: 70, y: 20}
   _physicsDuration: 0.3
 --- !u!114 &114950405042466896
@@ -858,6 +865,7 @@ MonoBehaviour:
   MaskDamageType: -2
   _damage: 15
   _deathAnim: 0
+  _triggerHitAnimation: 1
   _pushForce: {x: 25, y: 25}
   _physicsDuration: 0.5
 --- !u!212 &212558443439516754

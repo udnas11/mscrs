@@ -159,7 +159,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1044776261724056}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.101, y: -1.2780519, z: 0}
+  m_LocalPosition: {x: 2.22, y: -1.71, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4165657204699842}
@@ -312,6 +312,7 @@ MonoBehaviour:
   MaskDamageType: 1
   _damage: 10
   _deathAnim: 0
+  _triggerHitAnimation: 0
   _pushForce: {x: 20, y: 0}
   _physicsDuration: 0.2
 --- !u!114 &114578153325178550
