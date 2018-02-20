@@ -1,28 +1,29 @@
 fileFormatVersion: 2
-guid: b32abf7bf6e3f4d47a143031364df65e
-timeCreated: 1518013998
+guid: 9afaafc2d3ae3b94db925a4447e49938
+timeCreated: 1519135939
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: T_Player_roll_0
-    21300002: T_Player_roll_1
-    21300004: T_Player_roll_2
-    21300006: T_Player_roll_3
-    21300008: T_Player_roll_4
-    21300010: T_Player_roll_5
-    21300012: T_Player_roll_6
-    21300014: T_Player_roll_7
-    21300016: T_Player_roll_8
-    21300018: T_Player_roll_9
-    21300020: T_Player_roll_10
-    21300022: T_Player_roll_11
-    21300024: T_Player_roll_12
-    21300026: T_Player_roll_13
-    21300028: T_Player_roll_14
-    21300030: T_Player_roll_15
-    21300032: T_Player_roll_16
-    21300034: T_Player_roll_17
-    21300036: T_Player_roll_18
+    21300000: T_Momon_melee_walk_0
+    21300002: T_Momon_melee_walk_1
+    21300004: T_Momon_melee_walk_2
+    21300006: T_Momon_melee_walk_3
+    21300008: T_Momon_melee_walk_4
+    21300010: T_Momon_melee_walk_5
+    21300012: T_Momon_melee_walk_6
+    21300014: T_Momon_melee_walk_7
+    21300016: T_Momon_melee_walk_8
+    21300018: T_Momon_melee_walk_9
+    21300020: T_Momon_melee_walk_10
+    21300022: T_Momon_melee_walk_11
+    21300024: T_Momon_melee_walk_12
+    21300026: T_Momon_melee_walk_13
+    21300028: T_Momon_melee_walk_14
+    21300030: T_Momon_melee_walk_15
+    21300032: T_Momon_melee_walk_16
+    21300034: T_Momon_melee_walk_17
+    21300036: T_Momon_melee_walk_18
+    21300038: T_Momon_melee_walk_19
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -124,274 +125,260 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: T_Player_roll_0
+      name: T_Momon_melee_walk_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 199
-        width: 69
-        height: 57
+        y: 195
+        width: 95
+        height: 61
       alignment: 9
-      pivot: {x: 0.5217391, y: 0.05263158}
+      pivot: {x: 0.6, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: T_Player_roll_1
+      name: T_Momon_melee_walk_1
       rect:
         serializedVersion: 2
-        x: 69
-        y: 199
-        width: 69
-        height: 57
+        x: 95
+        y: 195
+        width: 95
+        height: 61
       alignment: 9
-      pivot: {x: 0.5217391, y: 0.05263158}
+      pivot: {x: 0.6, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: T_Player_roll_2
+      name: T_Momon_melee_walk_2
       rect:
         serializedVersion: 2
-        x: 138
-        y: 199
-        width: 69
-        height: 57
+        x: 190
+        y: 195
+        width: 95
+        height: 61
       alignment: 9
-      pivot: {x: 0.5217391, y: 0.05263158}
+      pivot: {x: 0.6, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: T_Player_roll_3
+      name: T_Momon_melee_walk_3
       rect:
         serializedVersion: 2
-        x: 207
-        y: 199
-        width: 69
-        height: 57
+        x: 285
+        y: 195
+        width: 95
+        height: 61
       alignment: 9
-      pivot: {x: 0.5217391, y: 0.05263158}
+      pivot: {x: 0.6, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: T_Player_roll_4
+      name: T_Momon_melee_walk_4
       rect:
         serializedVersion: 2
-        x: 276
-        y: 199
-        width: 69
-        height: 57
+        x: 380
+        y: 195
+        width: 95
+        height: 61
       alignment: 9
-      pivot: {x: 0.5217391, y: 0.05263158}
+      pivot: {x: 0.6, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: T_Player_roll_5
-      rect:
-        serializedVersion: 2
-        x: 345
-        y: 199
-        width: 69
-        height: 57
-      alignment: 9
-      pivot: {x: 0.5217391, y: 0.05263158}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: T_Player_roll_6
-      rect:
-        serializedVersion: 2
-        x: 414
-        y: 199
-        width: 69
-        height: 57
-      alignment: 9
-      pivot: {x: 0.5217391, y: 0.05263158}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: T_Player_roll_7
+      name: T_Momon_melee_walk_5
       rect:
         serializedVersion: 2
         x: 0
-        y: 142
-        width: 69
-        height: 57
+        y: 134
+        width: 95
+        height: 61
       alignment: 9
-      pivot: {x: 0.5217391, y: 0.05263158}
+      pivot: {x: 0.6, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: T_Player_roll_8
+      name: T_Momon_melee_walk_6
       rect:
         serializedVersion: 2
-        x: 69
-        y: 142
-        width: 69
-        height: 57
+        x: 95
+        y: 134
+        width: 95
+        height: 61
       alignment: 9
-      pivot: {x: 0.5217391, y: 0.05263158}
+      pivot: {x: 0.6, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: T_Player_roll_9
+      name: T_Momon_melee_walk_7
       rect:
         serializedVersion: 2
-        x: 138
-        y: 142
-        width: 69
-        height: 57
+        x: 190
+        y: 134
+        width: 95
+        height: 61
       alignment: 9
-      pivot: {x: 0.5217391, y: 0.05263158}
+      pivot: {x: 0.6, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: T_Player_roll_10
+      name: T_Momon_melee_walk_8
       rect:
         serializedVersion: 2
-        x: 207
-        y: 142
-        width: 69
-        height: 57
+        x: 285
+        y: 134
+        width: 95
+        height: 61
       alignment: 9
-      pivot: {x: 0.5217391, y: 0.05263158}
+      pivot: {x: 0.6, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: T_Player_roll_11
+      name: T_Momon_melee_walk_9
       rect:
         serializedVersion: 2
-        x: 276
-        y: 142
-        width: 69
-        height: 57
+        x: 380
+        y: 134
+        width: 95
+        height: 61
       alignment: 9
-      pivot: {x: 0.5217391, y: 0.05263158}
+      pivot: {x: 0.6, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: T_Player_roll_12
-      rect:
-        serializedVersion: 2
-        x: 345
-        y: 142
-        width: 69
-        height: 57
-      alignment: 9
-      pivot: {x: 0.5217391, y: 0.05263158}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: T_Player_roll_13
-      rect:
-        serializedVersion: 2
-        x: 414
-        y: 142
-        width: 69
-        height: 57
-      alignment: 9
-      pivot: {x: 0.5217391, y: 0.05263158}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: T_Player_roll_14
+      name: T_Momon_melee_walk_10
       rect:
         serializedVersion: 2
         x: 0
-        y: 85
-        width: 69
-        height: 57
+        y: 73
+        width: 95
+        height: 61
       alignment: 9
-      pivot: {x: 0.5217391, y: 0.05263158}
+      pivot: {x: 0.6, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: T_Player_roll_15
+      name: T_Momon_melee_walk_11
       rect:
         serializedVersion: 2
-        x: 69
-        y: 85
-        width: 69
-        height: 57
+        x: 95
+        y: 73
+        width: 95
+        height: 61
       alignment: 9
-      pivot: {x: 0.5217391, y: 0.05263158}
+      pivot: {x: 0.6, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: T_Player_roll_16
+      name: T_Momon_melee_walk_12
       rect:
         serializedVersion: 2
-        x: 138
-        y: 85
-        width: 69
-        height: 57
+        x: 190
+        y: 73
+        width: 95
+        height: 61
       alignment: 9
-      pivot: {x: 0.5217391, y: 0.05263158}
+      pivot: {x: 0.6, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: T_Player_roll_17
+      name: T_Momon_melee_walk_13
       rect:
         serializedVersion: 2
-        x: 207
-        y: 85
-        width: 69
-        height: 57
+        x: 285
+        y: 73
+        width: 95
+        height: 61
       alignment: 9
-      pivot: {x: 0.5217391, y: 0.05263158}
+      pivot: {x: 0.6, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: T_Player_roll_18
+      name: T_Momon_melee_walk_14
       rect:
         serializedVersion: 2
-        x: 276
-        y: 85
-        width: 69
-        height: 57
+        x: 380
+        y: 73
+        width: 95
+        height: 61
       alignment: 9
-      pivot: {x: 0.5217391, y: 0.05263158}
+      pivot: {x: 0.6, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Momon_melee_walk_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 12
+        width: 95
+        height: 61
+      alignment: 9
+      pivot: {x: 0.6, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Momon_melee_walk_16
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 12
+        width: 95
+        height: 61
+      alignment: 9
+      pivot: {x: 0.6, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Momon_melee_walk_17
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 12
+        width: 95
+        height: 61
+      alignment: 9
+      pivot: {x: 0.6, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     outline: []
     physicsShape: []
-  spritePackingTag: PLAYER
+  spritePackingTag: MOMON
   userData: 
   assetBundleName: 
   assetBundleVariant: 

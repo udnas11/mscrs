@@ -29,7 +29,7 @@ GameObject:
   - component: {fileID: 50071463371391358}
   - component: {fileID: 61482056147148062}
   m_Layer: 10
-  m_Name: P_Enemy_Mirror
+  m_Name: P_Enemy_Momon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -132,7 +132,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1965729402311608}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.392, y: 0.138, z: 0}
+  m_LocalPosition: {x: 0.496, y: 0.347, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4946569634290356}
@@ -226,7 +226,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.32}
+  m_Size: {x: 1.2, y: 0.6}
   m_EdgeRadius: 0
 --- !u!61 &61482056147148062
 BoxCollider2D:
@@ -243,9 +243,9 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.67164177, y: 0.06451613}
-    oldSize: {x: 0.67, y: 0.62}
-    newSize: {x: 0.67, y: 0.62}
+    pivot: {x: 0.68, y: 0.07}
+    oldSize: {x: 1.01, y: 0.68}
+    newSize: {x: 0.95, y: 0.61}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -277,7 +277,7 @@ Animator:
   m_GameObject: {fileID: 1044776261724056}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 98724bfe1a9865e42af1bc778357bd00, type: 2}
+  m_Controller: {fileID: 9100000, guid: c2b92c75a644b5d4eb9c1a623df7bed1, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -312,7 +312,7 @@ MonoBehaviour:
   MaskDamageType: 1
   _damage: 10
   _deathAnim: 0
-  _pushForce: {x: 10, y: 10}
+  _pushForce: {x: 20, y: 0}
   _physicsDuration: 0.2
 --- !u!114 &114578153325178550
 MonoBehaviour:
@@ -337,8 +337,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BehaviourSettings:
-    DetectRange: 3
-    AttackRange: 0.8
+    DetectRange: 2.5
+    AttackRange: 1
   _behaviourRaycastTarget: {fileID: 4165657204699842}
   _gibsPrefab: {fileID: 114689919781034436, guid: c8cda92fda87e8441b05dee78dd25431,
     type: 2}
@@ -405,12 +405,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: adcb4ae0e2096184a9024b0c7349b653, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: d4d890fad906cd746a00b4fe84702168, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.67, y: 0.62}
+  m_Size: {x: 0.95, y: 0.61}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

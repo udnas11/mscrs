@@ -1,28 +1,21 @@
 fileFormatVersion: 2
-guid: b32abf7bf6e3f4d47a143031364df65e
-timeCreated: 1518013998
+guid: d4d890fad906cd746a00b4fe84702168
+timeCreated: 1519134946
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: T_Player_roll_0
-    21300002: T_Player_roll_1
-    21300004: T_Player_roll_2
-    21300006: T_Player_roll_3
-    21300008: T_Player_roll_4
-    21300010: T_Player_roll_5
-    21300012: T_Player_roll_6
-    21300014: T_Player_roll_7
-    21300016: T_Player_roll_8
-    21300018: T_Player_roll_9
-    21300020: T_Player_roll_10
-    21300022: T_Player_roll_11
-    21300024: T_Player_roll_12
-    21300026: T_Player_roll_13
-    21300028: T_Player_roll_14
-    21300030: T_Player_roll_15
-    21300032: T_Player_roll_16
-    21300034: T_Player_roll_17
-    21300036: T_Player_roll_18
+    21300000: T_Momon_idle_0
+    21300002: T_Momon_idle_1
+    21300004: T_Momon_idle_2
+    21300006: T_Momon_idle_3
+    21300008: T_Momon_idle_4
+    21300010: T_Momon_idle_5
+    21300012: T_Momon_idle_6
+    21300014: T_Momon_idle_7
+    21300016: T_Momon_idle_8
+    21300018: T_Momon_idle_9
+    21300020: T_Momon_idle_10
+    21300022: T_Momon_idle_11
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -124,274 +117,176 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: T_Player_roll_0
+      name: T_Momon_idle_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 199
-        width: 69
-        height: 57
+        y: 188
+        width: 101
+        height: 68
       alignment: 9
-      pivot: {x: 0.5217391, y: 0.05263158}
+      pivot: {x: 0.68, y: 0.07}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: T_Player_roll_1
+      name: T_Momon_idle_1
       rect:
         serializedVersion: 2
-        x: 69
-        y: 199
-        width: 69
-        height: 57
+        x: 101
+        y: 188
+        width: 101
+        height: 68
       alignment: 9
-      pivot: {x: 0.5217391, y: 0.05263158}
+      pivot: {x: 0.68, y: 0.07}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: T_Player_roll_2
+      name: T_Momon_idle_2
       rect:
         serializedVersion: 2
-        x: 138
-        y: 199
-        width: 69
-        height: 57
+        x: 202
+        y: 188
+        width: 101
+        height: 68
       alignment: 9
-      pivot: {x: 0.5217391, y: 0.05263158}
+      pivot: {x: 0.68, y: 0.07}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: T_Player_roll_3
+      name: T_Momon_idle_3
       rect:
         serializedVersion: 2
-        x: 207
-        y: 199
-        width: 69
-        height: 57
+        x: 303
+        y: 188
+        width: 101
+        height: 68
       alignment: 9
-      pivot: {x: 0.5217391, y: 0.05263158}
+      pivot: {x: 0.68, y: 0.07}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: T_Player_roll_4
+      name: T_Momon_idle_4
       rect:
         serializedVersion: 2
-        x: 276
-        y: 199
-        width: 69
-        height: 57
+        x: 404
+        y: 188
+        width: 101
+        height: 68
       alignment: 9
-      pivot: {x: 0.5217391, y: 0.05263158}
+      pivot: {x: 0.68, y: 0.07}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: T_Player_roll_5
-      rect:
-        serializedVersion: 2
-        x: 345
-        y: 199
-        width: 69
-        height: 57
-      alignment: 9
-      pivot: {x: 0.5217391, y: 0.05263158}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: T_Player_roll_6
-      rect:
-        serializedVersion: 2
-        x: 414
-        y: 199
-        width: 69
-        height: 57
-      alignment: 9
-      pivot: {x: 0.5217391, y: 0.05263158}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: T_Player_roll_7
+      name: T_Momon_idle_5
       rect:
         serializedVersion: 2
         x: 0
-        y: 142
-        width: 69
-        height: 57
+        y: 120
+        width: 101
+        height: 68
       alignment: 9
-      pivot: {x: 0.5217391, y: 0.05263158}
+      pivot: {x: 0.68, y: 0.07}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: T_Player_roll_8
+      name: T_Momon_idle_6
       rect:
         serializedVersion: 2
-        x: 69
-        y: 142
-        width: 69
-        height: 57
+        x: 101
+        y: 120
+        width: 101
+        height: 68
       alignment: 9
-      pivot: {x: 0.5217391, y: 0.05263158}
+      pivot: {x: 0.68, y: 0.07}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: T_Player_roll_9
+      name: T_Momon_idle_7
       rect:
         serializedVersion: 2
-        x: 138
-        y: 142
-        width: 69
-        height: 57
+        x: 202
+        y: 120
+        width: 101
+        height: 68
       alignment: 9
-      pivot: {x: 0.5217391, y: 0.05263158}
+      pivot: {x: 0.68, y: 0.07}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: T_Player_roll_10
+      name: T_Momon_idle_8
       rect:
         serializedVersion: 2
-        x: 207
-        y: 142
-        width: 69
-        height: 57
+        x: 303
+        y: 120
+        width: 101
+        height: 68
       alignment: 9
-      pivot: {x: 0.5217391, y: 0.05263158}
+      pivot: {x: 0.68, y: 0.07}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: T_Player_roll_11
+      name: T_Momon_idle_9
       rect:
         serializedVersion: 2
-        x: 276
-        y: 142
-        width: 69
-        height: 57
+        x: 404
+        y: 120
+        width: 101
+        height: 68
       alignment: 9
-      pivot: {x: 0.5217391, y: 0.05263158}
+      pivot: {x: 0.68, y: 0.07}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: T_Player_roll_12
-      rect:
-        serializedVersion: 2
-        x: 345
-        y: 142
-        width: 69
-        height: 57
-      alignment: 9
-      pivot: {x: 0.5217391, y: 0.05263158}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: T_Player_roll_13
-      rect:
-        serializedVersion: 2
-        x: 414
-        y: 142
-        width: 69
-        height: 57
-      alignment: 9
-      pivot: {x: 0.5217391, y: 0.05263158}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: T_Player_roll_14
+      name: T_Momon_idle_10
       rect:
         serializedVersion: 2
         x: 0
-        y: 85
-        width: 69
-        height: 57
+        y: 52
+        width: 101
+        height: 68
       alignment: 9
-      pivot: {x: 0.5217391, y: 0.05263158}
+      pivot: {x: 0.68, y: 0.07}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: T_Player_roll_15
+      name: T_Momon_idle_11
       rect:
         serializedVersion: 2
-        x: 69
-        y: 85
-        width: 69
-        height: 57
+        x: 101
+        y: 52
+        width: 101
+        height: 68
       alignment: 9
-      pivot: {x: 0.5217391, y: 0.05263158}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: T_Player_roll_16
-      rect:
-        serializedVersion: 2
-        x: 138
-        y: 85
-        width: 69
-        height: 57
-      alignment: 9
-      pivot: {x: 0.5217391, y: 0.05263158}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: T_Player_roll_17
-      rect:
-        serializedVersion: 2
-        x: 207
-        y: 85
-        width: 69
-        height: 57
-      alignment: 9
-      pivot: {x: 0.5217391, y: 0.05263158}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: T_Player_roll_18
-      rect:
-        serializedVersion: 2
-        x: 276
-        y: 85
-        width: 69
-        height: 57
-      alignment: 9
-      pivot: {x: 0.5217391, y: 0.05263158}
+      pivot: {x: 0.68, y: 0.07}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     outline: []
     physicsShape: []
-  spritePackingTag: PLAYER
+  spritePackingTag: MOMON
   userData: 
   assetBundleName: 
   assetBundleVariant: 

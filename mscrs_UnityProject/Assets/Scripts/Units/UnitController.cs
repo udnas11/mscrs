@@ -13,13 +13,15 @@ public class UnitBehaviourSettings
     public float AttackRange;
 }
 
-abstract public class UnitController : MonoBehaviour
+public class UnitController : MonoBehaviour
 {
     #region public serialisable
     public UnitBehaviourSettings BehaviourSettings;
 
     [SerializeField]
     protected Transform _behaviourRaycastTarget;
+    [SerializeField]
+    GibsController _gibsPrefab;
 
     [SerializeField, Header("State machine")]
     protected StateSO _startState;
@@ -61,6 +63,12 @@ abstract public class UnitController : MonoBehaviour
         if (_currentState != null)
             _currentState.OnExit(this);
         _currentState = newState;
+    }
+
+    public virtual void SpawnGibs()
+    {
+        var gibs = Instantiate(_gibsPrefab, _behaviourRaycastTarget.position, Quaternion.identity) as GibsController;
+        gibs.SetFlipX(!_unitPawn.IsFlipX);
     }
     #endregion
 
