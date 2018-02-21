@@ -46,6 +46,7 @@ public class SceneController : Singleton<SceneController>
         }
 
         PlayerControllerInstance = Instantiate(AssetDatabaseSO.Instance.PlayerPrefab, _playerSpawnPos.position, Quaternion.identity) as PlayerController;
+        PlayerControllerInstance.gameObject.SetActive(true);
         PlayerControllerInstance.HealthEntity.OnDeath += OnPlayerDeath;
 
         if (OnPlayerSpawned != null)

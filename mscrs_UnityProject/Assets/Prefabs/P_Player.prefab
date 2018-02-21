@@ -65,7 +65,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1227535662577990
 GameObject:
   m_ObjectHideFlags: 1
@@ -110,6 +110,7 @@ GameObject:
   - component: {fileID: 4143612757990090}
   - component: {fileID: 114231486517972620}
   - component: {fileID: 61376700100335316}
+  - component: {fileID: 114621111376643664}
   m_Layer: 11
   m_Name: Attack2_2
   m_TagString: Untagged
@@ -159,6 +160,7 @@ GameObject:
   - component: {fileID: 4291747449519278}
   - component: {fileID: 114328337454597648}
   - component: {fileID: 61260918989288538}
+  - component: {fileID: 114687272572757306}
   m_Layer: 11
   m_Name: Attack2
   m_TagString: Untagged
@@ -193,6 +195,7 @@ GameObject:
   - component: {fileID: 4441659423472008}
   - component: {fileID: 114987409116920868}
   - component: {fileID: 61599154509059504}
+  - component: {fileID: 114952379819708352}
   m_Layer: 11
   m_Name: Attack_Airdrop
   m_TagString: Untagged
@@ -691,6 +694,8 @@ MonoBehaviour:
   _damage: 15
   _deathAnim: 1
   _triggerHitAnimation: 1
+  _cameraShaker: {fileID: 0}
+  _shakerTriggerType: 0
   _pushForce: {x: 100, y: 0}
   _physicsDuration: 0.3
 --- !u!114 &114231486517972620
@@ -708,6 +713,8 @@ MonoBehaviour:
   _damage: 25
   _deathAnim: 1
   _triggerHitAnimation: 1
+  _cameraShaker: {fileID: 114621111376643664}
+  _shakerTriggerType: 1
   _pushForce: {x: 5, y: 25}
   _physicsDuration: 0.2
 --- !u!114 &114260997796308458
@@ -725,6 +732,8 @@ MonoBehaviour:
   _damage: 10
   _deathAnim: 0
   _triggerHitAnimation: 0
+  _cameraShaker: {fileID: 0}
+  _shakerTriggerType: 0
   _pushForce: {x: 40, y: 0}
   _physicsDuration: 0.5
 --- !u!114 &114328337454597648
@@ -742,6 +751,8 @@ MonoBehaviour:
   _damage: 15
   _deathAnim: 0
   _triggerHitAnimation: 0
+  _cameraShaker: {fileID: 114687272572757306}
+  _shakerTriggerType: 1
   _pushForce: {x: 10, y: 15}
   _physicsDuration: 0.2
 --- !u!114 &114474905649628520
@@ -759,6 +770,8 @@ MonoBehaviour:
   _damage: 8
   _deathAnim: 0
   _triggerHitAnimation: 0
+  _cameraShaker: {fileID: 0}
+  _shakerTriggerType: 0
   _pushForce: {x: 10, y: 10}
   _physicsDuration: 0.2
 --- !u!114 &114600008291051498
@@ -775,6 +788,72 @@ MonoBehaviour:
   _maxHP: 100
   _receiverColliders:
   - {fileID: 58322926926371274}
+--- !u!114 &114621111376643664
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1535916485100022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5431f7d6213787340af0ca35632c5a0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animX:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  _animY:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.01841484
+      value: -1.367093
+      inSlope: -0.004956327
+      outSlope: -0.004956327
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.3408456
+      value: -0.0068608224
+      inSlope: 8.13146
+      outSlope: 8.13146
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.647174
+      value: 0.00021703588
+      inSlope: -2.9503722
+      outSlope: -2.9503722
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  _duration: 0.2
 --- !u!114 &114626945109260866
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -793,6 +872,60 @@ MonoBehaviour:
   _damageDealers: {fileID: 1603633842306928}
   _animHorizontalSpeed: 0
   _animHorizontalForcedSpeed: 0
+--- !u!114 &114687272572757306
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1673620421629130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5431f7d6213787340af0ca35632c5a0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animX:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  _animY:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.02332817
+      value: -0.99654853
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  _duration: 0.2
 --- !u!114 &114825490301319544
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -808,6 +941,8 @@ MonoBehaviour:
   _damage: 10
   _deathAnim: 0
   _triggerHitAnimation: 0
+  _cameraShaker: {fileID: 0}
+  _shakerTriggerType: 0
   _pushForce: {x: 0, y: 40}
   _physicsDuration: 0.5
 --- !u!114 &114894123962370206
@@ -836,6 +971,8 @@ MonoBehaviour:
   _damage: 20
   _deathAnim: 1
   _triggerHitAnimation: 1
+  _cameraShaker: {fileID: 0}
+  _shakerTriggerType: 0
   _pushForce: {x: 70, y: 20}
   _physicsDuration: 0.3
 --- !u!114 &114950405042466896
@@ -851,6 +988,66 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaskDamageType: 1
   _healthEntity: {fileID: 114600008291051498}
+--- !u!114 &114952379819708352
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1886224242518880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5431f7d6213787340af0ca35632c5a0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animX:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  _animY:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: -21.802061
+      tangentMode: 65
+    - serializedVersion: 2
+      time: 0.04503335
+      value: -0.98181987
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.62570584
+      value: 0.137535
+      inSlope: 0.0049290485
+      outSlope: 0.0049290485
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  _duration: 0.5
 --- !u!114 &114987409116920868
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -866,6 +1063,8 @@ MonoBehaviour:
   _damage: 15
   _deathAnim: 0
   _triggerHitAnimation: 1
+  _cameraShaker: {fileID: 114952379819708352}
+  _shakerTriggerType: 1
   _pushForce: {x: 25, y: 25}
   _physicsDuration: 0.5
 --- !u!212 &212558443439516754

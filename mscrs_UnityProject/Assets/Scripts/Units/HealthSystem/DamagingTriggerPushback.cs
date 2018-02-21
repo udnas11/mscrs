@@ -9,7 +9,7 @@ using UnityRandom = UnityEngine.Random;
 public class DamagingTriggerPushback : DamagingTrigger
 {
     #region public serialised vars
-    [SerializeField]
+    [SerializeField, Header("Pushback")]
     Vector2 _pushForce;
     [SerializeField]
     float _physicsDuration;

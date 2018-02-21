@@ -14,6 +14,13 @@ public enum EDamageReceiverType
 
 public class DamagingTrigger : MonoBehaviour
 {
+    public enum EShakeTriggerOptions
+    {
+        None,
+        OnEnable,
+        OnHitOnly
+    }
+
     #region public serialised vars
     [HideInInspector]
     public EDamageReceiverType MaskDamageType;
@@ -24,6 +31,11 @@ public class DamagingTrigger : MonoBehaviour
     int _deathAnim;
     [SerializeField]
     bool _triggerHitAnimation;
+
+    [SerializeField, Header("Camera Shake")]
+    CameraShaker _cameraShaker;
+    [SerializeField]
+    EShakeTriggerOptions _shakerTriggerType;
     #endregion
 
 
@@ -38,6 +50,9 @@ public class DamagingTrigger : MonoBehaviour
     #region private protected methods
     virtual protected void OnProcessDamage(DamageReceiver receiver)
     {
+        if (_shakerTriggerType == EShakeTriggerOptions.OnHitOnly && _cameraShaker != null)
+            _cameraShaker.Apply();
+
         receiver.TakeDamage(_damage, _deathAnim, _triggerHitAnimation);
     }
     #endregion
@@ -48,6 +63,12 @@ public class DamagingTrigger : MonoBehaviour
 
 
     #region mono events
+    protected virtual void OnEnable()
+    {
+        if (_shakerTriggerType == EShakeTriggerOptions.OnEnable && _cameraShaker != null)
+            _cameraShaker.Apply();
+    }
+
     private void OnTriggerEnter2D(Collider2D receiverTrigger)
     {
         var receiverTarget = receiverTrigger.GetComponent<DamageReceiver>();

@@ -14,17 +14,35 @@ public class CameraController : Singleton<CameraController>
 
     #region private protected vars
     PlayerController _player;
+    CameraSettingsSO _settings;
+    float _horizontalInput;
+    Vector2 _playerVelocitySmooth;
+    Vector2 _shake = Vector2.zero;
     #endregion
 
 
     #region pub methods
+    public void ApplyCameraShake(AnimationCurve x, AnimationCurve y, float duration)
+    {
+        StartCoroutine(ICameraShake(x, y, duration));
+    }
     #endregion
 
 
     #region private protected methods
-    CameraSettingsSO _settings;
-    float _horizontalInput;
-    Vector2 _playerVelocitySmooth;
+    IEnumerator ICameraShake(AnimationCurve x, AnimationCurve y, float duration)
+    {
+        float startTime = Time.time;
+        float endTime = startTime + duration;
+        float t;
+        while (Time.time < endTime)
+        {
+            t = Mathf.InverseLerp(startTime, endTime, Time.time);
+            _shake.x += x.Evaluate(t);
+            _shake.y += y.Evaluate(t);
+            yield return null;
+        }
+    }
     #endregion
 
 
@@ -75,7 +93,9 @@ public class CameraController : Singleton<CameraController>
 
         targetPos.x += _playerVelocitySmooth.x;
 
-        transform.position = Vector2.Lerp(transform.position, targetPos, Time.deltaTime * _settings.LerpSpeed);
+        targetPos += _shake;
+        _shake = Vector2.zero;
+        transform.position = Vector2.Lerp(transform.position, targetPos/* + _shake*/, Time.deltaTime * _settings.LerpSpeed);
     }
     #endregion
 }
