@@ -10,7 +10,9 @@ public class CameraShaker : MonoBehaviour
 {
     #region public serialised vars
     [SerializeField]
-    AnimationCurve _animX, _animY;
+    AnimationCurve _animX = AnimationCurve.Linear(0f, 0f, 1f, 0f);
+    [SerializeField]
+    AnimationCurve _animY = AnimationCurve.Linear(0f, 0f, 1f, 0f);
     [SerializeField]
     float _duration;
     #endregion

@@ -178,6 +178,7 @@ GameObject:
   - component: {fileID: 4870745714011676}
   - component: {fileID: 114219987291396486}
   - component: {fileID: 61711775091248050}
+  - component: {fileID: 114774988375707960}
   m_Layer: 11
   m_Name: Attack1_3
   m_TagString: Untagged
@@ -694,8 +695,8 @@ MonoBehaviour:
   _damage: 15
   _deathAnim: 1
   _triggerHitAnimation: 1
-  _cameraShaker: {fileID: 0}
-  _shakerTriggerType: 0
+  _cameraShaker: {fileID: 114774988375707960}
+  _shakerTriggerType: 1
   _pushForce: {x: 100, y: 0}
   _physicsDuration: 0.3
 --- !u!114 &114231486517972620
@@ -926,6 +927,72 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 0
   _duration: 0.2
+--- !u!114 &114774988375707960
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1878129249527606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5431f7d6213787340af0ca35632c5a0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animX:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.10403822
+      value: -1.547296
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  _animY:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.1767256
+      value: 0.7752287
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.5782341
+      value: -0.33610797
+      inSlope: 0.24413814
+      outSlope: 0.24413814
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  _duration: 0.5
 --- !u!114 &114825490301319544
 MonoBehaviour:
   m_ObjectHideFlags: 1
