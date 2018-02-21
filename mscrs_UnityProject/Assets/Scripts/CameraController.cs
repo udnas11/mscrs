@@ -9,6 +9,7 @@ using UnityRandom = UnityEngine.Random;
 public class CameraController : Singleton<CameraController>
 {
     #region public serialised vars
+	float a;
     #endregion
 
 
