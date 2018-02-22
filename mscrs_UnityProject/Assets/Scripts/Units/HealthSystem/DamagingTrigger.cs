@@ -28,6 +28,8 @@ public class DamagingTrigger : MonoBehaviour
     [SerializeField]
     int _damage;
     [SerializeField]
+    bool _canCrit;
+    [SerializeField]
     int _deathAnim;
     [SerializeField]
     bool _triggerHitAnimation;
@@ -36,6 +38,14 @@ public class DamagingTrigger : MonoBehaviour
     CameraShaker _cameraShaker;
     [SerializeField]
     EShakeTriggerOptions _shakerTriggerType;
+
+    [SerializeField, Header("Freeze")]
+    bool _shouldFreeze;
+    [SerializeField]
+    float _freezeDuration;
+
+    [SerializeField, Header("Sparks")]
+    Vector2 _sparksOffset;
     #endregion
 
 
@@ -53,6 +63,20 @@ public class DamagingTrigger : MonoBehaviour
         if (_shakerTriggerType == EShakeTriggerOptions.OnHitOnly && _cameraShaker != null)
             _cameraShaker.Apply();
 
+        int dmg = _damage;
+        if (_canCrit)
+        {
+            GenericSettingsSO genericSettings = AssetDatabaseSO.Instance.GenericSettings;
+            if (UnityRandom.Range(0f, 1f) <= genericSettings.CritChance)
+            {
+                dmg = Mathf.FloorToInt(dmg * genericSettings.CritMultiplier);
+                SlowMoController.Instance.ApplyCritSlowmo();
+                Vector3 sparkPos = transform.position;
+                sparkPos.x += _sparksOffset.x * transform.lossyScale.x;
+                sparkPos.y += _sparksOffset.y;
+                Instantiate(AssetDatabaseSO.Instance.SparksPrefab, sparkPos, Quaternion.identity);
+            }
+        }
         receiver.TakeDamage(_damage, _deathAnim, _triggerHitAnimation);
     }
     #endregion
@@ -67,6 +91,9 @@ public class DamagingTrigger : MonoBehaviour
     {
         if (_shakerTriggerType == EShakeTriggerOptions.OnEnable && _cameraShaker != null)
             _cameraShaker.Apply();
+
+        if (_shouldFreeze)
+            SlowMoController.Instance.ApplyFreeze(_freezeDuration);
     }
 
     private void OnTriggerEnter2D(Collider2D receiverTrigger)
@@ -81,6 +108,11 @@ public class DamagingTrigger : MonoBehaviour
         {
             OnProcessDamage(receiverTarget);
         }
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.DrawSphere(transform.position + (Vector3)_sparksOffset, 0.01f);
     }
     #endregion
 }

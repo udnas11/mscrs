@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.Assertions;
 using UnityRandom = UnityEngine.Random;
 
-public class SlowMoController : MonoBehaviour
+public class SlowMoController : Singleton<SlowMoController>
 {
     #region public serialised vars
     [SerializeField]
@@ -15,15 +15,54 @@ public class SlowMoController : MonoBehaviour
 
 
     #region private protected vars
-    bool _slowMo = false;
+    bool _slowMoDebug = false;
+    float _slowMoAccumulated = 1f;
     #endregion
 
 
     #region pub methods
+    public void ApplyCritSlowmo()
+    {
+        GenericSettingsSO genericSettings = AssetDatabaseSO.Instance.GenericSettings;
+        ApplySlowmo(genericSettings.CritSlowmotionCurve, genericSettings.CritSlowmotionDuration);
+    }
+
+    public void ApplySlowmo(AnimationCurve curve, float duration)
+    {
+        StartCoroutine(IApplySlowmo(curve, duration));
+    }
+
+    public void ApplyFreeze(float duration)
+    {
+        StartCoroutine(IApplyFreeze(duration));
+    }
     #endregion
 
 
     #region private protected methods
+    IEnumerator IApplySlowmo(AnimationCurve curve, float duration)
+    {
+        float startTime = Time.unscaledTime;
+        float endTime = startTime + duration;
+        float t;
+        while (Time.unscaledTime < endTime)
+        {
+            t = Mathf.InverseLerp(startTime, endTime, Time.unscaledTime);
+            _slowMoAccumulated *= curve.Evaluate(t);
+            yield return null;
+        }
+    }
+
+    IEnumerator IApplyFreeze(float duration)
+    {
+        float startTime = Time.unscaledTime;
+        float endTime = startTime + duration;
+        while (Time.unscaledTime < endTime)
+        {
+            _slowMoAccumulated = 0f;
+            yield return null;
+        }
+    }
     #endregion
 
 
@@ -32,13 +71,23 @@ public class SlowMoController : MonoBehaviour
 
 
     #region mono events
+    private void Awake()
+    {
+        RegisterSingleton(this);
+    }
+
     private void Update()
     {
+        Time.timeScale = _slowMoDebug ? 0.2f : _slowMoAccumulated;
+        _slowMoAccumulated = 1f;
+
         if (Input.GetKeyDown(_slowMoButton))
-        {
-            _slowMo = !_slowMo;
-            Time.timeScale = _slowMo ? 0.2f : 1f;
-        }
+            _slowMoDebug = !_slowMoDebug;
+    }
+
+    private void OnGUI()
+    {
+        GUI.Label(new Rect(Screen.width - 150, Screen.height - 25, 150, 25), "Time scale: " + Time.timeScale);
     }
     #endregion
 }

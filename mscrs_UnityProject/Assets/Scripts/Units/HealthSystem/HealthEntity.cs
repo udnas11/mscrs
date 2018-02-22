@@ -17,7 +17,7 @@ public class HealthEntity : MonoBehaviour
     [SerializeField]
     int _maxHP;
     [SerializeField]
-    Collider2D[] _receiverColliders;
+    DamageReceiver[] _receivers;
     #endregion
 
 

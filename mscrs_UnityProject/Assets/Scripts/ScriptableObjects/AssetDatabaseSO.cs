@@ -11,7 +11,9 @@ public class AssetDatabaseSO : ScriptableObject
 {
 
     public PlayerController PlayerPrefab;
+    public GameObject SparksPrefab;
     public CameraSettingsSO CameraSettings;
+    public GenericSettingsSO GenericSettings;
 
 
     #region pseudo singleton

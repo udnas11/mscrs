@@ -13,4 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerPrefab: {fileID: 114626945109260866, guid: 409511605f5899342bbdb1258ae65e3c,
     type: 2}
+  SparksPrefab: {fileID: 1616589180969650, guid: edf22abf8eb79cd46b8d56db562e8600,
+    type: 2}
   CameraSettings: {fileID: 11400000, guid: d54c7929812c31744a8264448dd78aa5, type: 2}
+  GenericSettings: {fileID: 11400000, guid: 3fedade749da2c8429987aacde7df701, type: 2}

@@ -696,10 +696,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaskDamageType: -2
   _damage: 15
+  _canCrit: 1
   _deathAnim: 1
   _triggerHitAnimation: 1
   _cameraShaker: {fileID: 114774988375707960}
   _shakerTriggerType: 1
+  _shouldFreeze: 1
+  _freezeDuration: 0.2
+  _sparksOffset: {x: 0.4, y: 0}
   _pushForce: {x: 100, y: 0}
   _physicsDuration: 0.3
 --- !u!114 &114231486517972620
@@ -715,10 +719,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaskDamageType: -2
   _damage: 25
+  _canCrit: 1
   _deathAnim: 1
   _triggerHitAnimation: 1
   _cameraShaker: {fileID: 114621111376643664}
   _shakerTriggerType: 1
+  _shouldFreeze: 0
+  _freezeDuration: 0
+  _sparksOffset: {x: 0.35, y: -0.18}
   _pushForce: {x: 5, y: 25}
   _physicsDuration: 0.2
 --- !u!114 &114260997796308458
@@ -734,10 +742,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaskDamageType: -2
   _damage: 10
+  _canCrit: 1
   _deathAnim: 0
   _triggerHitAnimation: 0
   _cameraShaker: {fileID: 0}
   _shakerTriggerType: 0
+  _shouldFreeze: 0
+  _freezeDuration: 0
+  _sparksOffset: {x: 0.47, y: -0.03}
   _pushForce: {x: 40, y: 0}
   _physicsDuration: 0.5
 --- !u!114 &114309892797954474
@@ -819,10 +831,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaskDamageType: -2
   _damage: 15
+  _canCrit: 1
   _deathAnim: 0
   _triggerHitAnimation: 0
   _cameraShaker: {fileID: 114687272572757306}
   _shakerTriggerType: 1
+  _shouldFreeze: 0
+  _freezeDuration: 0
+  _sparksOffset: {x: 0.22, y: -0.24}
   _pushForce: {x: 10, y: 15}
   _physicsDuration: 0.2
 --- !u!114 &114341167585377288
@@ -928,10 +944,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaskDamageType: -2
   _damage: 8
+  _canCrit: 1
   _deathAnim: 0
   _triggerHitAnimation: 0
   _cameraShaker: {fileID: 114309892797954474}
   _shakerTriggerType: 1
+  _shouldFreeze: 0
+  _freezeDuration: 0
+  _sparksOffset: {x: 0.45, y: 0.04}
   _pushForce: {x: 10, y: 10}
   _physicsDuration: 0.2
 --- !u!114 &114515010369384546
@@ -1006,8 +1026,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxHP: 100
-  _receiverColliders:
-  - {fileID: 58322926926371274}
+  _receivers:
+  - {fileID: 114950405042466896}
 --- !u!114 &114621111376643664
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1261,10 +1281,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaskDamageType: -2
   _damage: 10
+  _canCrit: 1
   _deathAnim: 0
   _triggerHitAnimation: 0
   _cameraShaker: {fileID: 114515010369384546}
   _shakerTriggerType: 1
+  _shouldFreeze: 0
+  _freezeDuration: 0
+  _sparksOffset: {x: 0.43, y: 0}
   _pushForce: {x: 0, y: 40}
   _physicsDuration: 0.5
 --- !u!114 &114894123962370206
@@ -1291,10 +1315,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaskDamageType: -2
   _damage: 20
+  _canCrit: 1
   _deathAnim: 1
   _triggerHitAnimation: 1
   _cameraShaker: {fileID: 114341167585377288}
   _shakerTriggerType: 1
+  _shouldFreeze: 0
+  _freezeDuration: 0
+  _sparksOffset: {x: 0.66, y: 0}
   _pushForce: {x: 70, y: 20}
   _physicsDuration: 0.4
 --- !u!114 &114950405042466896
@@ -1383,10 +1411,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaskDamageType: -2
   _damage: 15
+  _canCrit: 1
   _deathAnim: 0
   _triggerHitAnimation: 1
   _cameraShaker: {fileID: 114952379819708352}
   _shakerTriggerType: 1
+  _shouldFreeze: 0
+  _freezeDuration: 0
+  _sparksOffset: {x: 0.32, y: -0.47}
   _pushForce: {x: 25, y: 25}
   _physicsDuration: 0.5
 --- !u!212 &212558443439516754
