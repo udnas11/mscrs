@@ -147,7 +147,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_GenerateMotionCurves: 0
   m_Events:
-  - time: 0.22222222
+  - time: 0.11111111
     functionName: OnAnimEventComboAvailable
     data: 
     objectReferenceParameter: {fileID: 0}

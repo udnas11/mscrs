@@ -36,6 +36,7 @@ GameObject:
   - component: {fileID: 4992764165361000}
   - component: {fileID: 114825490301319544}
   - component: {fileID: 61040637053072222}
+  - component: {fileID: 114515010369384546}
   m_Layer: 11
   m_Name: Attack_Charged_Heavy_1
   m_TagString: Untagged
@@ -93,6 +94,7 @@ GameObject:
   - component: {fileID: 4296050131820454}
   - component: {fileID: 114903239349958100}
   - component: {fileID: 61172921486979506}
+  - component: {fileID: 114341167585377288}
   m_Layer: 11
   m_Name: Attack_Charged_Heavy_2
   m_TagString: Untagged
@@ -128,6 +130,7 @@ GameObject:
   - component: {fileID: 4345194325126512}
   - component: {fileID: 114474905649628520}
   - component: {fileID: 61447923987153654}
+  - component: {fileID: 114309892797954474}
   m_Layer: 11
   m_Name: Attack1
   m_TagString: Untagged
@@ -737,6 +740,72 @@ MonoBehaviour:
   _shakerTriggerType: 0
   _pushForce: {x: 40, y: 0}
   _physicsDuration: 0.5
+--- !u!114 &114309892797954474
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1537551606183236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5431f7d6213787340af0ca35632c5a0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animX:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.4640523
+      value: 0.05507692
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  _animY:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0.074157715
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.3465028
+      value: 0.019655835
+      inSlope: -0.10278076
+      outSlope: -0.10278076
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.6571643
+      value: 0.0769518
+      inSlope: -0.033164397
+      outSlope: -0.033164397
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  _duration: 0.2
 --- !u!114 &114328337454597648
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -756,6 +825,96 @@ MonoBehaviour:
   _shakerTriggerType: 1
   _pushForce: {x: 10, y: 15}
   _physicsDuration: 0.2
+--- !u!114 &114341167585377288
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1330649919086590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5431f7d6213787340af0ca35632c5a0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animX:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: -0.020614624
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.14348322
+      value: -0.19844562
+      inSlope: 0.022668391
+      outSlope: 0.022668391
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.34609726
+      value: 0.20225027
+      inSlope: -0.021215528
+      outSlope: -0.021215528
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.5282199
+      value: -0.19185358
+      inSlope: -0.49769878
+      outSlope: -0.49769878
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.7240702
+      value: 0.18283616
+      inSlope: 0.8869916
+      outSlope: 0.8869916
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.99798584
+      value: 0.047058105
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  _animY:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: -0.003921509
+      value: -0.033843994
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.16825731
+      value: 0.8677102
+      inSlope: -0.001961538
+      outSlope: -0.001961538
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.40067625
+      value: -0.5502495
+      inSlope: -0.042598695
+      outSlope: -0.042598695
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.67417693
+      value: 0.82127947
+      inSlope: 0.93024224
+      outSlope: 0.93024224
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.9876709
+      value: -0.10861206
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  _duration: 0.2
 --- !u!114 &114474905649628520
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -771,10 +930,70 @@ MonoBehaviour:
   _damage: 8
   _deathAnim: 0
   _triggerHitAnimation: 0
-  _cameraShaker: {fileID: 0}
-  _shakerTriggerType: 0
+  _cameraShaker: {fileID: 114309892797954474}
+  _shakerTriggerType: 1
   _pushForce: {x: 10, y: 10}
   _physicsDuration: 0.2
+--- !u!114 &114515010369384546
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1063327308897904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5431f7d6213787340af0ca35632c5a0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animX:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: -0.0013084412
+      value: -0.010772705
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.99871826
+      value: 0.010147095
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  _animY:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0.0076904297
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.26218998
+      value: -0.060464893
+      inSlope: -0.011404045
+      outSlope: -0.011404045
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.72809154
+      value: 0.06279963
+      inSlope: 0.019320287
+      outSlope: 0.019320287
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  _duration: 0.4
 --- !u!114 &114600008291051498
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -888,8 +1107,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 2
-      time: 0
-      value: 0
+      time: -0.0013084412
+      value: 0.00030517578
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -912,10 +1131,22 @@ MonoBehaviour:
       outSlope: 0
       tangentMode: 0
     - serializedVersion: 2
-      time: 0.02332817
-      value: -0.99654853
+      time: 0.24555336
+      value: 0.04614556
       inSlope: 0
       outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.40134335
+      value: -0.023206715
+      inSlope: -0.07925555
+      outSlope: -0.07925555
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.58371764
+      value: 0.04531847
+      inSlope: 0.05794689
+      outSlope: 0.05794689
       tangentMode: 0
     - serializedVersion: 2
       time: 1
@@ -948,10 +1179,28 @@ MonoBehaviour:
       outSlope: 0
       tangentMode: 0
     - serializedVersion: 2
-      time: 0.10403822
-      value: -1.547296
+      time: 0.21907423
+      value: -0.22374868
       inSlope: 0
       outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.39363113
+      value: 0.15063538
+      inSlope: 0.34168363
+      outSlope: 0.34168363
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.5736111
+      value: -0.22017981
+      inSlope: -0.30487776
+      outSlope: -0.30487776
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.7083557
+      value: 0.14080383
+      inSlope: 0.6853044
+      outSlope: 0.6853044
       tangentMode: 0
     - serializedVersion: 2
       time: 1
@@ -978,10 +1227,16 @@ MonoBehaviour:
       outSlope: 0
       tangentMode: 0
     - serializedVersion: 2
-      time: 0.5782341
-      value: -0.33610797
+      time: 0.37562788
+      value: -0.48567462
       inSlope: 0.24413814
       outSlope: 0.24413814
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.63292825
+      value: 0.88983893
+      inSlope: -0.12982637
+      outSlope: -0.12982637
       tangentMode: 0
     - serializedVersion: 2
       time: 1
@@ -992,7 +1247,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
-  _duration: 0.5
+  _duration: 0.2
 --- !u!114 &114825490301319544
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1008,8 +1263,8 @@ MonoBehaviour:
   _damage: 10
   _deathAnim: 0
   _triggerHitAnimation: 0
-  _cameraShaker: {fileID: 0}
-  _shakerTriggerType: 0
+  _cameraShaker: {fileID: 114515010369384546}
+  _shakerTriggerType: 1
   _pushForce: {x: 0, y: 40}
   _physicsDuration: 0.5
 --- !u!114 &114894123962370206
@@ -1038,10 +1293,10 @@ MonoBehaviour:
   _damage: 20
   _deathAnim: 1
   _triggerHitAnimation: 1
-  _cameraShaker: {fileID: 0}
-  _shakerTriggerType: 0
+  _cameraShaker: {fileID: 114341167585377288}
+  _shakerTriggerType: 1
   _pushForce: {x: 70, y: 20}
-  _physicsDuration: 0.3
+  _physicsDuration: 0.4
 --- !u!114 &114950405042466896
 MonoBehaviour:
   m_ObjectHideFlags: 1
