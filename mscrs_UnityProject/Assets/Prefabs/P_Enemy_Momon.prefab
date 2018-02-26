@@ -311,8 +311,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaskDamageType: 1
   _damage: 10
+  _canCrit: 0
   _deathAnim: 0
   _triggerHitAnimation: 0
+  _cameraShaker: {fileID: 0}
+  _shakerTriggerType: 0
+  _shouldFreeze: 0
+  _freezeDuration: 0
+  _sparksOffset: {x: 0, y: 0}
   _pushForce: {x: 20, y: 0}
   _physicsDuration: 0.2
 --- !u!114 &114578153325178550
@@ -357,8 +363,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxHP: 50
-  _receiverColliders:
-  - {fileID: 58292250164452724}
+  _receivers: []
 --- !u!114 &114951176426361420
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -5,7 +5,7 @@ AnimationClip:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: A_Player_AttackLight_03
+  m_Name: A_Player_AttackChargedLight
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -27,27 +27,21 @@ AnimationClip:
         tangentMode: 136
       - serializedVersion: 2
         time: 0.16666667
-        value: 1.2
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-      - serializedVersion: 2
-        time: 0.22222222
-        value: 1
-        inSlope: 0
-        outSlope: 0
+        value: 1.5
+        inSlope: 4.319999
+        outSlope: 4.319999
         tangentMode: 136
       - serializedVersion: 2
         time: 0.2777778
-        value: 2.2
+        value: 2.5
         inSlope: 0
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
         time: 0.3888889
         value: 1
-        inSlope: -9.900001
-        outSlope: -9.900001
+        inSlope: -11.250001
+        outSlope: -11.250001
         tangentMode: 136
       - serializedVersion: 2
         time: 0.5
@@ -190,27 +184,21 @@ AnimationClip:
         tangentMode: 136
       - serializedVersion: 2
         time: 0.16666667
-        value: 1.2
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-      - serializedVersion: 2
-        time: 0.22222222
-        value: 1
-        inSlope: 0
-        outSlope: 0
+        value: 1.5
+        inSlope: 4.319999
+        outSlope: 4.319999
         tangentMode: 136
       - serializedVersion: 2
         time: 0.2777778
-        value: 2.2
+        value: 2.5
         inSlope: 0
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
         time: 0.3888889
         value: 1
-        inSlope: -9.900001
-        outSlope: -9.900001
+        inSlope: -11.250001
+        outSlope: -11.250001
         tangentMode: 136
       - serializedVersion: 2
         time: 0.5

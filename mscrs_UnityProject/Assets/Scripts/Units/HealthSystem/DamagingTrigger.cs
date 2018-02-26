@@ -60,6 +60,9 @@ public class DamagingTrigger : MonoBehaviour
     #region private protected methods
     virtual protected void OnProcessDamage(DamageReceiver receiver)
     {
+        if (_shouldFreeze)
+            SlowMoController.Instance.ApplyFreeze(_freezeDuration);
+
         if (_shakerTriggerType == EShakeTriggerOptions.OnHitOnly && _cameraShaker != null)
             _cameraShaker.Apply();
 
@@ -91,9 +94,6 @@ public class DamagingTrigger : MonoBehaviour
     {
         if (_shakerTriggerType == EShakeTriggerOptions.OnEnable && _cameraShaker != null)
             _cameraShaker.Apply();
-
-        if (_shouldFreeze)
-            SlowMoController.Instance.ApplyFreeze(_freezeDuration);
     }
 
     private void OnTriggerEnter2D(Collider2D receiverTrigger)

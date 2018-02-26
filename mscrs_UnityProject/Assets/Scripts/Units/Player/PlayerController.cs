@@ -113,6 +113,11 @@ public class PlayerController : MonoBehaviour
         _unitAnimator.Attack2();
     }
 
+    private void OnAttack1ChargedInput()
+    {
+        _unitAnimator.Attack1Charged();
+    }
+
     private void OnAttack2ChargedInput()
     {
         _unitAnimator.Attack2Charged();
@@ -167,8 +172,9 @@ public class PlayerController : MonoBehaviour
     {
         PlayerInputHandler.Instance.OnHorizontalChange += OnHorizontalInputChange;
         PlayerInputHandler.Instance.OnJump += OnJumpInput;
-        PlayerInputHandler.Instance.OnAttack += OnAttackInput;
-        PlayerInputHandler.Instance.OnAttack2Combo += OnAttack2Input;
+        PlayerInputHandler.Instance.OnAttack1 += OnAttackInput;
+        PlayerInputHandler.Instance.OnAttack2 += OnAttack2Input;
+        PlayerInputHandler.Instance.OnAttack1Charged += OnAttack1ChargedInput;
         PlayerInputHandler.Instance.OnAttack2Charged += OnAttack2ChargedInput;
         PlayerInputHandler.Instance.OnRoll += OnRollInput;
 
@@ -184,8 +190,8 @@ public class PlayerController : MonoBehaviour
     {
         PlayerInputHandler.Instance.OnHorizontalChange -= OnHorizontalInputChange;
         PlayerInputHandler.Instance.OnJump -= OnJumpInput;
-        PlayerInputHandler.Instance.OnAttack -= OnAttackInput;
-        PlayerInputHandler.Instance.OnAttack2Combo -= OnAttack2Input;
+        PlayerInputHandler.Instance.OnAttack1 -= OnAttackInput;
+        PlayerInputHandler.Instance.OnAttack2 -= OnAttack2Input;
         PlayerInputHandler.Instance.OnAttack2Charged -= OnAttack2ChargedInput;
         PlayerInputHandler.Instance.OnRoll -= OnRollInput;
 

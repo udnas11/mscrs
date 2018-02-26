@@ -47,6 +47,11 @@ public class PlayerAnimatorController : BaseAnimatorController
         TriggerOnce("doChargedHeavy");
     }
 
+    public virtual void Attack1Charged()
+    {
+        TriggerOnce("doChargedLight");
+    }
+
     public void Roll()
     {
         TriggerOnce("doRoll");

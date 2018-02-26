@@ -8,8 +8,9 @@ public class PlayerInputHandler : Singleton<PlayerInputHandler>
 {
     public event Action<float> OnHorizontalChange;
     public event Action OnJump;
-    public event Action OnAttack;
-    public event Action OnAttack2Combo;
+    public event Action OnAttack1;
+    public event Action OnAttack2;
+    public event Action OnAttack1Charged;
     public event Action OnAttack2Charged;
     public event Action OnRoll;
 
@@ -60,12 +61,42 @@ public class PlayerInputHandler : Singleton<PlayerInputHandler>
             if (OnJump != null)
                 OnJump();
         }
-        
+        /*
         if (Input.GetButtonDown("Attack1"))
         {
-            if (OnAttack != null)
-                OnAttack();
+            if (OnAttack1 != null)
+                OnAttack1();
+        }*/
+
+        ////
+
+        if (Input.GetButtonDown("Attack1"))
+        {
+            _buttonHoldTimes["Attack1"] = Time.time;
         }
+        if (Input.GetButton("Attack1"))
+        {
+            float time = Time.time - _buttonHoldTimes["Attack1"];
+            if (time > cHoldDuration && _buttonHoldActiveList.Contains("Attack1") == false)
+            {
+                _buttonHoldActiveList.Add("Attack1");
+                if (OnAttack1Charged != null)
+                    OnAttack1Charged();
+            }
+        }
+        if (Input.GetButtonUp("Attack1"))
+        {
+            _buttonHoldActiveList.Remove("Attack1");
+
+            float time = Time.time - _buttonHoldTimes["Attack1"];
+            if (time < cHoldDuration)
+            {
+                if (OnAttack1 != null)
+                    OnAttack1();
+            }
+        }
+
+        /////
 
         if (Input.GetButtonDown("Attack2"))
         {
@@ -88,10 +119,12 @@ public class PlayerInputHandler : Singleton<PlayerInputHandler>
             float time = Time.time - _buttonHoldTimes["Attack2"];
             if (time < cHoldDuration)
             {
-                if (OnAttack2Combo != null)
-                    OnAttack2Combo();
+                if (OnAttack2 != null)
+                    OnAttack2();
             }
         }
+
+        /////
 
         if (Input.GetButtonDown("Roll"))
         {
