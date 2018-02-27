@@ -268,6 +268,13 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
+  - time: 0.59090906
+    functionName: DecreaseStamina
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 10
+    intParameter: 0
+    messageOptions: 0
   - time: 0.6818182
     functionName: OnAnimEventComboUnavailable
     data: 

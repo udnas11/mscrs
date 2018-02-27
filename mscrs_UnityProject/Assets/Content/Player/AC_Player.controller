@@ -319,6 +319,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: doRoll
     m_EventTreshold: 0
+  - m_ConditionMode: 3
+    m_ConditionEvent: PlayerStamina
+    m_EventTreshold: 10
   m_DstStateMachine: {fileID: 1107288640574291082}
   m_DstState: {fileID: 0}
   m_Solo: 0
@@ -364,6 +367,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: doChargedLight
     m_EventTreshold: 0
+  - m_ConditionMode: 3
+    m_ConditionEvent: PlayerStamina
+    m_EventTreshold: 10
   m_DstStateMachine: {fileID: 1107952431121093244}
   m_DstState: {fileID: 0}
   m_Solo: 0
@@ -412,6 +418,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: doAttack2
     m_EventTreshold: 0
+  - m_ConditionMode: 3
+    m_ConditionEvent: PlayerStamina
+    m_EventTreshold: 10
   m_DstStateMachine: {fileID: 1107866482983952808}
   m_DstState: {fileID: 0}
   m_Solo: 0
@@ -439,6 +448,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: doAttack
     m_EventTreshold: 0
+  - m_ConditionMode: 3
+    m_ConditionEvent: PlayerStamina
+    m_EventTreshold: 10
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102450580286176640}
   m_Solo: 0
@@ -580,6 +592,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: doAttack2
     m_EventTreshold: 0
+  - m_ConditionMode: 3
+    m_ConditionEvent: PlayerStamina
+    m_EventTreshold: 10
   m_DstStateMachine: {fileID: 1107866482983952808}
   m_DstState: {fileID: 0}
   m_Solo: 0
@@ -727,6 +742,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: doAttack2
     m_EventTreshold: 0
+  - m_ConditionMode: 3
+    m_ConditionEvent: PlayerStamina
+    m_EventTreshold: 10
   m_DstStateMachine: {fileID: 1107866482983952808}
   m_DstState: {fileID: 0}
   m_Solo: 0
@@ -751,6 +769,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: doRoll
     m_EventTreshold: 0
+  - m_ConditionMode: 3
+    m_ConditionEvent: PlayerStamina
+    m_EventTreshold: 10
   m_DstStateMachine: {fileID: 1107288640574291082}
   m_DstState: {fileID: 0}
   m_Solo: 0
@@ -778,6 +799,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: doAttack
     m_EventTreshold: 0
+  - m_ConditionMode: 3
+    m_ConditionEvent: PlayerStamina
+    m_EventTreshold: 10
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102450580286176640}
   m_Solo: 0
@@ -853,6 +877,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: doAttack2
     m_EventTreshold: 0
+  - m_ConditionMode: 3
+    m_ConditionEvent: PlayerStamina
+    m_EventTreshold: 10
   m_DstStateMachine: {fileID: 1107265858161023322}
   m_DstState: {fileID: 0}
   m_Solo: 0
@@ -877,6 +904,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: doAttack2
     m_EventTreshold: 0
+  - m_ConditionMode: 3
+    m_ConditionEvent: PlayerStamina
+    m_EventTreshold: 10
   m_DstStateMachine: {fileID: 1107265858161023322}
   m_DstState: {fileID: 0}
   m_Solo: 0
@@ -1042,6 +1072,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: doRoll
     m_EventTreshold: 0
+  - m_ConditionMode: 3
+    m_ConditionEvent: PlayerStamina
+    m_EventTreshold: 10
   m_DstStateMachine: {fileID: 1107288640574291082}
   m_DstState: {fileID: 0}
   m_Solo: 0
@@ -1066,6 +1099,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: doAttack2
     m_EventTreshold: 0
+  - m_ConditionMode: 3
+    m_ConditionEvent: PlayerStamina
+    m_EventTreshold: 10
   m_DstStateMachine: {fileID: 1107265858161023322}
   m_DstState: {fileID: 0}
   m_Solo: 0
@@ -1111,6 +1147,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: doRoll
     m_EventTreshold: 0
+  - m_ConditionMode: 3
+    m_ConditionEvent: PlayerStamina
+    m_EventTreshold: 10
   m_DstStateMachine: {fileID: 1107288640574291082}
   m_DstState: {fileID: 0}
   m_Solo: 0
@@ -1135,6 +1174,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: doRoll
     m_EventTreshold: 0
+  - m_ConditionMode: 3
+    m_ConditionEvent: PlayerStamina
+    m_EventTreshold: 10
   m_DstStateMachine: {fileID: 1107288640574291082}
   m_DstState: {fileID: 0}
   m_Solo: 0
@@ -1234,6 +1276,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: doChargedLight
     m_EventTreshold: 0
+  - m_ConditionMode: 3
+    m_ConditionEvent: PlayerStamina
+    m_EventTreshold: 10
   m_DstStateMachine: {fileID: 1107952431121093244}
   m_DstState: {fileID: 0}
   m_Solo: 0
@@ -1258,6 +1303,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: doChargedLight
     m_EventTreshold: 0
+  - m_ConditionMode: 3
+    m_ConditionEvent: PlayerStamina
+    m_EventTreshold: 10
   m_DstStateMachine: {fileID: 1107952431121093244}
   m_DstState: {fileID: 0}
   m_Solo: 0
@@ -1309,6 +1357,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: doRoll
     m_EventTreshold: 0
+  - m_ConditionMode: 3
+    m_ConditionEvent: PlayerStamina
+    m_EventTreshold: 10
   m_DstStateMachine: {fileID: 1107288640574291082}
   m_DstState: {fileID: 0}
   m_Solo: 0
@@ -1750,6 +1801,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: doAttack
     m_EventTreshold: 0
+  - m_ConditionMode: 3
+    m_ConditionEvent: PlayerStamina
+    m_EventTreshold: 10
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102450580286176640}
   m_Solo: 0
@@ -2697,11 +2751,11 @@ AnimatorStateMachine:
     m_Position: {x: 312, y: -36, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102450580286176640}
-    m_Position: {x: 900, y: 420, z: 0}
+    m_Position: {x: 960, y: 444, z: 0}
   m_ChildStateMachines:
   - serializedVersion: 1
     m_StateMachine: {fileID: 1107288640574291082}
-    m_Position: {x: -12, y: 132, z: 0}
+    m_Position: {x: -12, y: 144, z: 0}
   - serializedVersion: 1
     m_StateMachine: {fileID: 1107374201250093242}
     m_Position: {x: 576, y: 336, z: 0}
@@ -2713,7 +2767,7 @@ AnimatorStateMachine:
     m_Position: {x: -48, y: 204, z: 0}
   - serializedVersion: 1
     m_StateMachine: {fileID: 1107866482983952808}
-    m_Position: {x: 888, y: 336, z: 0}
+    m_Position: {x: 960, y: 300, z: 0}
   - serializedVersion: 1
     m_StateMachine: {fileID: 1107265858161023322}
     m_Position: {x: -48, y: 264, z: 0}
