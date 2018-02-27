@@ -11,23 +11,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e0ed99c1a6a2b54c82f32d5b148451c, type: 3}
   m_Name: GenericSettings
   m_EditorClassIdentifier: 
-  CritChance: 0.2
+  CritChance: 0.351
   CritMultiplier: 3
   CritSlowmotionCurve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 2
-      time: 0
-      value: 0.5
+      time: -0.0022277832
+      value: 0.20075989
       inSlope: 0
-      outSlope: -3.0088954
+      outSlope: -8.032284
       tangentMode: 65
     - serializedVersion: 2
-      time: 0.09953343
-      value: 0.20051432
+      time: 0.11429386
+      value: -0.735175
       inSlope: 0
       outSlope: 0
       tangentMode: 0
+    - serializedVersion: 2
+      time: 0.75114167
+      value: 0.71441424
+      inSlope: 2.8941035
+      outSlope: 2.8941035
+      tangentMode: 1
     - serializedVersion: 2
       time: 1
       value: 1
@@ -37,4 +43,4 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
-  CritSlowmotionDuration: 0.5
+  CritSlowmotionDuration: 0.3
