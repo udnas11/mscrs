@@ -29,10 +29,24 @@ public class SceneController : Singleton<SceneController>
 
 
     #region private protected vars
+    const string c_ScreenUISceneName = "ScreenUI";
     #endregion
 
 
     #region pub methods
+    [ContextMenu("Restart Player UI")]
+    public void RestartPlayerUI()
+    {
+        bool _loaded = false;
+        for (int i = 0; i < SceneManager.sceneCount && !_loaded; i++)
+            if (SceneManager.GetSceneAt(i).name == c_ScreenUISceneName)
+                _loaded = true;
+
+        if (_loaded)
+            SceneManager.UnloadSceneAsync(c_ScreenUISceneName);
+        SceneManager.LoadScene(c_ScreenUISceneName, LoadSceneMode.Additive);
+    }
+
     [ContextMenu("Respawn Player")]
     public void RespawnPlayer()
     {
@@ -48,6 +62,8 @@ public class SceneController : Singleton<SceneController>
         PlayerControllerInstance = Instantiate(AssetDatabaseSO.Instance.PlayerPrefab, _playerSpawnPos.position, Quaternion.identity) as PlayerController;
         PlayerControllerInstance.gameObject.SetActive(true);
         PlayerControllerInstance.HealthEntity.OnDeath += OnPlayerDeath;
+
+        RestartPlayerUI();
 
         if (OnPlayerSpawned != null)
             OnPlayerSpawned(PlayerControllerInstance);

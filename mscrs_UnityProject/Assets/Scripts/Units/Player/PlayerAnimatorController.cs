@@ -56,6 +56,11 @@ public class PlayerAnimatorController : BaseAnimatorController
     {
         TriggerOnce("doRoll");
     }
+
+    public void SetStamina(float newValue)
+    {
+        _animator.SetFloat("PlayerStamina", newValue);
+    }
     #endregion
 
 

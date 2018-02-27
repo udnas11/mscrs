@@ -8,7 +8,12 @@ using UnityRandom = UnityEngine.Random;
 
 public class PlayerController : MonoBehaviour
 {
+
+    public event Action<float, float> OnStaminaChanged;
+
     #region public serialised vars
+    [SerializeField]
+    float _staminaRegenPerSecond;
     [SerializeField]
     Collider2D _groundTrigger;
     [SerializeField]
@@ -40,6 +45,7 @@ public class PlayerController : MonoBehaviour
     int _groundTriggersActive = 0;
     bool _dead;
     float _physicsPenaltyOverTimestamp;
+    float _stamina = 100f;
 
     Coroutine _physicsInhibitorCoroutine;
     #endregion
@@ -51,10 +57,28 @@ public class PlayerController : MonoBehaviour
     public bool IsDead { get { return _dead; } }
     public HealthEntity HealthEntity { get { return _healthEntity; } }
     public Vector2 VelocityRigidbody { get { return _rigidBody2d.velocity; } }
+    public float Stamina { get { return _stamina; } }
+
+    public void DecreaseStamina(float cost)
+    {
+        SetStamina(_stamina - cost);
+    }
     #endregion
 
 
     #region private protected methods
+    void SetStamina(float newVal)
+    {
+        float newStamina = Mathf.Clamp(newVal, 0f, 100f);
+        if (newStamina == _stamina)
+            return;
+
+        _stamina = newStamina;
+        _unitAnimator.SetStamina(_stamina);
+        if (OnStaminaChanged != null)
+            OnStaminaChanged(_stamina, 100f);
+    }
+
     bool RaycastIsGroundBeneath()
     {
         RaycastHit2D hit = Physics2D.Raycast(this.transform.position, Vector2.down, _groundRaycastDistance, LayerMask.GetMask("Ground"));
@@ -219,6 +243,11 @@ public class PlayerController : MonoBehaviour
     {
         _groundTriggersActive--;
         _unitAnimator.SetInAir(InAir);
+    }
+
+    private void Update()
+    {
+        SetStamina(_stamina + _staminaRegenPerSecond * Time.deltaTime);
     }
 
     private void FixedUpdate()
