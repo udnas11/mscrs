@@ -61,6 +61,11 @@ public class PlayerAnimatorController : BaseAnimatorController
     {
         _animator.SetFloat("PlayerStamina", newValue);
     }
+
+    public void SetShouldStopRun(bool newValue)
+    {
+        _animator.SetBool("shouldStopRun", newValue);
+    }
     #endregion
 
 
@@ -104,14 +109,5 @@ public class PlayerAnimatorController : BaseAnimatorController
 
 
     #region mono events
-    /*
-    private void OnGUI()
-    {
-        string statesOn = "Active phases: ";
-        foreach (var pair in _phaseStates)
-            if (pair.Value)
-                statesOn += pair.Key.ToString() + " ";
-        GUI.Label(new Rect(0, Screen.height-20, 300, 20), statesOn);
-    }*/
     #endregion
 }

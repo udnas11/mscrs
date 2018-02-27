@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
 
 
     #region private protected vars
-    PlayerAnimatorController _unitAnimator;
+    PlayerAnimatorController _playerAnimator;
     Rigidbody2D _rigidBody2d;
     SpriteRenderer _spriteRenderer;
     HealthEntity _healthEntity;
@@ -46,6 +46,7 @@ public class PlayerController : MonoBehaviour
     bool _dead;
     float _physicsPenaltyOverTimestamp;
     float _stamina = 100f;
+    float _startRunTime;
 
     Coroutine _physicsInhibitorCoroutine;
     #endregion
@@ -74,7 +75,7 @@ public class PlayerController : MonoBehaviour
             return;
 
         _stamina = newStamina;
-        _unitAnimator.SetStamina(_stamina);
+        _playerAnimator.SetStamina(_stamina);
         if (OnStaminaChanged != null)
             OnStaminaChanged(_stamina, 100f);
     }
@@ -88,7 +89,7 @@ public class PlayerController : MonoBehaviour
     
     bool GetIsFlipAvailable()
     {
-        bool result = _unitAnimator.GetPhaseState(BaseAnimatorController.EAnimationPhase.Roll) || _unitAnimator.GetPhaseState(BaseAnimatorController.EAnimationPhase.Attacking);
+        bool result = _playerAnimator.GetPhaseState(BaseAnimatorController.EAnimationPhase.Roll) || _playerAnimator.GetPhaseState(BaseAnimatorController.EAnimationPhase.Attacking);
         return !result;
     }
 
@@ -110,7 +111,12 @@ public class PlayerController : MonoBehaviour
     #region events
     private void OnHorizontalInputChange(float horizontal)
     {
-        _unitAnimator.SetRunning(horizontal != 0f);
+        if (horizontal != 0f)
+            _startRunTime = Time.time;
+        else
+            _playerAnimator.SetShouldStopRun(Time.time - _startRunTime > 0.25f);
+
+        _playerAnimator.SetRunning(horizontal != 0f);
         _horizontalInput = horizontal;
     }
 
@@ -118,47 +124,47 @@ public class PlayerController : MonoBehaviour
     {
         if (InAir == false)
         {
-            _unitAnimator.Jump();
+            _playerAnimator.Jump();
         }
         else
         {
             if (RaycastIsGroundBeneath())
-                _unitAnimator.Jump();
+                _playerAnimator.Jump();
         }
     }
 
     private void OnAttackInput(bool immediate)
     {
         if (InAir == immediate)
-            _unitAnimator.Attack();
+            _playerAnimator.Attack();
     }
 
     private void OnAttack2Input(bool immediate)
     {
         if (InAir == immediate)
-            _unitAnimator.Attack2();
+            _playerAnimator.Attack2();
     }
 
     private void OnAttack1ChargedInput()
     {
-        _unitAnimator.Attack1Charged();
+        _playerAnimator.Attack1Charged();
     }
 
     private void OnAttack2ChargedInput()
     {
-        _unitAnimator.Attack2Charged();
+        _playerAnimator.Attack2Charged();
     }
 
     private void OnRollInput()
     {
         if (InAir == false)
         {
-            _unitAnimator.Roll();
+            _playerAnimator.Roll();
         }
         else
         {
             if (RaycastIsGroundBeneath())
-                _unitAnimator.Roll();
+                _playerAnimator.Roll();
         }
     }
 
@@ -180,7 +186,7 @@ public class PlayerController : MonoBehaviour
     private void OnDying(int deathAnimationIndex)
     {
         _dead = true;
-        _unitAnimator.SetDead(true, deathAnimationIndex);
+        _playerAnimator.SetDead(true, deathAnimationIndex);
     }
     #endregion
 
@@ -188,7 +194,7 @@ public class PlayerController : MonoBehaviour
     #region mono events
     private void Awake()
     {
-        _unitAnimator = GetComponent<PlayerAnimatorController>();
+        _playerAnimator = GetComponent<PlayerAnimatorController>();
         _rigidBody2d = GetComponent<Rigidbody2D>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _healthEntity = GetComponent<HealthEntity>();
@@ -204,9 +210,9 @@ public class PlayerController : MonoBehaviour
         PlayerInputHandler.Instance.OnAttack2Charged += OnAttack2ChargedInput;
         PlayerInputHandler.Instance.OnRoll += OnRollInput;
 
-        _unitAnimator.OnAnimEventJumpApplyForceAction += OnAnimationCallbackJumpForce;
-        _unitAnimator.OnAnimEventAirdropInhibitPhysicsAction += OnAnimationCallbackInhibitPhysics;
-        _unitAnimator.OnAnimEventAirdropAction += OnAnimationCallbackAirdrop;
+        _playerAnimator.OnAnimEventJumpApplyForceAction += OnAnimationCallbackJumpForce;
+        _playerAnimator.OnAnimEventAirdropInhibitPhysicsAction += OnAnimationCallbackInhibitPhysics;
+        _playerAnimator.OnAnimEventAirdropAction += OnAnimationCallbackAirdrop;
 
         _healthEntity.OnDeath += OnDying;
         _healthEntity.OnPushForceReceived += OnPushForceReceived;
@@ -221,9 +227,9 @@ public class PlayerController : MonoBehaviour
         PlayerInputHandler.Instance.OnAttack2Charged -= OnAttack2ChargedInput;
         PlayerInputHandler.Instance.OnRoll -= OnRollInput;
 
-        _unitAnimator.OnAnimEventJumpApplyForceAction -= OnAnimationCallbackJumpForce;
-        _unitAnimator.OnAnimEventAirdropInhibitPhysicsAction -= OnAnimationCallbackInhibitPhysics;
-        _unitAnimator.OnAnimEventAirdropAction -= OnAnimationCallbackAirdrop;
+        _playerAnimator.OnAnimEventJumpApplyForceAction -= OnAnimationCallbackJumpForce;
+        _playerAnimator.OnAnimEventAirdropInhibitPhysicsAction -= OnAnimationCallbackInhibitPhysics;
+        _playerAnimator.OnAnimEventAirdropAction -= OnAnimationCallbackAirdrop;
 
         _healthEntity.OnDeath -= OnDying;
         _healthEntity.OnPushForceReceived -= OnPushForceReceived;
@@ -238,13 +244,13 @@ public class PlayerController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D trigger)
     {
         _groundTriggersActive++;
-        _unitAnimator.SetInAir(InAir);
+        _playerAnimator.SetInAir(InAir);
     }
 
     private void OnTriggerExit2D(Collider2D trigger)
     {
         _groundTriggersActive--;
-        _unitAnimator.SetInAir(InAir);
+        _playerAnimator.SetInAir(InAir);
     }
 
     private void Update()
