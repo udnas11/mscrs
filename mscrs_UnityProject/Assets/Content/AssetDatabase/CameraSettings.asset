@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Name: CameraSettings
   m_EditorClassIdentifier: 
   AddHeight: 0.75
-  LerpSpeed: 3
-  PlayerVelocityMultiplier: 1
-  PlayerVelocityLerpSpeed: 3
+  LerpSpeed: 3.85
+  PlayerVelocityMultiplier: -0.03
+  PlayerVelocityLerpSpeed: 2.21

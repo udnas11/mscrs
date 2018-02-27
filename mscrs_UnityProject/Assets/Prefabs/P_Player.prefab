@@ -702,10 +702,10 @@ MonoBehaviour:
   _cameraShaker: {fileID: 114774988375707960}
   _shakerTriggerType: 1
   _shouldFreeze: 1
-  _freezeDuration: 0.2
+  _freezeDuration: 0.03
   _sparksOffset: {x: 0.4, y: 0}
   _pushForce: {x: 100, y: 0}
-  _physicsDuration: 0.3
+  _physicsDuration: 0.5
 --- !u!114 &114231486517972620
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -724,8 +724,8 @@ MonoBehaviour:
   _triggerHitAnimation: 1
   _cameraShaker: {fileID: 114621111376643664}
   _shakerTriggerType: 1
-  _shouldFreeze: 0
-  _freezeDuration: 0
+  _shouldFreeze: 1
+  _freezeDuration: 0.05
   _sparksOffset: {x: 0.35, y: -0.18}
   _pushForce: {x: 5, y: 25}
   _physicsDuration: 0.2
@@ -744,11 +744,11 @@ MonoBehaviour:
   _damage: 10
   _canCrit: 1
   _deathAnim: 0
-  _triggerHitAnimation: 0
+  _triggerHitAnimation: 1
   _cameraShaker: {fileID: 0}
   _shakerTriggerType: 0
-  _shouldFreeze: 0
-  _freezeDuration: 0
+  _shouldFreeze: 1
+  _freezeDuration: 0.03
   _sparksOffset: {x: 0.47, y: -0.03}
   _pushForce: {x: 40, y: 0}
   _physicsDuration: 0.5
@@ -817,7 +817,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
-  _duration: 0.2
+  _duration: 0.1
 --- !u!114 &114328337454597648
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -836,11 +836,11 @@ MonoBehaviour:
   _triggerHitAnimation: 0
   _cameraShaker: {fileID: 114687272572757306}
   _shakerTriggerType: 1
-  _shouldFreeze: 0
-  _freezeDuration: 0
+  _shouldFreeze: 1
+  _freezeDuration: 0.04
   _sparksOffset: {x: 0.22, y: -0.24}
   _pushForce: {x: 10, y: 15}
-  _physicsDuration: 0.2
+  _physicsDuration: 0.3
 --- !u!114 &114341167585377288
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -911,7 +911,7 @@ MonoBehaviour:
       tangentMode: 0
     - serializedVersion: 2
       time: 0.40067625
-      value: -0.5502495
+      value: -0.5531792
       inSlope: -0.042598695
       outSlope: -0.042598695
       tangentMode: 0
@@ -948,9 +948,9 @@ MonoBehaviour:
   _deathAnim: 0
   _triggerHitAnimation: 0
   _cameraShaker: {fileID: 114309892797954474}
-  _shakerTriggerType: 1
-  _shouldFreeze: 0
-  _freezeDuration: 0
+  _shakerTriggerType: 2
+  _shouldFreeze: 1
+  _freezeDuration: 0.05
   _sparksOffset: {x: 0.45, y: 0.04}
   _pushForce: {x: 10, y: 10}
   _physicsDuration: 0.2
@@ -1151,16 +1151,28 @@ MonoBehaviour:
       outSlope: 0
       tangentMode: 0
     - serializedVersion: 2
-      time: 0.24555336
-      value: 0.04614556
+      time: 0.09730762
+      value: 0.38441804
       inSlope: 0
       outSlope: 0
       tangentMode: 0
     - serializedVersion: 2
-      time: 0.40134335
-      value: -0.023206715
+      time: 0.19513607
+      value: -0.3473034
       inSlope: -0.07925555
       outSlope: -0.07925555
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.31023306
+      value: 0.39480615
+      inSlope: 1.5181303
+      outSlope: 1.5181303
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.41286343
+      value: -0.38509637
+      inSlope: -2.0760298
+      outSlope: -2.0760298
       tangentMode: 0
     - serializedVersion: 2
       time: 0.58371764
@@ -1267,7 +1279,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
-  _duration: 0.2
+  _duration: 0.1
 --- !u!114 &114825490301319544
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1283,13 +1295,13 @@ MonoBehaviour:
   _damage: 10
   _canCrit: 1
   _deathAnim: 0
-  _triggerHitAnimation: 0
+  _triggerHitAnimation: 1
   _cameraShaker: {fileID: 114515010369384546}
   _shakerTriggerType: 1
-  _shouldFreeze: 0
-  _freezeDuration: 0
+  _shouldFreeze: 1
+  _freezeDuration: 0.05
   _sparksOffset: {x: 0.43, y: 0}
-  _pushForce: {x: 0, y: 40}
+  _pushForce: {x: 0, y: 30}
   _physicsDuration: 0.5
 --- !u!114 &114894123962370206
 MonoBehaviour:
@@ -1320,11 +1332,11 @@ MonoBehaviour:
   _triggerHitAnimation: 1
   _cameraShaker: {fileID: 114341167585377288}
   _shakerTriggerType: 1
-  _shouldFreeze: 0
-  _freezeDuration: 0
+  _shouldFreeze: 1
+  _freezeDuration: 0.08
   _sparksOffset: {x: 0.66, y: 0}
-  _pushForce: {x: 70, y: 20}
-  _physicsDuration: 0.4
+  _pushForce: {x: 100, y: 20}
+  _physicsDuration: 0.5
 --- !u!114 &114950405042466896
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1353,10 +1365,40 @@ MonoBehaviour:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 2
-      time: 0
-      value: 0
+      time: -0.0022277832
+      value: -0.017486572
       inSlope: 0
       outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.0946946
+      value: 0.06326485
+      inSlope: 0.009611249
+      outSlope: 0.009611249
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.20059231
+      value: -0.04881695
+      inSlope: -0.14938414
+      outSlope: -0.14938414
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.32129186
+      value: 0.06865336
+      inSlope: 0.32570213
+      outSlope: 0.32570213
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.41997308
+      value: -0.046014577
+      inSlope: -0.42669475
+      outSlope: -0.42669475
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.5619019
+      value: 0.07997443
+      inSlope: 0.32767653
+      outSlope: 0.32767653
       tangentMode: 0
     - serializedVersion: 2
       time: 1
@@ -1374,19 +1416,37 @@ MonoBehaviour:
       time: 0
       value: 0
       inSlope: 0
-      outSlope: -21.802061
+      outSlope: 19.57264
       tangentMode: 65
     - serializedVersion: 2
-      time: 0.04503335
-      value: -0.98181987
+      time: 0.06143821
+      value: 1.202508
       inSlope: 0
       outSlope: 0
       tangentMode: 0
     - serializedVersion: 2
-      time: 0.62570584
-      value: 0.137535
+      time: 0.17819974
+      value: -1.2757292
       inSlope: 0.0049290485
       outSlope: 0.0049290485
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.24372956
+      value: 0.40297604
+      inSlope: 29.728413
+      outSlope: 29.728413
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.5150516
+      value: -1.326963
+      inSlope: -0.46133995
+      outSlope: -0.46133995
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.65405107
+      value: 1.0576359
+      inSlope: 4.8244
+      outSlope: 4.8244
       tangentMode: 0
     - serializedVersion: 2
       time: 1
@@ -1397,7 +1457,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
-  _duration: 0.5
+  _duration: 0.2
 --- !u!114 &114987409116920868
 MonoBehaviour:
   m_ObjectHideFlags: 1
