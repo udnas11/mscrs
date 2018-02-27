@@ -20,11 +20,11 @@ MonoBehaviour:
       time: -0.0022277832
       value: 0.20075989
       inSlope: 0
-      outSlope: -8.032284
+      outSlope: -1.7229408
       tangentMode: 65
     - serializedVersion: 2
       time: 0.11429386
-      value: -0.735175
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0

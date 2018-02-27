@@ -8,8 +8,8 @@ public class PlayerInputHandler : Singleton<PlayerInputHandler>
 {
     public event Action<float> OnHorizontalChange;
     public event Action OnJump;
-    public event Action OnAttack1;
-    public event Action OnAttack2;
+    public event Action<bool> OnAttack1; // true for immediate, false for delayed
+    public event Action<bool> OnAttack2;
     public event Action OnAttack1Charged;
     public event Action OnAttack2Charged;
     public event Action OnRoll;
@@ -61,18 +61,14 @@ public class PlayerInputHandler : Singleton<PlayerInputHandler>
             if (OnJump != null)
                 OnJump();
         }
-        /*
-        if (Input.GetButtonDown("Attack1"))
-        {
-            if (OnAttack1 != null)
-                OnAttack1();
-        }*/
 
         ////
 
         if (Input.GetButtonDown("Attack1"))
         {
             _buttonHoldTimes["Attack1"] = Time.time;
+            if (OnAttack1 != null)
+                OnAttack1(true);
         }
         if (Input.GetButton("Attack1"))
         {
@@ -92,7 +88,7 @@ public class PlayerInputHandler : Singleton<PlayerInputHandler>
             if (time < cHoldDuration)
             {
                 if (OnAttack1 != null)
-                    OnAttack1();
+                    OnAttack1(false);
             }
         }
 
@@ -101,6 +97,8 @@ public class PlayerInputHandler : Singleton<PlayerInputHandler>
         if (Input.GetButtonDown("Attack2"))
         {
             _buttonHoldTimes["Attack2"] = Time.time;
+            if (OnAttack2 != null)
+                OnAttack2(true);
         }
         if (Input.GetButton("Attack2"))
         {
@@ -120,7 +118,7 @@ public class PlayerInputHandler : Singleton<PlayerInputHandler>
             if (time < cHoldDuration)
             {
                 if (OnAttack2 != null)
-                    OnAttack2();
+                    OnAttack2(false);
             }
         }
 

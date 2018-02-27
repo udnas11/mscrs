@@ -127,14 +127,16 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void OnAttackInput()
+    private void OnAttackInput(bool immediate)
     {
-        _unitAnimator.Attack();
+        if (InAir == immediate)
+            _unitAnimator.Attack();
     }
 
-    private void OnAttack2Input()
+    private void OnAttack2Input(bool immediate)
     {
-        _unitAnimator.Attack2();
+        if (InAir == immediate)
+            _unitAnimator.Attack2();
     }
 
     private void OnAttack1ChargedInput()
