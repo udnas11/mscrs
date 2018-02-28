@@ -4,7 +4,7 @@
 	{
 		[PerRendererData] _MainTex("Sprite Texture", 2D) = "white" {}
 		_BumpTex("Bump Texture", 2D) = "gray" {}
-		_BumpMult("Bump Multiplier", Range(0.0, 1.0)) = 0.0
+		_BumpMask("Bump Mask", 2D) = "white" {}
 	}
 
 	SubShader
@@ -47,23 +47,26 @@
 			struct v2f
 			{
 				float4 vertex : SV_POSITION;
-				float2 texcoord : TEXCOORD0;
-				float4 grabPos : TEXCOORD1;
+				float2 texcoordST : TEXCOORD0;
+				float2 texcoord : TEXCOORD1;
+				float4 grabPos : TEXCOORD2;
 				
 			};
 
 			float4 _ReflectPoint;
 			sampler2D _MainTex;
 			sampler2D _BumpTex;
+			sampler2D _BumpMask;
 			float4 _BumpTex_ST;
 			float _BumpMult;
+			half4 _BumpSpeed;
 			sampler2D _ScreenTexture;
 
 			v2f vert(appdata_t IN)
 			{
 				v2f result;
-				//result.texcoord = IN.texcoord;
-				result.texcoord = TRANSFORM_TEX(IN.texcoord, _BumpTex);
+				result.texcoord = IN.texcoord;
+				result.texcoordST = TRANSFORM_TEX(IN.texcoord, _BumpTex);
 
 				result.vertex = UnityObjectToClipPos(IN.vertex);
 				result.grabPos = ComputeGrabScreenPos(result.vertex);
@@ -74,18 +77,18 @@
 			fixed4 frag(v2f IN) : SV_Target
 			{				
 				float4 uv = IN.grabPos;
-				float2 bumpUV = IN.texcoord;
 
-				half4 bump = tex2D(_BumpTex, bumpUV);
+				float2 bumpUV = IN.texcoordST;
+				float2 bumpUvDisplaced = bumpUV + float2(_Time.x * _BumpSpeed.x, _Time.x * _BumpSpeed.y);
+
+				half4 bump = tex2D(_BumpTex, bumpUvDisplaced);
+				half bumpMask = tex2D(_BumpMask, IN.texcoord).a;
 				float4 uvAdjusted = uv;
-				uvAdjusted.x += (bump.r - 1.0f) * _BumpMult;
-				uvAdjusted.y += (bump.g - 0.5f ) * _BumpMult;
-				//uvAdjusted.w += (bump.r - 0.5f) * _BumpMult;
-				half4 col = tex2Dproj(_ScreenTexture, uvAdjusted);
 
-				//float2 origUv = IN.texcoord;
-				//col = tex2D(_BumpTex, origUv);
-				//return col;
+				uvAdjusted.x += ((bump.r - 1.0f) * _BumpMult) * bumpMask;
+				uvAdjusted.y += ((bump.g - 0.5f ) * _BumpMult) * bumpMask;
+
+				half4 col = tex2Dproj(_ScreenTexture, uvAdjusted);
 				
 				half4 colGrayscale = (col.r + col.g + col.g) / 3.0f;
 				colGrayscale.a = col.a;

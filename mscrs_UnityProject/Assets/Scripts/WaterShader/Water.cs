@@ -11,6 +11,10 @@ public class Water : MonoBehaviour
     #region public serialised vars
     [SerializeField]
     Transform _reflectPoint;
+    [SerializeField, Range(0f, 0.5f)]
+    float _bumpMultiplier;
+    [SerializeField]
+    Vector2 _bumpSpeed;
     #endregion
 
 
@@ -24,6 +28,11 @@ public class Water : MonoBehaviour
 
 
     #region private protected methods
+    private void Init()
+    {
+        _material.SetFloat("_BumpMult", _bumpMultiplier);
+        _material.SetVector("_BumpSpeed", _bumpSpeed);
+    }
     #endregion
 
 
@@ -35,12 +44,13 @@ public class Water : MonoBehaviour
     private void Awake()
     {
         _material = GetComponent<SpriteRenderer>().material;
+        Init();
     }    
 
     void LateUpdate()
     {
         _material.SetVector("_ReflectPoint", Camera.main.WorldToViewportPoint(_reflectPoint.position));
-        //_material.SetVector("_ReflectPoint", _reflectPoint.position - transform.position);
+        Init(); // to be removed later
     }
     #endregion
 }
