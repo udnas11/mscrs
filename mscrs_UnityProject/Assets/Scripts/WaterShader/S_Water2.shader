@@ -4,6 +4,7 @@
 	{
 		[PerRendererData] _MainTex("Sprite Texture", 2D) = "white" {}
 		_BumpTex("Bump Texture", 2D) = "gray" {}
+		_BumpMult("Bump Multiplier", Range(0.0, 1.0)) = 0.0
 	}
 
 	SubShader
@@ -54,12 +55,15 @@
 			float4 _ReflectPoint;
 			sampler2D _MainTex;
 			sampler2D _BumpTex;
+			float4 _BumpTex_ST;
+			float _BumpMult;
 			sampler2D _ScreenTexture;
 
 			v2f vert(appdata_t IN)
 			{
 				v2f result;
-				result.texcoord = IN.texcoord;
+				//result.texcoord = IN.texcoord;
+				result.texcoord = TRANSFORM_TEX(IN.texcoord, _BumpTex);
 
 				result.vertex = UnityObjectToClipPos(IN.vertex);
 				result.grabPos = ComputeGrabScreenPos(result.vertex);
@@ -70,16 +74,23 @@
 			fixed4 frag(v2f IN) : SV_Target
 			{				
 				float4 uv = IN.grabPos;
-				half4 col = tex2Dproj(_ScreenTexture, uv);
+				float2 bumpUV = IN.texcoord;
 
-				float2 origUv = IN.texcoord;
-				col = tex2D(_BumpTex, origUv);
-				return col;
-				/*
+				half4 bump = tex2D(_BumpTex, bumpUV);
+				float4 uvAdjusted = uv;
+				uvAdjusted.x += (bump.r - 1.0f) * _BumpMult;
+				uvAdjusted.y += (bump.g - 0.5f ) * _BumpMult;
+				//uvAdjusted.w += (bump.r - 0.5f) * _BumpMult;
+				half4 col = tex2Dproj(_ScreenTexture, uvAdjusted);
+
+				//float2 origUv = IN.texcoord;
+				//col = tex2D(_BumpTex, origUv);
+				//return col;
+				
 				half4 colGrayscale = (col.r + col.g + col.g) / 3.0f;
 				colGrayscale.a = col.a;
 				return pow(lerp(col, colGrayscale, 0.55f), 0.8f);
-				*/
+				
 			}
 			ENDCG
 		}
