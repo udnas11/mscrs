@@ -224,6 +224,7 @@ public class PlayerController : MonoBehaviour
         PlayerInputHandler.Instance.OnJump -= OnJumpInput;
         PlayerInputHandler.Instance.OnAttack1 -= OnAttackInput;
         PlayerInputHandler.Instance.OnAttack2 -= OnAttack2Input;
+        PlayerInputHandler.Instance.OnAttack1Charged -= OnAttack1ChargedInput;
         PlayerInputHandler.Instance.OnAttack2Charged -= OnAttack2ChargedInput;
         PlayerInputHandler.Instance.OnRoll -= OnRollInput;
 
