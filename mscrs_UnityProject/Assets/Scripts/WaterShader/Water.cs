@@ -35,9 +35,9 @@ public class Water : MonoBehaviour
     private void Awake()
     {
         _material = GetComponent<SpriteRenderer>().material;
-    }
+    }    
 
-    private void Update()
+    void LateUpdate()
     {
         _material.SetVector("_ReflectPoint", Camera.main.WorldToViewportPoint(_reflectPoint.position));
         //_material.SetVector("_ReflectPoint", _reflectPoint.position - transform.position);

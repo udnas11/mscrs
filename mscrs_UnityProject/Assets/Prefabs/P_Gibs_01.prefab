@@ -455,8 +455,8 @@ MonoBehaviour:
   - {fileID: 50034738672155628}
   - {fileID: 50749393828620486}
   _autodestroyTime: 5
-  _fromCenterImpulse: 3
-  _lateralImpulse: {x: 5, y: 2}
+  _fromCenterImpulse: 4
+  _lateralImpulse: {x: 6, y: 3}
   _torqueRange: {x: 0, y: 0}
 --- !u!198 &198338404512974146
 ParticleSystem:
