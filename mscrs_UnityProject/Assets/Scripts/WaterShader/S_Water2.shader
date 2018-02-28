@@ -5,6 +5,7 @@
 		[PerRendererData] _MainTex("Sprite Texture", 2D) = "white" {}
 		_BumpTex("Bump Texture", 2D) = "gray" {}
 		_BumpMask("Bump Mask", 2D) = "white" {}
+		_ReflectScale("Scale", Range(0.25, 2.0)) = 1.0
 	}
 
 	SubShader
@@ -54,6 +55,7 @@
 			};
 
 			float4 _ReflectPoint;
+			float _ReflectScale;
 			sampler2D _MainTex;
 			sampler2D _BumpTex;
 			sampler2D _BumpMask;
@@ -70,7 +72,8 @@
 
 				result.vertex = UnityObjectToClipPos(IN.vertex);
 				result.grabPos = ComputeGrabScreenPos(result.vertex);
-				result.grabPos.y = 2 * _ReflectPoint.y - result.grabPos.y;
+				//result.grabPos.y = 2.0f * _ReflectPoint.y - result.grabPos.y;
+				result.grabPos.y = _ReflectPoint.y + (_ReflectPoint.y - result.grabPos.y) * _ReflectScale;
 				return result;
 			}
 

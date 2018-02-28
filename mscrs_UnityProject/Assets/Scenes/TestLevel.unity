@@ -2006,7 +2006,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _reflectPoint: {fileID: 1532802170}
   _bumpMultiplier: 0.064
-  _bumpSpeed: {x: 5, y: 2}
+  _bumpSpeed: {x: -5, y: 2}
 --- !u!212 &1911358161
 SpriteRenderer:
   m_ObjectHideFlags: 0
