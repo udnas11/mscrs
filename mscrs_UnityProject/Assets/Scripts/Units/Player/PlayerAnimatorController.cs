@@ -12,7 +12,7 @@ public class PlayerAnimatorController : BaseAnimatorController
 
     #region public serialised vars
     public event Action OnAnimEventJumpApplyForceAction;
-    public event Action OnAnimEventAirdropInhibitPhysicsAction;
+    public event Action<float> OnAnimEventInhibitPhysicsAction;
     public event Action OnAnimEventAirdropAction;
     public event Action<bool> OnJumpPhaseActive;
     #endregion
@@ -86,10 +86,10 @@ public class PlayerAnimatorController : BaseAnimatorController
         OnStatePhaseChange(EAnimationPhase.ComboZone, false);
     }
 
-    public void OnAnimEventAirdropInhibitPhsyics()
+    public void OnAnimEventInhibitPhsyics(float duration)
     {
-        if (OnAnimEventAirdropInhibitPhysicsAction != null)
-            OnAnimEventAirdropInhibitPhysicsAction();
+        if (OnAnimEventInhibitPhysicsAction != null)
+            OnAnimEventInhibitPhysicsAction(duration);
     }
 
     public void OnAnimEventAirDrop()

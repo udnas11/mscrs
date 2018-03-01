@@ -93,17 +93,16 @@ public class PlayerController : MonoBehaviour
         return !result;
     }
 
-    IEnumerator IVelocityInhibitor()
+    IEnumerator IVelocityInhibitor(float duration)
     {
         float timeStart = Time.time;
         _rigidBody2d.gravityScale = 0.2f;
-        while (Time.time < timeStart + 1f) // fail-safe. Effect interrupted by _queueAirdrop
+        while (Time.time < timeStart + duration) // fail-safe. Effect interrupted by _queueAirdrop
         {
             yield return new WaitForFixedUpdate();
             _rigidBody2d.velocity = _rigidBody2d.velocity * 0.5f;
         }
         _rigidBody2d.gravityScale = 1f;
-        Debug.LogWarning("Player physics inhibitor fail-safe triggered.");
     }
     #endregion
 
@@ -173,9 +172,9 @@ public class PlayerController : MonoBehaviour
         _queueJump = true;
     }
 
-    private void OnAnimationCallbackInhibitPhysics()
+    private void OnAnimationCallbackInhibitPhysics(float duration)
     {
-        _physicsInhibitorCoroutine = StartCoroutine(IVelocityInhibitor());
+        _physicsInhibitorCoroutine = StartCoroutine(IVelocityInhibitor(duration));
     }
 
     private void OnAnimationCallbackAirdrop()
@@ -211,7 +210,7 @@ public class PlayerController : MonoBehaviour
         PlayerInputHandler.Instance.OnRoll += OnRollInput;
 
         _playerAnimator.OnAnimEventJumpApplyForceAction += OnAnimationCallbackJumpForce;
-        _playerAnimator.OnAnimEventAirdropInhibitPhysicsAction += OnAnimationCallbackInhibitPhysics;
+        _playerAnimator.OnAnimEventInhibitPhysicsAction += OnAnimationCallbackInhibitPhysics;
         _playerAnimator.OnAnimEventAirdropAction += OnAnimationCallbackAirdrop;
 
         _healthEntity.OnDeath += OnDying;
@@ -229,7 +228,7 @@ public class PlayerController : MonoBehaviour
         PlayerInputHandler.Instance.OnRoll -= OnRollInput;
 
         _playerAnimator.OnAnimEventJumpApplyForceAction -= OnAnimationCallbackJumpForce;
-        _playerAnimator.OnAnimEventAirdropInhibitPhysicsAction -= OnAnimationCallbackInhibitPhysics;
+        _playerAnimator.OnAnimEventInhibitPhysicsAction -= OnAnimationCallbackInhibitPhysics;
         _playerAnimator.OnAnimEventAirdropAction -= OnAnimationCallbackAirdrop;
 
         _healthEntity.OnDeath -= OnDying;
