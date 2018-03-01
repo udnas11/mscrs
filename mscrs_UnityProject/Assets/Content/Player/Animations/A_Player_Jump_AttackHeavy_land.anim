@@ -181,6 +181,6 @@ AnimationClip:
     functionName: DecreaseStamina
     data: 
     objectReferenceParameter: {fileID: 0}
-    floatParameter: 10
+    floatParameter: 35
     intParameter: 0
     messageOptions: 0
