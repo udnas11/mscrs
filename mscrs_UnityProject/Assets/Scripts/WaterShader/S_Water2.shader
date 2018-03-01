@@ -3,9 +3,6 @@
 	Properties
 	{
 		[PerRendererData] _MainTex("Sprite Texture", 2D) = "white" {}
-		_BumpTex("Bump Texture", 2D) = "gray" {}
-		_BumpMask("Bump Mask", 2D) = "white" {}
-		_ReflectScale("Scale", Range(0.25, 2.0)) = 1.0
 	}
 
 	SubShader
@@ -63,6 +60,8 @@
 			float _BumpMult;
 			half4 _BumpSpeed;
 			sampler2D _ScreenTexture;
+			float _Exposure;
+			float _Saturation;
 
 			v2f vert(appdata_t IN)
 			{
@@ -72,7 +71,6 @@
 
 				result.vertex = UnityObjectToClipPos(IN.vertex);
 				result.grabPos = ComputeGrabScreenPos(result.vertex);
-				//result.grabPos.y = 2.0f * _ReflectPoint.y - result.grabPos.y;
 				result.grabPos.y = _ReflectPoint.y + (_ReflectPoint.y - result.grabPos.y) * _ReflectScale;
 				return result;
 			}
@@ -95,7 +93,7 @@
 				
 				half4 colGrayscale = (col.r + col.g + col.g) / 3.0f;
 				colGrayscale.a = col.a;
-				return pow(lerp(col, colGrayscale, 0.55f), 0.8f);
+				return pow(lerp(colGrayscale, col, _Saturation), _Exposure);
 				
 			}
 			ENDCG
