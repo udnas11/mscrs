@@ -59,6 +59,7 @@ public class PlayerController : MonoBehaviour
     public HealthEntity HealthEntity { get { return _healthEntity; } }
     public Vector2 VelocityRigidbody { get { return _rigidBody2d.velocity; } }
     public float Stamina { get { return _stamina; } }
+    public bool IsFlippedX { get { return !_facingRight; } }
 
     public void DecreaseStamina(float cost)
     {
@@ -305,6 +306,10 @@ public class PlayerController : MonoBehaviour
         GUILayout.Label("Horizontal Input: " + _horizontalInput);
         GUILayout.Label("Anim Horizontal Speed: " + _animHorizontalSpeed);
         GUILayout.Label("Anim Horizontal Forced: " + _animHorizontalForcedSpeed);
+
+        Vector2 pos = Camera.main.WorldToScreenPoint(transform.position);
+        pos.y = Screen.height - pos.y - 15;
+        GUI.Label(new Rect(pos, new Vector2(50, 20)), _stamina.ToString("0.") + "/100");
     }
     #endregion
 }

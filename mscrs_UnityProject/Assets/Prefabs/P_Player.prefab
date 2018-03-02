@@ -61,13 +61,14 @@ GameObject:
   - component: {fileID: 70250984569791468}
   - component: {fileID: 61702665924388410}
   - component: {fileID: 114759264693997952}
+  - component: {fileID: 114248900881487826}
   m_Layer: 9
   m_Name: P_Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1227535662577990
 GameObject:
   m_ObjectHideFlags: 1
@@ -730,6 +731,17 @@ MonoBehaviour:
   _sparksOffset: {x: 0.35, y: -0.18}
   _pushForce: {x: 5, y: 25}
   _physicsDuration: 0.2
+--- !u!114 &114248900881487826
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1153659839953148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abf7af23a5e0ab14484b78531141861d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114260997796308458
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1483,7 +1495,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaskDamageType: -2
-  _damage: 15
+  _damage: 35
   _canCrit: 1
   _deathAnim: 0
   _triggerHitAnimation: 1

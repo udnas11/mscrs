@@ -140,4 +140,12 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_GenerateMotionCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0
+    functionName: SpawnEffect
+    data: 
+    objectReferenceParameter: {fileID: 4497950730599326, guid: 0f59872e1c88e3748a2b7056029b5d27,
+      type: 2}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
