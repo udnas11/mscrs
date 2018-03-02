@@ -1,14 +1,14 @@
 fileFormatVersion: 2
-guid: d9f803fbe25c56f43933ee02a8d81f2a
-timeCreated: 1520008458
+guid: 9bfb2f472976e3845bd1e4b173792147
+timeCreated: 1520008686
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: T_Gibs_test_0
-    21300002: T_Gibs_test_1
-    21300004: T_Gibs_test_2
-    21300006: T_Gibs_test_3
-    21300008: T_Gibs_test_4
+    21300000: T_Gibs_test2_0
+    21300002: T_Gibs_test2_1
+    21300004: T_Gibs_test2_2
+    21300006: T_Gibs_test2_3
+    21300008: T_Gibs_test2_4
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -110,93 +110,73 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: T_Gibs_test_0
+      name: T_Gibs_test2_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 3
-        height: 5
+        width: 5
+        height: 7
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -1.5, y: 2.5}
-        - {x: -1.5, y: -2.5}
-        - {x: 1.5, y: -2.5}
-        - {x: 1.5, y: 2.5}
+      outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: T_Gibs_test_1
+      name: T_Gibs_test2_1
       rect:
         serializedVersion: 2
-        x: 3
+        x: 5
         y: 0
-        width: 3
-        height: 5
+        width: 5
+        height: 7
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -1.5, y: 2.5}
-        - {x: -1.5, y: -2.5}
-        - {x: 1.5, y: -2.5}
-        - {x: 1.5, y: 2.5}
+      outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: T_Gibs_test_2
+      name: T_Gibs_test2_2
       rect:
         serializedVersion: 2
-        x: 6
+        x: 10
         y: 0
-        width: 3
-        height: 5
+        width: 5
+        height: 7
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -1.5, y: 2.5}
-        - {x: -1.5, y: -2.5}
-        - {x: 1.5, y: -2.5}
-        - {x: 1.5, y: 2.5}
+      outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: T_Gibs_test_3
+      name: T_Gibs_test2_3
       rect:
         serializedVersion: 2
-        x: 9
+        x: 15
         y: 0
-        width: 3
-        height: 5
+        width: 5
+        height: 7
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -1.5, y: 2.5}
-        - {x: -1.5, y: -2.5}
-        - {x: 1.5, y: -2.5}
-        - {x: 1.5, y: 2.5}
+      outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: T_Gibs_test_4
+      name: T_Gibs_test2_4
       rect:
         serializedVersion: 2
-        x: 12
+        x: 20
         y: 0
-        width: 3
-        height: 5
+        width: 5
+        height: 7
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -1.5, y: 2.5}
-        - {x: -1.5, y: -2.5}
-        - {x: 1.5, y: -2.5}
-        - {x: 1.5, y: 2.5}
+      outline: []
       physicsShape: []
       tessellationDetail: 0
     outline: []
