@@ -7,7 +7,7 @@ using UnityEngine.Assertions;
 using UnityRandom = UnityEngine.Random;
 using UnityEditor;
 
-[CustomEditor(typeof(DamagingTrigger))]
+[CustomEditor(typeof(DamagingTrigger), true)]
 public class DamagingTriggerInspector : Editor
 {
     public override void OnInspectorGUI()

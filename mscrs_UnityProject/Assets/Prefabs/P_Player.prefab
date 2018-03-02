@@ -68,7 +68,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1227535662577990
 GameObject:
   m_ObjectHideFlags: 1
@@ -345,7 +345,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1153659839953148}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.401, y: -0.63404155, z: 0}
+  m_LocalPosition: {x: -1.095, y: -1.746, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4630942114074044}
@@ -842,7 +842,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76dc360f05f53fa45a0ad8109db6a92c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaskDamageType: -2
+  MaskDamageType: -6
   _damage: 15
   _canCrit: 1
   _deathAnim: 0
@@ -955,7 +955,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76dc360f05f53fa45a0ad8109db6a92c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaskDamageType: -2
+  MaskDamageType: -6
   _damage: 8
   _canCrit: 1
   _deathAnim: 0
@@ -1316,7 +1316,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76dc360f05f53fa45a0ad8109db6a92c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaskDamageType: -2
+  MaskDamageType: -6
   _damage: 10
   _canCrit: 1
   _deathAnim: 0

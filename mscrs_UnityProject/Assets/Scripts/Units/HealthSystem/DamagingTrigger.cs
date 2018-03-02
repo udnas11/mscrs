@@ -9,7 +9,8 @@ using UnityRandom = UnityEngine.Random;
 public enum EDamageReceiverType
 {
     Player = 1,
-    Enemy = 2
+    Enemy = 2,
+    Destructable = 4
 }
 
 public class DamagingTrigger : MonoBehaviour
