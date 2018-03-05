@@ -78,8 +78,17 @@ public class SlowMoController : Singleton<SlowMoController>
 
     private void Update()
     {
-        Time.timeScale = _slowMoDebug ? 0.2f : _slowMoAccumulated;
+        float lastTimeScale = Time.timeScale;
+        float newTimeScale = _slowMoDebug ? 0.2f : _slowMoAccumulated;
+        Time.timeScale = newTimeScale;
         _slowMoAccumulated = 1f;
+        
+        //if (lastTimeScale != newTimeScale)
+        {
+            List<AudioObject> activeSounds = AudioController.GetPlayingAudioObjectsInCategory("SFX");
+            foreach (var sound in activeSounds)
+                sound.pitch = Mathf.Max(newTimeScale, 0.2f);
+        }
 
         if (Input.GetKeyDown(_slowMoButton))
             _slowMoDebug = !_slowMoDebug;

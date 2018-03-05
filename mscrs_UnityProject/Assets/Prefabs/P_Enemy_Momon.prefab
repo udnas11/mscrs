@@ -28,6 +28,7 @@ GameObject:
   - component: {fileID: 70227153224704440}
   - component: {fileID: 50071463371391358}
   - component: {fileID: 61482056147148062}
+  - component: {fileID: 114448067951117862}
   m_Layer: 10
   m_Name: P_Enemy_Momon
   m_TagString: Untagged
@@ -298,6 +299,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaskDamageType: 2
   _healthEntity: {fileID: 114921064403192754}
+  _soundID: Enemy_DamageReceive
+--- !u!114 &114448067951117862
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1044776261724056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7300f22a00c40c45a9a217918ac0934, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114531608548538948
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -364,6 +377,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxHP: 50
   _receivers: []
+  _deathSoundID: Momon_Death
 --- !u!114 &114951176426361420
 MonoBehaviour:
   m_ObjectHideFlags: 1

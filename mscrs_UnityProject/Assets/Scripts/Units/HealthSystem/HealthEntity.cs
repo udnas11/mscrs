@@ -19,6 +19,8 @@ public class HealthEntity : MonoBehaviour
     int _maxHP;
     [SerializeField]
     DamageReceiver[] _receivers;
+    [SerializeField]
+    string _deathSoundID;
     #endregion
 
 
@@ -56,6 +58,8 @@ public class HealthEntity : MonoBehaviour
             return;
         
         _dead = true;
+        if (string.IsNullOrEmpty(_deathSoundID) == false)
+            AudioController.Play(_deathSoundID, transform.position);
         if (OnDeath != null)
             OnDeath(deathAnimationIndex);
     }

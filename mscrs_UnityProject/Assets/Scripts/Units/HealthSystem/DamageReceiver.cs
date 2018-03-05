@@ -14,6 +14,9 @@ public class DamageReceiver : MonoBehaviour
 
     [SerializeField]
     HealthEntity _healthEntity;
+
+    [SerializeField]
+    string _soundID;
     #endregion
 
 
@@ -26,6 +29,8 @@ public class DamageReceiver : MonoBehaviour
     public void TakeDamage(int damageCount, int deathAnimationIndex, bool triggerHitAnimation)
     {
         _healthEntity.TakeDamage(damageCount, deathAnimationIndex, triggerHitAnimation);
+        if (string.IsNullOrEmpty(_soundID) == false)
+            AudioController.Play(_soundID, transform.position);
     }
 
     public void TakePushForce(Vector2 pushForce, float physicsDuration)
