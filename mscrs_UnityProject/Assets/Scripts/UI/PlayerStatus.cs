@@ -15,7 +15,16 @@ namespace MoonscarsUI
         [SerializeField]
         Slider _healthSlider;
         [SerializeField]
+        Slider _healthSliderDelayed;
+        [SerializeField]
+        float _healthDelaySpeed;
+
+        [SerializeField]
         Slider _staminaSlider;
+        [SerializeField]
+        Slider _staminaSliderDelayed;
+        [SerializeField]
+        float _staminaDelaySpeed;
         #endregion
 
 
@@ -40,12 +49,14 @@ namespace MoonscarsUI
 
         private void OnPlayerHealthUpdated(int current, int max)
         {
-            _healthSlider.value = (float)current / max;
+            float newValue = (float)current / max;
+            _healthSlider.value = newValue;
         }
 
         private void OnPlayerStaminaUpdated(float current, float max)
         {
-            _staminaSlider.value = current / max;
+            float newValue = (float)current / max;
+            _staminaSlider.value = newValue;
         }
         #endregion
 
@@ -59,6 +70,12 @@ namespace MoonscarsUI
         {
             RegisterSingleton(this);
             Init(SceneController.Instance.PlayerControllerInstance);
+        }
+
+        private void Update()
+        {
+            _healthSliderDelayed.value = Mathf.MoveTowards(_healthSliderDelayed.value, _healthSlider.value, _healthDelaySpeed * Time.unscaledDeltaTime);
+            _staminaSliderDelayed.value = Mathf.MoveTowards(_staminaSliderDelayed.value, _staminaSlider.value, _staminaDelaySpeed * Time.unscaledDeltaTime);
         }
 
         private void OnDestroy()
