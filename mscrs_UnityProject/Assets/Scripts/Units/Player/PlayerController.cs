@@ -301,11 +301,13 @@ public class PlayerController : MonoBehaviour
 
     private void OnGUI()
     {
+        /*
         GUILayout.Label("Player velocity: " + _rigidBody2d.velocity);
         GUILayout.Label("Ground collisions: " + _groundTriggersActive);
         GUILayout.Label("Horizontal Input: " + _horizontalInput);
         GUILayout.Label("Anim Horizontal Speed: " + _animHorizontalSpeed);
         GUILayout.Label("Anim Horizontal Forced: " + _animHorizontalForcedSpeed);
+        */
 
         Vector2 pos = Camera.main.WorldToScreenPoint(transform.position);
         pos.y = Screen.height - pos.y - 15;
