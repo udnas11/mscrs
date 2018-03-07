@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 8f7f835b0cd89614f97520cb37b6f44b
-timeCreated: 1518189750
+guid: 6c9963c822ad4e8458019a946a516bad
+timeCreated: 1520430066
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -18,6 +18,8 @@ TextureImporter:
     21300022: T_Player_air_heavy_11
     21300024: T_Player_air_heavy_12
     21300026: T_Player_air_heavy_13
+    21300028: T_Player_air_heavy_14
+    21300030: T_Player_air_heavy_15
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -123,11 +125,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 132
-        width: 141
-        height: 124
+        y: 407
+        width: 122
+        height: 105
       alignment: 9
-      pivot: {x: 0.31, y: 0.03}
+      pivot: {x: 0.39, y: 0.05}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -136,12 +138,12 @@ TextureImporter:
       name: T_Player_air_heavy_1
       rect:
         serializedVersion: 2
-        x: 141
-        y: 132
-        width: 141
-        height: 124
+        x: 122
+        y: 407
+        width: 122
+        height: 105
       alignment: 9
-      pivot: {x: 0.31, y: 0.03}
+      pivot: {x: 0.39, y: 0.05}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -150,12 +152,12 @@ TextureImporter:
       name: T_Player_air_heavy_2
       rect:
         serializedVersion: 2
-        x: 282
-        y: 132
-        width: 141
-        height: 124
+        x: 244
+        y: 407
+        width: 122
+        height: 105
       alignment: 9
-      pivot: {x: 0.31, y: 0.03}
+      pivot: {x: 0.39, y: 0.05}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -164,12 +166,12 @@ TextureImporter:
       name: T_Player_air_heavy_3
       rect:
         serializedVersion: 2
-        x: 423
-        y: 132
-        width: 141
-        height: 124
+        x: 366
+        y: 407
+        width: 122
+        height: 105
       alignment: 9
-      pivot: {x: 0.31, y: 0.03}
+      pivot: {x: 0.39, y: 0.05}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -178,12 +180,12 @@ TextureImporter:
       name: T_Player_air_heavy_4
       rect:
         serializedVersion: 2
-        x: 564
-        y: 132
-        width: 141
-        height: 124
+        x: 0
+        y: 302
+        width: 122
+        height: 105
       alignment: 9
-      pivot: {x: 0.31, y: 0.03}
+      pivot: {x: 0.39, y: 0.05}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -192,12 +194,12 @@ TextureImporter:
       name: T_Player_air_heavy_5
       rect:
         serializedVersion: 2
-        x: 705
-        y: 132
-        width: 141
-        height: 124
+        x: 122
+        y: 302
+        width: 122
+        height: 105
       alignment: 9
-      pivot: {x: 0.31, y: 0.03}
+      pivot: {x: 0.39, y: 0.05}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -206,12 +208,12 @@ TextureImporter:
       name: T_Player_air_heavy_6
       rect:
         serializedVersion: 2
-        x: 846
-        y: 132
-        width: 141
-        height: 124
+        x: 244
+        y: 302
+        width: 122
+        height: 105
       alignment: 9
-      pivot: {x: 0.31, y: 0.03}
+      pivot: {x: 0.39, y: 0.05}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -220,12 +222,12 @@ TextureImporter:
       name: T_Player_air_heavy_7
       rect:
         serializedVersion: 2
-        x: 0
-        y: 8
-        width: 141
-        height: 124
+        x: 366
+        y: 302
+        width: 122
+        height: 105
       alignment: 9
-      pivot: {x: 0.31, y: 0.03}
+      pivot: {x: 0.39, y: 0.05}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -234,12 +236,12 @@ TextureImporter:
       name: T_Player_air_heavy_8
       rect:
         serializedVersion: 2
-        x: 141
-        y: 8
-        width: 141
-        height: 124
+        x: 0
+        y: 197
+        width: 122
+        height: 105
       alignment: 9
-      pivot: {x: 0.31, y: 0.03}
+      pivot: {x: 0.39, y: 0.05}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -248,12 +250,12 @@ TextureImporter:
       name: T_Player_air_heavy_9
       rect:
         serializedVersion: 2
-        x: 282
-        y: 8
-        width: 141
-        height: 124
+        x: 122
+        y: 197
+        width: 122
+        height: 105
       alignment: 9
-      pivot: {x: 0.31, y: 0.03}
+      pivot: {x: 0.39, y: 0.05}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -262,12 +264,12 @@ TextureImporter:
       name: T_Player_air_heavy_10
       rect:
         serializedVersion: 2
-        x: 423
-        y: 8
-        width: 141
-        height: 124
+        x: 244
+        y: 197
+        width: 122
+        height: 105
       alignment: 9
-      pivot: {x: 0.31, y: 0.03}
+      pivot: {x: 0.39, y: 0.05}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -276,19 +278,75 @@ TextureImporter:
       name: T_Player_air_heavy_11
       rect:
         serializedVersion: 2
-        x: 564
-        y: 8
-        width: 141
-        height: 124
+        x: 366
+        y: 197
+        width: 122
+        height: 105
       alignment: 9
-      pivot: {x: 0.31, y: 0.03}
+      pivot: {x: 0.39, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Player_air_heavy_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 92
+        width: 122
+        height: 105
+      alignment: 9
+      pivot: {x: 0.39, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Player_air_heavy_13
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 92
+        width: 122
+        height: 105
+      alignment: 9
+      pivot: {x: 0.39, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Player_air_heavy_14
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 92
+        width: 122
+        height: 105
+      alignment: 9
+      pivot: {x: 0.39, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Player_air_heavy_15
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 92
+        width: 122
+        height: 105
+      alignment: 9
+      pivot: {x: 0.39, y: 0.05}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     outline: []
     physicsShape: []
-  spritePackingTag: PLAYER
+  spritePackingTag: 
   userData: 
   assetBundleName: 
   assetBundleVariant: 
