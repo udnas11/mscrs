@@ -20,7 +20,10 @@ public class UnitAnimatorController : BaseAnimatorController
     public override void Attack()
     {
         if (GetPhaseState(EAnimationPhase.Attacking) == false)
+        {
+            _animator.SetFloat("indexAttackAnim", UnityRandom.Range(0, 2));
             base.Attack();
+        }
     }
     #endregion
 

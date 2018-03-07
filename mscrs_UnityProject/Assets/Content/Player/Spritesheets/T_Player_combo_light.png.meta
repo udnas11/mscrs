@@ -1,71 +1,66 @@
 fileFormatVersion: 2
-guid: fb1b98d50bf43fe4f9d8c9c2c99808ce
-timeCreated: 1519059668
+guid: c21d2f290b1abc0478346a41beb63fe5
+timeCreated: 1520431042
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: T_Player_heavy_0
-    21300002: T_Player_heavy_1
-    21300004: T_Player_heavy_2
-    21300006: T_Player_heavy_3
-    21300008: T_Player_heavy_4
-    21300010: T_Player_heavy_5
-    21300012: T_Player_heavy_6
-    21300014: T_Player_heavy_7
-    21300016: T_Player_heavy_8
-    21300018: T_Player_heavy_9
-    21300020: T_Player_heavy_10
-    21300022: T_Player_heavy_11
-    21300024: T_Player_heavy_12
-    21300026: T_Player_heavy_13
-    21300028: T_Player_heavy_14
-    21300030: T_Player_heavy_15
-    21300032: T_Player_heavy_16
-    21300034: T_Player_heavy_17
-    21300036: T_Player_heavy_18
-    21300038: T_Player_heavy_19
-    21300040: T_Player_heavy_20
-    21300042: T_Player_heavy_21
-    21300044: T_Player_heavy_22
-    21300046: T_Player_heavy_23
-    21300048: T_Player_heavy_24
-    21300050: T_Player_heavy_25
-    21300052: T_Player_heavy_26
-    21300054: T_Player_heavy_27
-    21300056: T_Player_heavy_28
-    21300058: T_Player_heavy_29
-    21300060: T_Player_heavy_30
-    21300062: T_Player_heavy_31
-    21300064: T_Player_heavy_32
-    21300066: T_Player_heavy_33
-    21300068: T_Player_heavy_34
-    21300070: T_Player_heavy_35
-    21300072: T_Player_heavy_36
-    21300074: T_Player_heavy_37
-    21300076: T_Player_heavy_38
-    21300078: T_Player_heavy_39
-    21300080: T_Player_heavy_40
-    21300082: T_Player_heavy_41
-    21300084: T_Player_heavy_42
-    21300086: T_Player_heavy_43
-    21300088: T_Player_heavy_44
-    21300090: T_Player_heavy_45
-    21300092: T_Player_heavy_46
-    21300094: T_Player_heavy_47
-    21300096: T_Player_heavy_48
-    21300098: T_Player_heavy_49
-    21300100: T_Player_heavy_50
-    21300102: T_Player_heavy_51
-    21300104: T_Player_heavy_52
-    21300106: T_Player_heavy_53
-    21300108: T_Player_heavy_54
-    21300110: T_Player_heavy_55
-    21300112: T_Player_heavy_56
-    21300114: T_Player_heavy_57
-    21300116: T_Player_heavy_58
-    21300118: T_Player_heavy_59
-    21300120: T_Player_heavy_60
-    21300122: T_Player_heavy_61
+    21300000: T_Player_combo_light_0
+    21300002: T_Player_combo_light_1
+    21300004: T_Player_combo_light_2
+    21300006: T_Player_combo_light_3
+    21300008: T_Player_combo_light_4
+    21300010: T_Player_combo_light_5
+    21300012: T_Player_combo_light_6
+    21300014: T_Player_combo_light_7
+    21300016: T_Player_combo_light_8
+    21300018: T_Player_combo_light_9
+    21300020: T_Player_combo_light_10
+    21300022: T_Player_combo_light_11
+    21300024: T_Player_combo_light_12
+    21300026: T_Player_combo_light_13
+    21300028: T_Player_combo_light_14
+    21300030: T_Player_combo_light_15
+    21300032: T_Player_combo_light_16
+    21300034: T_Player_combo_light_17
+    21300036: T_Player_combo_light_18
+    21300038: T_Player_combo_light_19
+    21300040: T_Player_combo_light_20
+    21300042: T_Player_combo_light_21
+    21300044: T_Player_combo_light_22
+    21300046: T_Player_combo_light_23
+    21300048: T_Player_combo_light_24
+    21300050: T_Player_combo_light_25
+    21300052: T_Player_combo_light_26
+    21300054: T_Player_combo_light_27
+    21300056: T_Player_combo_light_28
+    21300058: T_Player_combo_light_29
+    21300060: T_Player_combo_light_30
+    21300062: T_Player_combo_light_31
+    21300064: T_Player_combo_light_32
+    21300066: T_Player_combo_light_33
+    21300068: T_Player_combo_light_34
+    21300070: T_Player_combo_light_35
+    21300072: T_Player_combo_light_36
+    21300074: T_Player_combo_light_37
+    21300076: T_Player_combo_light_38
+    21300078: T_Player_combo_light_39
+    21300080: T_Player_combo_light_40
+    21300082: T_Player_combo_light_41
+    21300084: T_Player_combo_light_42
+    21300086: T_Player_combo_light_43
+    21300088: T_Player_combo_light_44
+    21300090: T_Player_combo_light_45
+    21300092: T_Player_combo_light_46
+    21300094: T_Player_combo_light_47
+    21300096: T_Player_combo_light_48
+    21300098: T_Player_combo_light_49
+    21300100: T_Player_combo_light_50
+    21300102: T_Player_combo_light_51
+    21300104: T_Player_combo_light_52
+    21300106: T_Player_combo_light_53
+    21300108: T_Player_combo_light_54
+    21300110: T_Player_combo_light_55
+    21300112: T_Player_combo_light_56
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -167,876 +162,806 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: T_Player_heavy_0
+      name: T_Player_combo_light_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 927
-        width: 220
-        height: 97
+        y: 934
+        width: 200
+        height: 90
       alignment: 9
-      pivot: {x: 0.42, y: 0.03}
+      pivot: {x: 0.415, y: 0.16}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: T_Player_heavy_1
+      name: T_Player_combo_light_1
       rect:
         serializedVersion: 2
-        x: 220
-        y: 927
-        width: 220
-        height: 97
+        x: 200
+        y: 934
+        width: 200
+        height: 90
       alignment: 9
-      pivot: {x: 0.42, y: 0.03}
+      pivot: {x: 0.415, y: 0.16}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: T_Player_heavy_2
+      name: T_Player_combo_light_2
       rect:
         serializedVersion: 2
-        x: 440
-        y: 927
-        width: 220
-        height: 97
+        x: 400
+        y: 934
+        width: 200
+        height: 90
       alignment: 9
-      pivot: {x: 0.42, y: 0.03}
+      pivot: {x: 0.415, y: 0.16}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: T_Player_heavy_3
+      name: T_Player_combo_light_3
       rect:
         serializedVersion: 2
-        x: 660
-        y: 927
-        width: 220
-        height: 97
+        x: 600
+        y: 934
+        width: 200
+        height: 90
       alignment: 9
-      pivot: {x: 0.42, y: 0.03}
+      pivot: {x: 0.415, y: 0.16}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: T_Player_heavy_4
+      name: T_Player_combo_light_4
       rect:
         serializedVersion: 2
-        x: 880
-        y: 927
-        width: 220
-        height: 97
+        x: 800
+        y: 934
+        width: 200
+        height: 90
       alignment: 9
-      pivot: {x: 0.42, y: 0.03}
+      pivot: {x: 0.415, y: 0.16}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: T_Player_heavy_5
+      name: T_Player_combo_light_5
       rect:
         serializedVersion: 2
-        x: 1100
-        y: 927
-        width: 220
-        height: 97
+        x: 1000
+        y: 934
+        width: 200
+        height: 90
       alignment: 9
-      pivot: {x: 0.42, y: 0.03}
+      pivot: {x: 0.415, y: 0.16}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: T_Player_heavy_6
+      name: T_Player_combo_light_6
       rect:
         serializedVersion: 2
-        x: 1320
-        y: 927
-        width: 220
-        height: 97
+        x: 1200
+        y: 934
+        width: 200
+        height: 90
       alignment: 9
-      pivot: {x: 0.42, y: 0.03}
+      pivot: {x: 0.415, y: 0.16}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: T_Player_heavy_7
+      name: T_Player_combo_light_7
       rect:
         serializedVersion: 2
-        x: 1540
-        y: 927
-        width: 220
-        height: 97
+        x: 1400
+        y: 934
+        width: 200
+        height: 90
       alignment: 9
-      pivot: {x: 0.42, y: 0.03}
+      pivot: {x: 0.415, y: 0.16}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: T_Player_heavy_8
+      name: T_Player_combo_light_8
       rect:
         serializedVersion: 2
-        x: 1760
-        y: 927
-        width: 220
-        height: 97
+        x: 1600
+        y: 934
+        width: 200
+        height: 90
       alignment: 9
-      pivot: {x: 0.42, y: 0.03}
+      pivot: {x: 0.415, y: 0.16}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: T_Player_heavy_9
+      name: T_Player_combo_light_9
       rect:
         serializedVersion: 2
-        x: 0
-        y: 830
-        width: 220
-        height: 97
+        x: 1800
+        y: 934
+        width: 200
+        height: 90
       alignment: 9
-      pivot: {x: 0.42, y: 0.03}
+      pivot: {x: 0.415, y: 0.16}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: T_Player_heavy_10
-      rect:
-        serializedVersion: 2
-        x: 220
-        y: 830
-        width: 220
-        height: 97
-      alignment: 9
-      pivot: {x: 0.42, y: 0.03}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: T_Player_heavy_11
-      rect:
-        serializedVersion: 2
-        x: 440
-        y: 830
-        width: 220
-        height: 97
-      alignment: 9
-      pivot: {x: 0.42, y: 0.03}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: T_Player_heavy_12
-      rect:
-        serializedVersion: 2
-        x: 660
-        y: 830
-        width: 220
-        height: 97
-      alignment: 9
-      pivot: {x: 0.42, y: 0.03}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: T_Player_heavy_13
-      rect:
-        serializedVersion: 2
-        x: 880
-        y: 830
-        width: 220
-        height: 97
-      alignment: 9
-      pivot: {x: 0.42, y: 0.03}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: T_Player_heavy_14
-      rect:
-        serializedVersion: 2
-        x: 1100
-        y: 830
-        width: 220
-        height: 97
-      alignment: 9
-      pivot: {x: 0.42, y: 0.03}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: T_Player_heavy_15
-      rect:
-        serializedVersion: 2
-        x: 1320
-        y: 830
-        width: 220
-        height: 97
-      alignment: 9
-      pivot: {x: 0.42, y: 0.03}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: T_Player_heavy_16
-      rect:
-        serializedVersion: 2
-        x: 1540
-        y: 830
-        width: 220
-        height: 97
-      alignment: 9
-      pivot: {x: 0.42, y: 0.03}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: T_Player_heavy_17
-      rect:
-        serializedVersion: 2
-        x: 1760
-        y: 830
-        width: 220
-        height: 97
-      alignment: 9
-      pivot: {x: 0.42, y: 0.03}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: T_Player_heavy_18
+      name: T_Player_combo_light_10
       rect:
         serializedVersion: 2
         x: 0
-        y: 733
-        width: 220
-        height: 97
+        y: 844
+        width: 200
+        height: 90
       alignment: 9
-      pivot: {x: 0.42, y: 0.03}
+      pivot: {x: 0.415, y: 0.16}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: T_Player_heavy_19
+      name: T_Player_combo_light_11
       rect:
         serializedVersion: 2
-        x: 220
-        y: 733
-        width: 220
-        height: 97
+        x: 200
+        y: 844
+        width: 200
+        height: 90
       alignment: 9
-      pivot: {x: 0.42, y: 0.03}
+      pivot: {x: 0.415, y: 0.16}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: T_Player_heavy_20
+      name: T_Player_combo_light_12
       rect:
         serializedVersion: 2
-        x: 440
-        y: 733
-        width: 220
-        height: 97
+        x: 400
+        y: 844
+        width: 200
+        height: 90
       alignment: 9
-      pivot: {x: 0.42, y: 0.03}
+      pivot: {x: 0.415, y: 0.16}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: T_Player_heavy_21
+      name: T_Player_combo_light_13
       rect:
         serializedVersion: 2
-        x: 660
-        y: 733
-        width: 220
-        height: 97
+        x: 600
+        y: 844
+        width: 200
+        height: 90
       alignment: 9
-      pivot: {x: 0.42, y: 0.03}
+      pivot: {x: 0.415, y: 0.16}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: T_Player_heavy_22
+      name: T_Player_combo_light_14
       rect:
         serializedVersion: 2
-        x: 880
-        y: 733
-        width: 220
-        height: 97
+        x: 800
+        y: 844
+        width: 200
+        height: 90
       alignment: 9
-      pivot: {x: 0.42, y: 0.03}
+      pivot: {x: 0.415, y: 0.16}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: T_Player_heavy_23
+      name: T_Player_combo_light_15
       rect:
         serializedVersion: 2
-        x: 1100
-        y: 733
-        width: 220
-        height: 97
+        x: 1000
+        y: 844
+        width: 200
+        height: 90
       alignment: 9
-      pivot: {x: 0.42, y: 0.03}
+      pivot: {x: 0.415, y: 0.16}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: T_Player_heavy_24
+      name: T_Player_combo_light_16
       rect:
         serializedVersion: 2
-        x: 1320
-        y: 733
-        width: 220
-        height: 97
+        x: 1200
+        y: 844
+        width: 200
+        height: 90
       alignment: 9
-      pivot: {x: 0.42, y: 0.03}
+      pivot: {x: 0.415, y: 0.16}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: T_Player_heavy_25
+      name: T_Player_combo_light_17
       rect:
         serializedVersion: 2
-        x: 1540
-        y: 733
-        width: 220
-        height: 97
+        x: 1400
+        y: 844
+        width: 200
+        height: 90
       alignment: 9
-      pivot: {x: 0.42, y: 0.03}
+      pivot: {x: 0.415, y: 0.16}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: T_Player_heavy_26
+      name: T_Player_combo_light_18
       rect:
         serializedVersion: 2
-        x: 1760
-        y: 733
-        width: 220
-        height: 97
+        x: 1600
+        y: 844
+        width: 200
+        height: 90
       alignment: 9
-      pivot: {x: 0.42, y: 0.03}
+      pivot: {x: 0.415, y: 0.16}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: T_Player_heavy_27
+      name: T_Player_combo_light_19
       rect:
         serializedVersion: 2
-        x: 0
-        y: 636
-        width: 220
-        height: 97
+        x: 1800
+        y: 844
+        width: 200
+        height: 90
       alignment: 9
-      pivot: {x: 0.42, y: 0.03}
+      pivot: {x: 0.415, y: 0.16}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: T_Player_heavy_28
-      rect:
-        serializedVersion: 2
-        x: 220
-        y: 636
-        width: 220
-        height: 97
-      alignment: 9
-      pivot: {x: 0.42, y: 0.03}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: T_Player_heavy_29
-      rect:
-        serializedVersion: 2
-        x: 440
-        y: 636
-        width: 220
-        height: 97
-      alignment: 9
-      pivot: {x: 0.42, y: 0.03}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: T_Player_heavy_30
-      rect:
-        serializedVersion: 2
-        x: 660
-        y: 636
-        width: 220
-        height: 97
-      alignment: 9
-      pivot: {x: 0.42, y: 0.03}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: T_Player_heavy_31
-      rect:
-        serializedVersion: 2
-        x: 880
-        y: 636
-        width: 220
-        height: 97
-      alignment: 9
-      pivot: {x: 0.42, y: 0.03}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: T_Player_heavy_32
-      rect:
-        serializedVersion: 2
-        x: 1100
-        y: 636
-        width: 220
-        height: 97
-      alignment: 9
-      pivot: {x: 0.42, y: 0.03}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: T_Player_heavy_33
-      rect:
-        serializedVersion: 2
-        x: 1320
-        y: 636
-        width: 220
-        height: 97
-      alignment: 9
-      pivot: {x: 0.42, y: 0.03}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: T_Player_heavy_34
-      rect:
-        serializedVersion: 2
-        x: 1540
-        y: 636
-        width: 220
-        height: 97
-      alignment: 9
-      pivot: {x: 0.42, y: 0.03}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: T_Player_heavy_35
-      rect:
-        serializedVersion: 2
-        x: 1760
-        y: 636
-        width: 220
-        height: 97
-      alignment: 9
-      pivot: {x: 0.42, y: 0.03}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: T_Player_heavy_36
+      name: T_Player_combo_light_20
       rect:
         serializedVersion: 2
         x: 0
-        y: 539
-        width: 220
-        height: 97
+        y: 754
+        width: 200
+        height: 90
       alignment: 9
-      pivot: {x: 0.42, y: 0.03}
+      pivot: {x: 0.415, y: 0.16}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: T_Player_heavy_37
+      name: T_Player_combo_light_21
       rect:
         serializedVersion: 2
-        x: 220
-        y: 539
-        width: 220
-        height: 97
+        x: 200
+        y: 754
+        width: 200
+        height: 90
       alignment: 9
-      pivot: {x: 0.42, y: 0.03}
+      pivot: {x: 0.415, y: 0.16}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: T_Player_heavy_38
+      name: T_Player_combo_light_22
       rect:
         serializedVersion: 2
-        x: 440
-        y: 539
-        width: 220
-        height: 97
+        x: 400
+        y: 754
+        width: 200
+        height: 90
       alignment: 9
-      pivot: {x: 0.42, y: 0.03}
+      pivot: {x: 0.415, y: 0.16}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: T_Player_heavy_39
+      name: T_Player_combo_light_23
       rect:
         serializedVersion: 2
-        x: 660
-        y: 539
-        width: 220
-        height: 97
+        x: 600
+        y: 754
+        width: 200
+        height: 90
       alignment: 9
-      pivot: {x: 0.42, y: 0.03}
+      pivot: {x: 0.415, y: 0.16}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: T_Player_heavy_40
+      name: T_Player_combo_light_24
       rect:
         serializedVersion: 2
-        x: 880
-        y: 539
-        width: 220
-        height: 97
+        x: 800
+        y: 754
+        width: 200
+        height: 90
       alignment: 9
-      pivot: {x: 0.42, y: 0.03}
+      pivot: {x: 0.415, y: 0.16}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: T_Player_heavy_41
+      name: T_Player_combo_light_25
       rect:
         serializedVersion: 2
-        x: 1100
-        y: 539
-        width: 220
-        height: 97
+        x: 1000
+        y: 754
+        width: 200
+        height: 90
       alignment: 9
-      pivot: {x: 0.42, y: 0.03}
+      pivot: {x: 0.415, y: 0.16}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: T_Player_heavy_42
+      name: T_Player_combo_light_26
       rect:
         serializedVersion: 2
-        x: 1320
-        y: 539
-        width: 220
-        height: 97
+        x: 1200
+        y: 754
+        width: 200
+        height: 90
       alignment: 9
-      pivot: {x: 0.42, y: 0.03}
+      pivot: {x: 0.415, y: 0.16}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: T_Player_heavy_43
+      name: T_Player_combo_light_27
       rect:
         serializedVersion: 2
-        x: 1540
-        y: 539
-        width: 220
-        height: 97
+        x: 1400
+        y: 754
+        width: 200
+        height: 90
       alignment: 9
-      pivot: {x: 0.42, y: 0.03}
+      pivot: {x: 0.415, y: 0.16}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: T_Player_heavy_44
+      name: T_Player_combo_light_28
       rect:
         serializedVersion: 2
-        x: 1760
-        y: 539
-        width: 220
-        height: 97
+        x: 1600
+        y: 754
+        width: 200
+        height: 90
       alignment: 9
-      pivot: {x: 0.42, y: 0.03}
+      pivot: {x: 0.415, y: 0.16}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: T_Player_heavy_45
+      name: T_Player_combo_light_29
       rect:
         serializedVersion: 2
-        x: 0
-        y: 442
-        width: 220
-        height: 97
+        x: 1800
+        y: 754
+        width: 200
+        height: 90
       alignment: 9
-      pivot: {x: 0.42, y: 0.03}
+      pivot: {x: 0.415, y: 0.16}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: T_Player_heavy_46
-      rect:
-        serializedVersion: 2
-        x: 220
-        y: 442
-        width: 220
-        height: 97
-      alignment: 9
-      pivot: {x: 0.42, y: 0.03}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: T_Player_heavy_47
-      rect:
-        serializedVersion: 2
-        x: 440
-        y: 442
-        width: 220
-        height: 97
-      alignment: 9
-      pivot: {x: 0.42, y: 0.03}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: T_Player_heavy_48
-      rect:
-        serializedVersion: 2
-        x: 660
-        y: 442
-        width: 220
-        height: 97
-      alignment: 9
-      pivot: {x: 0.42, y: 0.03}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: T_Player_heavy_49
-      rect:
-        serializedVersion: 2
-        x: 880
-        y: 442
-        width: 220
-        height: 97
-      alignment: 9
-      pivot: {x: 0.42, y: 0.03}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: T_Player_heavy_50
-      rect:
-        serializedVersion: 2
-        x: 1100
-        y: 442
-        width: 220
-        height: 97
-      alignment: 9
-      pivot: {x: 0.42, y: 0.03}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: T_Player_heavy_51
-      rect:
-        serializedVersion: 2
-        x: 1320
-        y: 442
-        width: 220
-        height: 97
-      alignment: 9
-      pivot: {x: 0.42, y: 0.03}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: T_Player_heavy_52
-      rect:
-        serializedVersion: 2
-        x: 1540
-        y: 442
-        width: 220
-        height: 97
-      alignment: 9
-      pivot: {x: 0.42, y: 0.03}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: T_Player_heavy_53
-      rect:
-        serializedVersion: 2
-        x: 1760
-        y: 442
-        width: 220
-        height: 97
-      alignment: 9
-      pivot: {x: 0.42, y: 0.03}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: T_Player_heavy_54
+      name: T_Player_combo_light_30
       rect:
         serializedVersion: 2
         x: 0
-        y: 345
-        width: 220
-        height: 97
+        y: 664
+        width: 200
+        height: 90
       alignment: 9
-      pivot: {x: 0.42, y: 0.03}
+      pivot: {x: 0.415, y: 0.16}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: T_Player_heavy_55
+      name: T_Player_combo_light_31
       rect:
         serializedVersion: 2
-        x: 220
-        y: 345
-        width: 220
-        height: 97
+        x: 200
+        y: 664
+        width: 200
+        height: 90
       alignment: 9
-      pivot: {x: 0.42, y: 0.03}
+      pivot: {x: 0.415, y: 0.16}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: T_Player_heavy_56
+      name: T_Player_combo_light_32
       rect:
         serializedVersion: 2
-        x: 440
-        y: 345
-        width: 220
-        height: 97
+        x: 400
+        y: 664
+        width: 200
+        height: 90
       alignment: 9
-      pivot: {x: 0.42, y: 0.03}
+      pivot: {x: 0.415, y: 0.16}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: T_Player_heavy_57
+      name: T_Player_combo_light_33
       rect:
         serializedVersion: 2
-        x: 660
-        y: 345
-        width: 220
-        height: 97
+        x: 600
+        y: 664
+        width: 200
+        height: 90
       alignment: 9
-      pivot: {x: 0.42, y: 0.03}
+      pivot: {x: 0.415, y: 0.16}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: T_Player_heavy_58
+      name: T_Player_combo_light_34
       rect:
         serializedVersion: 2
-        x: 880
-        y: 345
-        width: 220
-        height: 97
+        x: 800
+        y: 664
+        width: 200
+        height: 90
       alignment: 9
-      pivot: {x: 0.42, y: 0.03}
+      pivot: {x: 0.415, y: 0.16}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: T_Player_heavy_59
+      name: T_Player_combo_light_35
       rect:
         serializedVersion: 2
-        x: 1100
-        y: 345
-        width: 220
-        height: 97
+        x: 1000
+        y: 664
+        width: 200
+        height: 90
       alignment: 9
-      pivot: {x: 0.42, y: 0.03}
+      pivot: {x: 0.415, y: 0.16}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: T_Player_heavy_60
+      name: T_Player_combo_light_36
       rect:
         serializedVersion: 2
-        x: 1320
-        y: 345
-        width: 220
-        height: 97
+        x: 1200
+        y: 664
+        width: 200
+        height: 90
       alignment: 9
-      pivot: {x: 0.42, y: 0.03}
+      pivot: {x: 0.415, y: 0.16}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: T_Player_heavy_61
+      name: T_Player_combo_light_37
       rect:
         serializedVersion: 2
-        x: 1540
-        y: 345
-        width: 220
-        height: 97
+        x: 1400
+        y: 664
+        width: 200
+        height: 90
       alignment: 9
-      pivot: {x: 0.42, y: 0.03}
+      pivot: {x: 0.415, y: 0.16}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Player_combo_light_38
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 664
+        width: 200
+        height: 90
+      alignment: 9
+      pivot: {x: 0.415, y: 0.16}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Player_combo_light_39
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 664
+        width: 200
+        height: 90
+      alignment: 9
+      pivot: {x: 0.415, y: 0.16}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Player_combo_light_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 574
+        width: 200
+        height: 90
+      alignment: 9
+      pivot: {x: 0.415, y: 0.16}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Player_combo_light_41
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 574
+        width: 200
+        height: 90
+      alignment: 9
+      pivot: {x: 0.415, y: 0.16}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Player_combo_light_42
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 574
+        width: 200
+        height: 90
+      alignment: 9
+      pivot: {x: 0.415, y: 0.16}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Player_combo_light_43
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 574
+        width: 200
+        height: 90
+      alignment: 9
+      pivot: {x: 0.415, y: 0.16}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Player_combo_light_44
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 574
+        width: 200
+        height: 90
+      alignment: 9
+      pivot: {x: 0.415, y: 0.16}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Player_combo_light_45
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 574
+        width: 200
+        height: 90
+      alignment: 9
+      pivot: {x: 0.415, y: 0.16}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Player_combo_light_46
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 574
+        width: 200
+        height: 90
+      alignment: 9
+      pivot: {x: 0.415, y: 0.16}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Player_combo_light_47
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 574
+        width: 200
+        height: 90
+      alignment: 9
+      pivot: {x: 0.415, y: 0.16}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Player_combo_light_48
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 574
+        width: 200
+        height: 90
+      alignment: 9
+      pivot: {x: 0.415, y: 0.16}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Player_combo_light_49
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 574
+        width: 200
+        height: 90
+      alignment: 9
+      pivot: {x: 0.415, y: 0.16}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Player_combo_light_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 484
+        width: 200
+        height: 90
+      alignment: 9
+      pivot: {x: 0.415, y: 0.16}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Player_combo_light_51
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 484
+        width: 200
+        height: 90
+      alignment: 9
+      pivot: {x: 0.415, y: 0.16}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Player_combo_light_52
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 484
+        width: 200
+        height: 90
+      alignment: 9
+      pivot: {x: 0.415, y: 0.16}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Player_combo_light_53
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 484
+        width: 200
+        height: 90
+      alignment: 9
+      pivot: {x: 0.415, y: 0.16}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Player_combo_light_54
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 484
+        width: 200
+        height: 90
+      alignment: 9
+      pivot: {x: 0.415, y: 0.16}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Player_combo_light_55
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 484
+        width: 200
+        height: 90
+      alignment: 9
+      pivot: {x: 0.415, y: 0.16}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Player_combo_light_56
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 484
+        width: 200
+        height: 90
+      alignment: 9
+      pivot: {x: 0.415, y: 0.16}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     outline: []
     physicsShape: []
-  spritePackingTag: PLAYER
+  spritePackingTag: 
   userData: 
   assetBundleName: 
   assetBundleVariant: 
