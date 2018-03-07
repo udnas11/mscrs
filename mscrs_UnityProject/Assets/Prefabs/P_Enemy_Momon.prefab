@@ -326,7 +326,7 @@ MonoBehaviour:
   _damage: 10
   _canCrit: 0
   _deathAnim: 0
-  _triggerHitAnimation: 0
+  _triggerHitAnimation: 1
   _cameraShaker: {fileID: 0}
   _shakerTriggerType: 0
   _shouldFreeze: 0

@@ -1053,6 +1053,7 @@ MonoBehaviour:
   _maxHP: 100
   _receivers:
   - {fileID: 114950405042466896}
+  _deathSoundID: 
 --- !u!114 &114621111376643664
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1387,6 +1388,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaskDamageType: 1
   _healthEntity: {fileID: 114600008291051498}
+  _soundID: 
 --- !u!114 &114952379819708352
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -120,6 +120,12 @@ public class PlayerController : MonoBehaviour
         _horizontalInput = horizontal;
     }
 
+    private void OnPushForceReceived(Vector2 force, float physicsDuration)
+    {
+        _rigidBody2d.AddForce(force, ForceMode2D.Impulse);
+        _physicsPenaltyOverTimestamp = Time.time + physicsDuration;
+    }
+
     private void OnJumpInput()
     {
         if (InAir == false)
@@ -173,6 +179,11 @@ public class PlayerController : MonoBehaviour
         _queueJump = true;
     }
 
+    private void OnPlayGetHitAnimation()
+    {
+        _playerAnimator.GetHit();
+    }
+
     private void OnAnimationCallbackInhibitPhysics(float duration)
     {
         _physicsInhibitorCoroutine = StartCoroutine(IVelocityInhibitor(duration));
@@ -216,6 +227,7 @@ public class PlayerController : MonoBehaviour
 
         _healthEntity.OnDeath += OnDying;
         _healthEntity.OnPushForceReceived += OnPushForceReceived;
+        _healthEntity.OnPlayGetHitAnimation += OnPlayGetHitAnimation;
     }
 
     private void OnDestroy()
@@ -234,12 +246,6 @@ public class PlayerController : MonoBehaviour
 
         _healthEntity.OnDeath -= OnDying;
         _healthEntity.OnPushForceReceived -= OnPushForceReceived;
-    }
-
-    private void OnPushForceReceived(Vector2 force, float physicsDuration)
-    {
-        _rigidBody2d.AddForce(force, ForceMode2D.Impulse);
-        _physicsPenaltyOverTimestamp = Time.time + physicsDuration;
     }
 
     private void OnTriggerEnter2D(Collider2D trigger)
