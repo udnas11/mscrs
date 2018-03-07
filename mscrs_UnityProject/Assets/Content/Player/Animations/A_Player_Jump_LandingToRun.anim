@@ -5,7 +5,7 @@ AnimationClip:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: A_Player_Jump_Landing
+  m_Name: A_Player_Jump_LandingToRun
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -23,46 +23,40 @@ AnimationClip:
         time: 0
         value: 2
         inSlope: 0
-        outSlope: 0
-        tangentMode: 136
+        outSlope: -0.10697602
+        tangentMode: 5
       - serializedVersion: 2
-        time: 0.13333334
-        value: 0
-        inSlope: 0
+        time: 0.375
+        value: 2
+        inSlope: 5.501838
         outSlope: 0
-        tangentMode: 136
+        tangentMode: 65
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: _animHorizontalSpeed
+    attribute: _animHorizontalForcedSpeed
     path: 
     classID: 114
     script: {fileID: 11500000, guid: ac05f29cccb520c46b05f10ea102311e, type: 3}
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300022, guid: d0ef1612748884345a08d25ffe64de15, type: 3}
-    - time: 0.06666667
-      value: {fileID: 21300024, guid: d0ef1612748884345a08d25ffe64de15, type: 3}
-    - time: 0.13333334
-      value: {fileID: 21300026, guid: d0ef1612748884345a08d25ffe64de15, type: 3}
-    - time: 0.2
-      value: {fileID: 21300028, guid: d0ef1612748884345a08d25ffe64de15, type: 3}
-    - time: 0.26666668
-      value: {fileID: 21300030, guid: d0ef1612748884345a08d25ffe64de15, type: 3}
-    - time: 0.33333334
-      value: {fileID: 21300032, guid: d0ef1612748884345a08d25ffe64de15, type: 3}
-    - time: 0.4
-      value: {fileID: 21300034, guid: d0ef1612748884345a08d25ffe64de15, type: 3}
-    - time: 0.46666667
-      value: {fileID: 21300036, guid: d0ef1612748884345a08d25ffe64de15, type: 3}
-    - time: 0.53333336
-      value: {fileID: 21300038, guid: d0ef1612748884345a08d25ffe64de15, type: 3}
+      value: {fileID: 21300000, guid: 33c3a8fa40581b1438f441fffd42dc69, type: 3}
+    - time: 0.0625
+      value: {fileID: 21300002, guid: 33c3a8fa40581b1438f441fffd42dc69, type: 3}
+    - time: 0.125
+      value: {fileID: 21300004, guid: 33c3a8fa40581b1438f441fffd42dc69, type: 3}
+    - time: 0.1875
+      value: {fileID: 21300006, guid: 33c3a8fa40581b1438f441fffd42dc69, type: 3}
+    - time: 0.25
+      value: {fileID: 21300008, guid: 33c3a8fa40581b1438f441fffd42dc69, type: 3}
+    - time: 0.3125
+      value: {fileID: 21300010, guid: 33c3a8fa40581b1438f441fffd42dc69, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
-  m_SampleRate: 15
+  m_SampleRate: 16
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -71,7 +65,7 @@ AnimationClip:
     genericBindings:
     - serializedVersion: 2
       path: 0
-      attribute: 2888044821
+      attribute: 2054611984
       script: {fileID: 11500000, guid: ac05f29cccb520c46b05f10ea102311e, type: 3}
       typeID: 114
       customType: 0
@@ -84,21 +78,18 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300022, guid: d0ef1612748884345a08d25ffe64de15, type: 3}
-    - {fileID: 21300024, guid: d0ef1612748884345a08d25ffe64de15, type: 3}
-    - {fileID: 21300026, guid: d0ef1612748884345a08d25ffe64de15, type: 3}
-    - {fileID: 21300028, guid: d0ef1612748884345a08d25ffe64de15, type: 3}
-    - {fileID: 21300030, guid: d0ef1612748884345a08d25ffe64de15, type: 3}
-    - {fileID: 21300032, guid: d0ef1612748884345a08d25ffe64de15, type: 3}
-    - {fileID: 21300034, guid: d0ef1612748884345a08d25ffe64de15, type: 3}
-    - {fileID: 21300036, guid: d0ef1612748884345a08d25ffe64de15, type: 3}
-    - {fileID: 21300038, guid: d0ef1612748884345a08d25ffe64de15, type: 3}
+    - {fileID: 21300000, guid: 33c3a8fa40581b1438f441fffd42dc69, type: 3}
+    - {fileID: 21300002, guid: 33c3a8fa40581b1438f441fffd42dc69, type: 3}
+    - {fileID: 21300004, guid: 33c3a8fa40581b1438f441fffd42dc69, type: 3}
+    - {fileID: 21300006, guid: 33c3a8fa40581b1438f441fffd42dc69, type: 3}
+    - {fileID: 21300008, guid: 33c3a8fa40581b1438f441fffd42dc69, type: 3}
+    - {fileID: 21300010, guid: 33c3a8fa40581b1438f441fffd42dc69, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.6
+    m_StopTime: 0.375
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -121,18 +112,18 @@ AnimationClip:
         time: 0
         value: 2
         inSlope: 0
-        outSlope: 0
-        tangentMode: 136
+        outSlope: -0.10697602
+        tangentMode: 5
       - serializedVersion: 2
-        time: 0.13333334
-        value: 0
-        inSlope: 0
+        time: 0.375
+        value: 2
+        inSlope: 5.501838
         outSlope: 0
-        tangentMode: 136
+        tangentMode: 65
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: _animHorizontalSpeed
+    attribute: _animHorizontalForcedSpeed
     path: 
     classID: 114
     script: {fileID: 11500000, guid: ac05f29cccb520c46b05f10ea102311e, type: 3}
@@ -145,14 +136,6 @@ AnimationClip:
     functionName: PlaySoundThisPosition
     data: Player_Landing
     objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0
-    functionName: SpawnEffect
-    data: 
-    objectReferenceParameter: {fileID: 4497950730599326, guid: 0f59872e1c88e3748a2b7056029b5d27,
-      type: 2}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0

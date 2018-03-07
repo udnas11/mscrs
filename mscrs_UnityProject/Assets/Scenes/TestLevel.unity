@@ -2087,7 +2087,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _unitSceneName: TestLevel_units
   _playerSpawnPos: {fileID: 867793373}
-  _loadUnits: 1
+  _loadUnits: 0
   _loadPlayer: 1
   PlayerControllerInstance: {fileID: 0}
 --- !u!1 &1911358158

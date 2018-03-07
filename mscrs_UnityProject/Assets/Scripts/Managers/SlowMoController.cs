@@ -82,13 +82,14 @@ public class SlowMoController : Singleton<SlowMoController>
         float newTimeScale = _slowMoDebug ? 0.2f : _slowMoAccumulated;
         Time.timeScale = newTimeScale;
         _slowMoAccumulated = 1f;
-        
+        /*
         //if (lastTimeScale != newTimeScale)
         {
             List<AudioObject> activeSounds = AudioController.GetPlayingAudioObjectsInCategory("SFX");
             foreach (var sound in activeSounds)
                 sound.pitch = Mathf.Max(newTimeScale, 0.2f);
         }
+        */
 
         if (Input.GetKeyDown(_slowMoButton))
             _slowMoDebug = !_slowMoDebug;
@@ -97,6 +98,16 @@ public class SlowMoController : Singleton<SlowMoController>
     private void OnGUI()
     {
         GUI.Label(new Rect(Screen.width - 150, Screen.height - 25, 150, 25), "Time scale: " + Time.timeScale);
+    }
+
+    [ContextMenu("Test")]
+    void test()
+    {
+        Vector2 init = new Vector2(0.5662019f, 0.03369229f);
+        Vector2 final = new Vector2(0.7094193f, 0.0365865f);
+
+        for(float i = 0f; i < 5f; i+= 1f)
+            Debug.Log(Vector2.Lerp(init, final, i / 5f).ToString("00.00000"));
     }
     #endregion
 }
