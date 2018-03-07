@@ -378,7 +378,7 @@ MonoBehaviour:
         Volume: 1
         PitchShift: 0
         Pan2D: 0
-        Delay: 0
+        Delay: 0.2
         RandomPitch: 0
         RandomVolume: 0
         RandomDelay: 0
@@ -838,8 +838,8 @@ MonoBehaviour:
   _volume: 1
   _currentInspectorSelection:
     currentCategoryIndex: 0
-    currentItemIndex: 12
-    currentSubitemIndex: 1
+    currentItemIndex: 5
+    currentSubitemIndex: 0
     currentPlaylistEntryIndex: 0
     currentPlaylistIndex: 0
 --- !u!1002 &11400001
