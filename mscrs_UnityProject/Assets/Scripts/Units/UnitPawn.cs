@@ -38,6 +38,9 @@ public class UnitPawn : MonoBehaviour
 
     public void SetFlipLeft(bool newState)
     {
+        if (_unitAnimatorController.GetPhaseState(BaseAnimatorController.EAnimationPhase.Attacking))
+            return;
+
         if (_flipLeft != newState)
         {
             _flipLeft = newState;
@@ -48,7 +51,7 @@ public class UnitPawn : MonoBehaviour
 
     public void Attack(Vector2 targetPos)
     {
-        if (_unitAnimatorController.GetPhaseState(BaseAnimatorController.EAnimationPhase.Attacking) == false)
+        //if (_unitAnimatorController.GetPhaseState(BaseAnimatorController.EAnimationPhase.Attacking) == false)
             SetFlipLeft(targetPos.x < transform.position.x);
         _unitAnimatorController.Attack();
     }

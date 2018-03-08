@@ -88,6 +88,11 @@ public class BaseAnimatorController : MonoBehaviour
             _phaseStates[state] = newStatus;
         }
     }
+
+    public void ClearStatePhases()
+    {
+        _phaseStates.Clear();
+    }
     #endregion
 
 
