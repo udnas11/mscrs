@@ -480,6 +480,7 @@ MonoBehaviour:
   BehaviourSettings:
     DetectRange: 2.5
     AttackRange: 1
+    AttackMinimumRange: 0.5
   _behaviourRaycastTarget: {fileID: 4165657204699842}
   _gibsPrefab: {fileID: 114689919781034436, guid: c8cda92fda87e8441b05dee78dd25431,
     type: 2}

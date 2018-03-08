@@ -11,6 +11,7 @@ public class UnitBehaviourSettings
 {
     public float DetectRange;
     public float AttackRange;
+    public float AttackMinimumRange;
 }
 
 public class UnitController : MonoBehaviour
