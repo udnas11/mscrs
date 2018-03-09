@@ -700,8 +700,10 @@ MonoBehaviour:
   MaskDamageType: -2
   _damage: 15
   _canCrit: 1
-  _deathAnim: 1
-  _triggerHitAnimation: 1
+  _properties:
+    DeathAnimation: 1
+    TriggerHitAnimation: 1
+    CustomHitSound: Enemy_DamageReceiveCombo
   _cameraShaker: {fileID: 114774988375707960}
   _shakerTriggerType: 1
   _shouldFreeze: 1
@@ -723,8 +725,10 @@ MonoBehaviour:
   MaskDamageType: -2
   _damage: 25
   _canCrit: 1
-  _deathAnim: 1
-  _triggerHitAnimation: 1
+  _properties:
+    DeathAnimation: 1
+    TriggerHitAnimation: 1
+    CustomHitSound: Enemy_DamageReceiveCombo
   _cameraShaker: {fileID: 114621111376643664}
   _shakerTriggerType: 1
   _shouldFreeze: 1
@@ -757,8 +761,10 @@ MonoBehaviour:
   MaskDamageType: -2
   _damage: 10
   _canCrit: 1
-  _deathAnim: 0
-  _triggerHitAnimation: 1
+  _properties:
+    DeathAnimation: 0
+    TriggerHitAnimation: 1
+    CustomHitSound: 
   _cameraShaker: {fileID: 0}
   _shakerTriggerType: 0
   _shouldFreeze: 1
@@ -846,8 +852,10 @@ MonoBehaviour:
   MaskDamageType: -6
   _damage: 15
   _canCrit: 1
-  _deathAnim: 0
-  _triggerHitAnimation: 0
+  _properties:
+    DeathAnimation: 0
+    TriggerHitAnimation: 1
+    CustomHitSound: 
   _cameraShaker: {fileID: 114687272572757306}
   _shakerTriggerType: 1
   _shouldFreeze: 1
@@ -970,8 +978,10 @@ MonoBehaviour:
   MaskDamageType: -6
   _damage: 8
   _canCrit: 1
-  _deathAnim: 0
-  _triggerHitAnimation: 0
+  _properties:
+    DeathAnimation: 0
+    TriggerHitAnimation: 0
+    CustomHitSound: 
   _cameraShaker: {fileID: 114309892797954474}
   _shakerTriggerType: 2
   _shouldFreeze: 1
@@ -1333,8 +1343,10 @@ MonoBehaviour:
   MaskDamageType: -6
   _damage: 10
   _canCrit: 1
-  _deathAnim: 0
-  _triggerHitAnimation: 1
+  _properties:
+    DeathAnimation: 0
+    TriggerHitAnimation: 0
+    CustomHitSound: 
   _cameraShaker: {fileID: 114515010369384546}
   _shakerTriggerType: 1
   _shouldFreeze: 1
@@ -1367,8 +1379,10 @@ MonoBehaviour:
   MaskDamageType: -2
   _damage: 20
   _canCrit: 1
-  _deathAnim: 1
-  _triggerHitAnimation: 1
+  _properties:
+    DeathAnimation: 0
+    TriggerHitAnimation: 1
+    CustomHitSound: Enemy_DamageReceiveCombo
   _cameraShaker: {fileID: 114341167585377288}
   _shakerTriggerType: 1
   _shouldFreeze: 1
@@ -1512,8 +1526,10 @@ MonoBehaviour:
   MaskDamageType: -2
   _damage: 35
   _canCrit: 1
-  _deathAnim: 0
-  _triggerHitAnimation: 1
+  _properties:
+    DeathAnimation: 0
+    TriggerHitAnimation: 1
+    CustomHitSound: 
   _cameraShaker: {fileID: 114952379819708352}
   _shakerTriggerType: 1
   _shouldFreeze: 0

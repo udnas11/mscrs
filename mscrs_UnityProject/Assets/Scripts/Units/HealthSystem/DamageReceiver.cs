@@ -26,10 +26,15 @@ public class DamageReceiver : MonoBehaviour
 
 
     #region pub methods
-    public void TakeDamage(int damageCount, int deathAnimationIndex, bool triggerHitAnimation)
+    public bool IsDead { get { return _healthEntity.IsDead; } }
+
+    //public void TakeDamage(int damageCount, int deathAnimationIndex, bool triggerHitAnimation)
+    public void TakeDamage(int damageCount, DamagingTrigger.DamageTriggerProperties properties)
     {
-        _healthEntity.TakeDamage(damageCount, deathAnimationIndex, triggerHitAnimation);
-        if (string.IsNullOrEmpty(_soundID) == false)
+        _healthEntity.TakeDamage(damageCount, properties.DeathAnimation, properties.TriggerHitAnimation);
+        if (string.IsNullOrEmpty(properties.CustomHitSound) == false)
+            AudioController.Play(properties.CustomHitSound, transform.position);
+        else if (string.IsNullOrEmpty(_soundID) == false)
             AudioController.Play(_soundID, transform.position);
     }
 

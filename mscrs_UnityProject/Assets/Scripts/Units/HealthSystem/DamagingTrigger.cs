@@ -22,6 +22,14 @@ public class DamagingTrigger : MonoBehaviour
         OnHitOnly
     }
 
+    [Serializable]
+    public struct DamageTriggerProperties
+    {
+        public int DeathAnimation;
+        public bool TriggerHitAnimation;
+        public string CustomHitSound;
+    }
+
     #region public serialised vars
     [HideInInspector]
     public EDamageReceiverType MaskDamageType;
@@ -31,9 +39,11 @@ public class DamagingTrigger : MonoBehaviour
     [SerializeField]
     bool _canCrit;
     [SerializeField]
+    DamageTriggerProperties _properties;
+    /*[SerializeField]
     int _deathAnim;
     [SerializeField]
-    bool _triggerHitAnimation;
+    bool _triggerHitAnimation;*/
 
     [SerializeField, Header("Camera Shake")]
     CameraShaker _cameraShaker;
@@ -61,6 +71,9 @@ public class DamagingTrigger : MonoBehaviour
     #region private protected methods
     virtual protected void OnProcessDamage(DamageReceiver receiver)
     {
+        if (receiver.IsDead)
+            return;
+
         if (_shouldFreeze)
             SlowMoController.Instance.ApplyFreeze(_freezeDuration);
 
@@ -81,7 +94,8 @@ public class DamagingTrigger : MonoBehaviour
                 Instantiate(AssetDatabaseSO.Instance.SparksPrefab, sparkPos, Quaternion.identity);
             }
         }
-        receiver.TakeDamage(_damage, _deathAnim, _triggerHitAnimation);
+        //receiver.TakeDamage(_damage, _deathAnim, _triggerHitAnimation);
+        receiver.TakeDamage(_damage, _properties);
     }
     #endregion
 

@@ -31,6 +31,8 @@ public class HealthEntity : MonoBehaviour
 
 
     #region pub methods
+    public bool IsDead { get { return _dead; } }
+
     public void TakeDamage(int damage, int deathAnimationIndex, bool triggerHitAnimation)
     {
         if (_dead)

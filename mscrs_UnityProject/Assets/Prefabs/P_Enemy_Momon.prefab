@@ -412,8 +412,10 @@ MonoBehaviour:
   MaskDamageType: 1
   _damage: 10
   _canCrit: 0
-  _deathAnim: 0
-  _triggerHitAnimation: 1
+  _properties:
+    DeathAnimation: 0
+    TriggerHitAnimation: 1
+    CustomHitSound: 
   _cameraShaker: {fileID: 0}
   _shakerTriggerType: 0
   _shouldFreeze: 0
@@ -458,14 +460,16 @@ MonoBehaviour:
   MaskDamageType: 1
   _damage: 3
   _canCrit: 0
-  _deathAnim: 0
-  _triggerHitAnimation: 1
+  _properties:
+    DeathAnimation: 0
+    TriggerHitAnimation: 1
+    CustomHitSound: 
   _cameraShaker: {fileID: 0}
   _shakerTriggerType: 0
   _shouldFreeze: 0
   _freezeDuration: 0
   _sparksOffset: {x: 0, y: 0}
-  _pushForce: {x: 6, y: 0}
+  _pushForce: {x: 20, y: 0}
   _physicsDuration: 0.1
 --- !u!114 &114777773529459632
 MonoBehaviour:

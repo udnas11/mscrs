@@ -15,12 +15,22 @@ namespace MoonscarsUI
         [SerializeField]
         Button _startButton;
         [SerializeField]
+        Button _readmeButton;
+        [SerializeField]
         Button _quitButton;
+
+        [SerializeField]
+        GameObject _readmePanel;
 
 
         void OnStartClick()
         {
             UnityEngine.SceneManagement.SceneManager.LoadScene("TestLevel", UnityEngine.SceneManagement.LoadSceneMode.Single);
+        }
+
+        void OnReadmeClick()
+        {
+            _readmePanel.SetActive(!_readmePanel.activeSelf);
         }
 
         void OnQuitclick()
@@ -31,8 +41,8 @@ namespace MoonscarsUI
         private void Awake()
         {
             _startButton.onClick.AddListener(OnStartClick);
+            _readmeButton.onClick.AddListener(OnReadmeClick);
             _quitButton.onClick.AddListener(OnQuitclick);
         }
-
     }
 }

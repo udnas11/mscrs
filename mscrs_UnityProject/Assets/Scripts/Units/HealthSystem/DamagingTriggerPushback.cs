@@ -27,8 +27,10 @@ public class DamagingTriggerPushback : DamagingTrigger
     #region private protected methods
     protected override void OnProcessDamage(DamageReceiver receiver)
     {
-        // applying push before damage so units that will die get pushed as well
+        if (receiver.IsDead)
+            return;
 
+        // applying push before damage so units that will die get pushed as well
         Vector2 pushForceFlippable = _pushForce;
         pushForceFlippable.x *= transform.lossyScale.x < 0 ? -1f : 1f;
         receiver.TakePushForce(pushForceFlippable, _physicsDuration);
