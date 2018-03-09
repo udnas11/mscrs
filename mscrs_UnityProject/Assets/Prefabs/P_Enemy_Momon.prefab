@@ -443,6 +443,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 507f7922c112de1478494db7ddc0e73d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _attackAnimCount: 1
 --- !u!114 &114746420712821782
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -479,8 +480,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BehaviourSettings:
     DetectRange: 2.5
-    AttackRange: 1
-    AttackMinimumRange: 0.5
+    AttackRange: 1.2
+    AttackMinimumRange: 0.25
   _behaviourRaycastTarget: {fileID: 4165657204699842}
   _gibsPrefab: {fileID: 114689919781034436, guid: c8cda92fda87e8441b05dee78dd25431,
     type: 2}

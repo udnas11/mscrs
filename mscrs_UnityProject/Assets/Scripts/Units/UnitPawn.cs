@@ -49,11 +49,11 @@ public class UnitPawn : MonoBehaviour
         }
     }
 
-    public void Attack(Vector2 targetPos)
+    public void Attack(Vector2 targetPos, int customAnim = -1)
     {
         //if (_unitAnimatorController.GetPhaseState(BaseAnimatorController.EAnimationPhase.Attacking) == false)
             SetFlipLeft(targetPos.x < transform.position.x);
-        _unitAnimatorController.Attack();
+        _unitAnimatorController.AttackCustomAnim(customAnim);
     }
 
     public void Die(int deathAnimationIndex = 0)

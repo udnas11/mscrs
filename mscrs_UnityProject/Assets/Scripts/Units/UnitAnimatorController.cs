@@ -9,6 +9,8 @@ using UnityRandom = UnityEngine.Random;
 public class UnitAnimatorController : BaseAnimatorController
 {
     #region public serialised vars
+    [SerializeField]
+    int _attackAnimCount = 1;
     #endregion
 
 
@@ -17,12 +19,15 @@ public class UnitAnimatorController : BaseAnimatorController
 
 
     #region pub methods
-    public override void Attack()
+    public virtual void AttackCustomAnim(int customAnimation = -1)
     {
         if (GetPhaseState(EAnimationPhase.Attacking) == false)
         {
-            _animator.SetFloat("indexAttackAnim", UnityRandom.Range(0, 2));
-            base.Attack();
+            if (customAnimation < 0)
+                _animator.SetFloat("indexAttackAnim", UnityRandom.Range(0, _attackAnimCount));
+            else
+                _animator.SetFloat("indexAttackAnim", customAnimation);
+            Attack();
         }
     }
     #endregion
