@@ -98,6 +98,8 @@ public class SlowMoController : Singleton<SlowMoController>
     private void OnGUI()
     {
         GUI.Label(new Rect(Screen.width - 150, Screen.height - 25, 150, 25), "Time scale: " + Time.timeScale);
+        if (GUI.Button(new Rect(Screen.width - 150, 50, 150, 25), "Toggle slowmo"))
+            _slowMoDebug = !_slowMoDebug;
     }
     #endregion
 }

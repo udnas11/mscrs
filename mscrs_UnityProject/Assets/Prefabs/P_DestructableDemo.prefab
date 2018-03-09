@@ -91,7 +91,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1.5, y: 1.5}
-    newSize: {x: 0.5, y: 1.25}
+    newSize: {x: 0.53, y: 1.22}
     adaptiveTilingThreshold: 0.5
     drawMode: 1
     adaptiveTiling: 0
@@ -137,6 +137,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaskDamageType: 4
   _healthEntity: {fileID: 114899328451211604}
+  _soundID: 
 --- !u!114 &114422900625333550
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -163,6 +164,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxHP: 1
   _receivers: []
+  _deathSoundID: 
 --- !u!212 &212130944246132236
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -202,7 +204,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 1
-  m_Size: {x: 0.5, y: 1.25}
+  m_Size: {x: 0.53, y: 1.22}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
