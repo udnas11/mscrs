@@ -322,7 +322,7 @@ public class PlayerController : MonoBehaviour
 
         Vector2 pos = Camera.main.WorldToScreenPoint(transform.position);
         pos.y = Screen.height - pos.y - 15;
-        GUI.Label(new Rect(pos, new Vector2(50, 20)), _stamina.ToString("0.") + "/100");
+        GUI.Label(new Rect(pos, new Vector2(50, 20)), _stamina.ToString("0.") + "/" + _staminaMaximum.ToString("0."));
     }
     #endregion
 }
