@@ -10,7 +10,7 @@ using UnityRandom = UnityEngine.Random;
 public class SceneController : Singleton<SceneController>
 {
 
-    public Action<PlayerController> OnPlayerSpawned;
+    public event Action<PlayerController> OnPlayerSpawned;
 
     #region public serialised vars
     [SerializeField]
