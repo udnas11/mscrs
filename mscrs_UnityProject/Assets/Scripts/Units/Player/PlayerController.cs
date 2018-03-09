@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
 
     #region public serialised vars
     [SerializeField]
+    float _staminaMaximum;
+    [SerializeField]
     float _staminaRegenPerSecond;
     [SerializeField]
     Collider2D _groundTrigger;
@@ -45,7 +47,7 @@ public class PlayerController : MonoBehaviour
     int _groundTriggersActive = 0;
     bool _dead;
     float _physicsPenaltyOverTimestamp;
-    float _stamina = 100f;
+    float _stamina;
     float _startRunTime;
 
     Coroutine _physicsInhibitorCoroutine;
@@ -59,6 +61,7 @@ public class PlayerController : MonoBehaviour
     public HealthEntity HealthEntity { get { return _healthEntity; } }
     public Vector2 VelocityRigidbody { get { return _rigidBody2d.velocity; } }
     public float Stamina { get { return _stamina; } }
+    public float StaminaMax { get { return _staminaMaximum; } }
     public bool IsFlippedX { get { return !_facingRight; } }
 
     public void DecreaseStamina(float cost)
@@ -71,14 +74,14 @@ public class PlayerController : MonoBehaviour
     #region private protected methods
     void SetStamina(float newVal)
     {
-        float newStamina = Mathf.Clamp(newVal, 0f, 100f);
+        float newStamina = Mathf.Clamp(newVal, 0f, _staminaMaximum);
         if (newStamina == _stamina)
             return;
 
         _stamina = newStamina;
         _playerAnimator.SetStamina(_stamina);
         if (OnStaminaChanged != null)
-            OnStaminaChanged(_stamina, 100f);
+            OnStaminaChanged(_stamina, _staminaMaximum);
     }
 
     bool RaycastIsGroundBeneath()
@@ -209,6 +212,8 @@ public class PlayerController : MonoBehaviour
         _rigidBody2d = GetComponent<Rigidbody2D>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _healthEntity = GetComponent<HealthEntity>();
+
+        SetStamina(_staminaMaximum);
     }
 
     private void Start()

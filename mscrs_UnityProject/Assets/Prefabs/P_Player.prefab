@@ -69,7 +69,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1227535662577990
 GameObject:
   m_ObjectHideFlags: 1
@@ -1131,6 +1131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac05f29cccb520c46b05f10ea102311e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _staminaMaximum: 150
   _staminaRegenPerSecond: 10
   _groundTrigger: {fileID: 61702665924388410}
   _jumpImpulse: 5
