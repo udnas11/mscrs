@@ -18,10 +18,22 @@ public class CameraController : Singleton<CameraController>
     float _horizontalInput;
     Vector2 _playerVelocitySmooth;
     Vector2 _shake = Vector2.zero;
+    CameraZone _activeCameraZone;
     #endregion
 
 
     #region pub methods
+    public void CameraZoneEnter(CameraZone zone)
+    {
+        _activeCameraZone = zone;
+    }
+
+    public void CameraZoneExit(CameraZone zone)
+    {
+        if (zone == _activeCameraZone)
+            _activeCameraZone = null;
+    }
+
     public void ApplyCameraShake(AnimationCurve x, AnimationCurve y, float duration)
     {
         StartCoroutine(ICameraShake(x, y, duration));
@@ -87,11 +99,13 @@ public class CameraController : Singleton<CameraController>
 
         Vector2 targetPos = _player.transform.position;
         targetPos.y += _settings.AddHeight;
-        //targetPos.x += _horizontalInput * _settings.AheadDistance;
 
         _playerVelocitySmooth = Vector2.Lerp(_playerVelocitySmooth, _player.VelocityRigidbody * _settings.PlayerVelocityMultiplier, Time.deltaTime * _settings.PlayerVelocityLerpSpeed);
 
         targetPos.x += _playerVelocitySmooth.x;
+
+        if (_activeCameraZone != null)
+            targetPos = _activeCameraZone.TargetPos;
 
         targetPos += _shake;
         _shake = Vector2.zero;

@@ -255,14 +255,20 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D trigger)
     {
-        _groundTriggersActive++;
-        _playerAnimator.SetInAir(InAir);
+        if (trigger.gameObject.layer == LayerMask.NameToLayer("Ground"))
+        {
+            _groundTriggersActive++;
+            _playerAnimator.SetInAir(InAir);
+        }
     }
 
     private void OnTriggerExit2D(Collider2D trigger)
     {
-        _groundTriggersActive--;
-        _playerAnimator.SetInAir(InAir);
+        if (trigger.gameObject.layer == LayerMask.NameToLayer("Ground"))
+        {
+            _groundTriggersActive--;
+            _playerAnimator.SetInAir(InAir);
+        }
     }
 
     private void Update()
