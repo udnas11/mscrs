@@ -34,14 +34,14 @@ public class CameraZone : MonoBehaviour
     #region mono events
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        Debug.Log("triggered with player");
-        CameraController.Instance.CameraZoneEnter(this);
+        if (collider.gameObject.layer == LayerMask.NameToLayer("Player"))
+            CameraController.Instance.CameraZoneEnter(this);
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnTriggerExit2D(Collider2D collider)
     {
-        Debug.Log("triger exit player");
-        CameraController.Instance.CameraZoneExit(this);
+        if (collider.gameObject.layer == LayerMask.NameToLayer("Player"))
+            CameraController.Instance.CameraZoneExit(this);
     }
     #endregion
 }
