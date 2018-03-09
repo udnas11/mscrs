@@ -152,7 +152,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1337852686805656}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.315, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4970063382988528}
@@ -274,7 +274,7 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.23}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.15
 --- !u!61 &61347174661201832
@@ -397,6 +397,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaskDamageType: 2
   _healthEntity: {fileID: 114921064403192754}
+  _onHitEffects:
+  - {fileID: 4771147261315122, guid: 3f80fc4e28dc8c14ba842b04d6625f37, type: 2}
+  - {fileID: 4771147261315122, guid: 24e3204f26d8bdd4781418e949b26bf2, type: 2}
+  - {fileID: 4771147261315122, guid: 43b2310e55da66c4f92c03363ec0cd8c, type: 2}
   _soundID: Enemy_DamageReceive
 --- !u!114 &114235587726836848
 MonoBehaviour:
@@ -421,6 +425,7 @@ MonoBehaviour:
   _shouldFreeze: 0
   _freezeDuration: 0
   _sparksOffset: {x: 0, y: 0}
+  _onHitEffects: []
   _pushForce: {x: 15, y: 0}
   _physicsDuration: 0.2
 --- !u!114 &114448067951117862
@@ -469,6 +474,7 @@ MonoBehaviour:
   _shouldFreeze: 0
   _freezeDuration: 0
   _sparksOffset: {x: 0, y: 0}
+  _onHitEffects: []
   _pushForce: {x: 20, y: 0}
   _physicsDuration: 0.1
 --- !u!114 &114777773529459632

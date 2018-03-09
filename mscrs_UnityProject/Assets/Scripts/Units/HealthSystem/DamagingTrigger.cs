@@ -40,10 +40,6 @@ public class DamagingTrigger : MonoBehaviour
     bool _canCrit;
     [SerializeField]
     DamageTriggerProperties _properties;
-    /*[SerializeField]
-    int _deathAnim;
-    [SerializeField]
-    bool _triggerHitAnimation;*/
 
     [SerializeField, Header("Camera Shake")]
     CameraShaker _cameraShaker;
@@ -57,6 +53,8 @@ public class DamagingTrigger : MonoBehaviour
 
     [SerializeField, Header("Sparks")]
     Vector2 _sparksOffset;
+    [SerializeField]
+    Transform[] _onHitEffects;
     #endregion
 
 
@@ -65,6 +63,7 @@ public class DamagingTrigger : MonoBehaviour
 
 
     #region pub methods
+    public DamageTriggerProperties Properties { get { return _properties; } }
     #endregion
 
 
@@ -94,8 +93,17 @@ public class DamagingTrigger : MonoBehaviour
                 Instantiate(AssetDatabaseSO.Instance.SparksPrefab, sparkPos, Quaternion.identity);
             }
         }
-        //receiver.TakeDamage(_damage, _deathAnim, _triggerHitAnimation);
-        receiver.TakeDamage(_damage, _properties);
+
+        if (_onHitEffects.Length > 0)
+        {
+            Vector3 spawnPos = transform.position;
+            spawnPos.x += _sparksOffset.x * transform.lossyScale.x;
+            spawnPos.y += _sparksOffset.y;
+            var newInst = Instantiate(_onHitEffects[UnityRandom.Range(0, _onHitEffects.Length)], spawnPos, Quaternion.identity) as Transform;
+            newInst.localScale = this.transform.lossyScale;
+        }
+
+        receiver.TakeDamage(_damage, this);
     }
     #endregion
 

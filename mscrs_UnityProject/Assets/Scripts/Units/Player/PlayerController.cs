@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     Transform _enemyRaycastTarget;
     [SerializeField]
-    GameObject _damageDealers;
+    Transform[] _flippables;
 
     // driven by Animation custom property
     [HideInInspector, SerializeField]
@@ -287,7 +287,8 @@ public class PlayerController : MonoBehaviour
         {
             _facingRight = _horizontalInput > 0;
             _spriteRenderer.flipX = !_facingRight;
-            _damageDealers.transform.localScale = new Vector3(_facingRight ? 1f : -1f, 1f, 1f);
+            for (int i = 0; i < _flippables.Length; i++)
+                _flippables[i].transform.localScale = new Vector3(_facingRight ? 1f : -1f, 1f, 1f);
         }
 
         float resultHorizontalVelocity = _animHorizontalSpeed * _horizontalInput + _animHorizontalForcedSpeed * (_facingRight?1f:-1f);

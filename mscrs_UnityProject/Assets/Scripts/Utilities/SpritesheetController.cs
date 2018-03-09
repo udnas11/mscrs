@@ -14,6 +14,10 @@ public class SpritesheetController : MonoBehaviour
     Sprite[] _spriteArray;
     [SerializeField]
     float _interval = 0.09f;
+    [SerializeField]
+    bool _loop;
+    [SerializeField]
+    bool _autodestroy;
     #endregion
 
 
@@ -31,12 +35,20 @@ public class SpritesheetController : MonoBehaviour
     #region private protected methods
     IEnumerator CPlayAnimation()
     {
-        for (;;)
+        do
         {
-            _spriteRenderer.sprite = _spriteArray[_frame++];
-            yield return new WaitForSeconds(_interval);
-            if (_frame >= _spriteArray.Length)
-                _frame = 0;
+            for (_frame = 0; _frame < _spriteArray.Length; _frame++)
+            {
+                _spriteRenderer.sprite = _spriteArray[_frame];
+                yield return new WaitForSeconds(_interval);
+            }
+        }
+        while (_loop);
+
+        if (_autodestroy)
+        {
+            Destroy(gameObject);
+            yield break;
         }
     }
     #endregion
