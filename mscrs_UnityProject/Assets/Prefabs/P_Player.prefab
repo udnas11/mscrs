@@ -1131,7 +1131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac05f29cccb520c46b05f10ea102311e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _staminaRegenPerSecond: 10
+  _staminaRegenPerSecond: 20
   _groundTrigger: {fileID: 61702665924388410}
   _jumpImpulse: 5
   _groundRaycastDistance: 0.25
