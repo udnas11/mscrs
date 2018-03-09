@@ -26,4 +26,10 @@ public class DEBUG_InfiniteStamina : MonoBehaviour
             _player.DecreaseStamina(-100f);
     }
 
+    private void OnGUI()
+    {
+        if (GUI.Button(new Rect(Screen.width - 150, 75, 150, 25), "Toggle insta stamina"))
+            _active = !_active;
+    }
+
 }
