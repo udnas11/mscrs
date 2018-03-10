@@ -2743,14 +2743,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _reflectPoint: {fileID: 1532802170}
   _bumpTexture: {fileID: 2800000, guid: fe4fedeac0b875247b05a6ba3958080c, type: 3}
-  _bumpTextureScale: {x: 8, y: 8}
+  _bumpTextureScale: {x: 7.94, y: 8}
   _bumpTextureOffset: {x: 0, y: 0}
   _bumpMask: {fileID: 2800000, guid: 89e74b28517687641afe3eb85fc1417d, type: 3}
-  _bumpMultiplier: 0.064
-  _bumpSpeed: {x: -5, y: 2}
+  _bumpMultiplier: 0.077
+  _bumpSpeed: {x: -1.86, y: 0.76}
   _scale: 1.25
-  _exposure: 0.8
-  _saturation: 0.55
+  _exposure: 1.11
+  _saturation: 0.696
 --- !u!212 &1911358161
 SpriteRenderer:
   m_ObjectHideFlags: 0

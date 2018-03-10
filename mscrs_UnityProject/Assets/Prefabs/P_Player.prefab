@@ -764,8 +764,8 @@ MonoBehaviour:
       outSlope: 0
       tangentMode: 0
     - serializedVersion: 2
-      time: 0.4640523
-      value: 0.05507692
+      time: 0.4767476
+      value: 0.069862686
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -788,14 +788,14 @@ MonoBehaviour:
       outSlope: 0
       tangentMode: 0
     - serializedVersion: 2
-      time: 0.3465028
-      value: 0.019655835
+      time: 0.3275514
+      value: 0.00006354973
       inSlope: -0.10278076
       outSlope: -0.10278076
       tangentMode: 0
     - serializedVersion: 2
-      time: 0.6571643
-      value: 0.0769518
+      time: 0.68505734
+      value: 0.096330464
       inSlope: -0.033164397
       outSlope: -0.033164397
       tangentMode: 0
@@ -830,7 +830,7 @@ MonoBehaviour:
   _cameraShaker: {fileID: 114774988375707960}
   _shakerTriggerType: 1
   _shouldFreeze: 1
-  _freezeDuration: 0.03
+  _freezeDuration: 0.2
   _sparksOffset: {x: 0.822, y: 0.035}
   _onHitEffects:
   - {fileID: 4771147261315122, guid: 64f0afe1fbed4314a95e507130047782, type: 2}
@@ -861,7 +861,7 @@ MonoBehaviour:
   _sparksOffset: {x: 0.523, y: -0.004}
   _onHitEffects:
   - {fileID: 4771147261315122, guid: 8bdb53bd7f38baa43a132ab818fefab9, type: 2}
-  _pushForce: {x: 5, y: 25}
+  _pushForce: {x: 30, y: 25}
   _physicsDuration: 0.2
 --- !u!114 &114248900881487826
 MonoBehaviour:
@@ -991,7 +991,7 @@ MonoBehaviour:
   _sparksOffset: {x: 0.525, y: 0.017}
   _onHitEffects:
   - {fileID: 4771147261315122, guid: 5afbf82c79ec7d9488de138f37dc0b07, type: 2}
-  _pushForce: {x: 10, y: 15}
+  _pushForce: {x: 50, y: 15}
   _physicsDuration: 0.3
 --- !u!114 &114330529465512690
 MonoBehaviour:
@@ -1009,12 +1009,12 @@ MonoBehaviour:
   _canCrit: 1
   _properties:
     DeathAnimation: 0
-    TriggerHitAnimation: 0
+    TriggerHitAnimation: 1
     CustomHitSound: 
   _cameraShaker: {fileID: 114060497566285774}
   _shakerTriggerType: 2
   _shouldFreeze: 1
-  _freezeDuration: 0.05
+  _freezeDuration: 0.08
   _sparksOffset: {x: 0.585, y: 0.12}
   _onHitEffects:
   - {fileID: 4771147261315122, guid: 4f6aead05cb00d649ae884c43727a963, type: 2}
@@ -1142,7 +1142,7 @@ MonoBehaviour:
   _cameraShaker: {fileID: 114309892797954474}
   _shakerTriggerType: 2
   _shouldFreeze: 1
-  _freezeDuration: 0.05
+  _freezeDuration: 0.08
   _sparksOffset: {x: 0.56, y: 0.06}
   _onHitEffects:
   - {fileID: 4771147261315122, guid: 44f741620a20e664b9754020ba7be23f, type: 2}
@@ -1300,8 +1300,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac05f29cccb520c46b05f10ea102311e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _staminaMaximum: 150
-  _staminaRegenPerSecond: 10
+  _staminaMaximum: 200
+  _staminaRegenPerSecond: 20
   _groundTrigger: {fileID: 61702665924388410}
   _jumpImpulse: 5
   _groundRaycastDistance: 0.25
@@ -1542,13 +1542,13 @@ MonoBehaviour:
   _damage: 20
   _canCrit: 1
   _properties:
-    DeathAnimation: 0
+    DeathAnimation: 1
     TriggerHitAnimation: 1
     CustomHitSound: Enemy_DamageReceiveCombo
   _cameraShaker: {fileID: 114341167585377288}
   _shakerTriggerType: 1
   _shouldFreeze: 1
-  _freezeDuration: 0.08
+  _freezeDuration: 0.1
   _sparksOffset: {x: 0.695, y: 0.016}
   _onHitEffects:
   - {fileID: 4771147261315122, guid: 2d42ee2a9ffdfac4998f23f8a38833e1, type: 2}
@@ -1567,10 +1567,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaskDamageType: 1
   _healthEntity: {fileID: 114600008291051498}
-  _onHitEffects:
-  - {fileID: 4771147261315122, guid: 3f80fc4e28dc8c14ba842b04d6625f37, type: 2}
-  - {fileID: 4771147261315122, guid: 24e3204f26d8bdd4781418e949b26bf2, type: 2}
-  - {fileID: 4771147261315122, guid: 43b2310e55da66c4f92c03363ec0cd8c, type: 2}
+  _onHitEffects: []
   _soundID: 
 --- !u!114 &114952379819708352
 MonoBehaviour:
@@ -1594,7 +1591,7 @@ MonoBehaviour:
       tangentMode: 0
     - serializedVersion: 2
       time: 0.0946946
-      value: 0.06326485
+      value: 0.0938282
       inSlope: 0.009611249
       outSlope: 0.009611249
       tangentMode: 0
@@ -1701,7 +1698,7 @@ MonoBehaviour:
   _cameraShaker: {fileID: 114952379819708352}
   _shakerTriggerType: 1
   _shouldFreeze: 0
-  _freezeDuration: 0
+  _freezeDuration: 0.04
   _sparksOffset: {x: 0.32, y: -0.47}
   _onHitEffects: []
   _pushForce: {x: 25, y: 25}
