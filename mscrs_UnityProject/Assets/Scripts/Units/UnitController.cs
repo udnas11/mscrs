@@ -81,6 +81,8 @@ public class UnitController : MonoBehaviour
         _dead = true;
         SetBehaviourState(_deadState);
         _unitPawn.Die(deathAnimationIndex);
+
+        Destroy(this.gameObject, 7f);
     }
 
     private void OnPushForceReceived(Vector2 vector, float physicsDuration)
@@ -115,6 +117,13 @@ public class UnitController : MonoBehaviour
     protected virtual void Update()
     {
         _currentState.StateUpdate(this);
+    }
+
+    protected virtual void OnDestroy()
+    {
+        _healthEntity.OnDeath -= OnDeath;
+        _healthEntity.OnPushForceReceived -= OnPushForceReceived;
+        _healthEntity.OnPlayGetHitAnimation -= OnPlayGetHitAnimation;
     }
     #endregion
 }

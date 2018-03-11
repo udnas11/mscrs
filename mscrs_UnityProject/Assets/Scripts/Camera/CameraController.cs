@@ -63,6 +63,7 @@ public class CameraController : Singleton<CameraController>
     {
         _player = player;
         _player.HealthEntity.OnDeath += OnPlayerDeath;
+        transform.position = _player.transform.position + Vector3.up*_settings.AddHeight;
     }
 
     void OnPlayerDeath(int deathAnim)
