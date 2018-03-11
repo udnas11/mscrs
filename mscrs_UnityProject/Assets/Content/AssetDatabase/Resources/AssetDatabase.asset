@@ -15,5 +15,7 @@ MonoBehaviour:
     type: 2}
   SparksPrefab: {fileID: 1616589180969650, guid: edf22abf8eb79cd46b8d56db562e8600,
     type: 2}
+  DamageTextPrefab: {fileID: 114988052565970164, guid: 9b74ff81db4b43b41a9888b6a9591d8f,
+    type: 2}
   CameraSettings: {fileID: 11400000, guid: d54c7929812c31744a8264448dd78aa5, type: 2}
   GenericSettings: {fileID: 11400000, guid: 3fedade749da2c8429987aacde7df701, type: 2}

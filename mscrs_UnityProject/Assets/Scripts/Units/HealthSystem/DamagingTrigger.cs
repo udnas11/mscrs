@@ -80,11 +80,13 @@ public class DamagingTrigger : MonoBehaviour
             _cameraShaker.Apply();
 
         int dmg = _damage;
+        bool isCrit = false;
         if (_canCrit)
         {
             GenericSettingsSO genericSettings = AssetDatabaseSO.Instance.GenericSettings;
             if (UnityRandom.Range(0f, 1f) <= genericSettings.CritChance)
             {
+                isCrit = true;
                 dmg = Mathf.FloorToInt(dmg * genericSettings.CritMultiplier);
                 SlowMoController.Instance.ApplyCritSlowmo();
                 Vector3 sparkPos = transform.position;
@@ -103,7 +105,7 @@ public class DamagingTrigger : MonoBehaviour
             newInst.localScale = this.transform.lossyScale;
         }
 
-        receiver.TakeDamage(_damage, this);
+        receiver.TakeDamage(dmg, isCrit, this);
     }
     #endregion
 

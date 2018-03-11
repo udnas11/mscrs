@@ -1569,6 +1569,8 @@ MonoBehaviour:
   _healthEntity: {fileID: 114600008291051498}
   _onHitEffects: []
   _soundID: 
+  _showDamageText: 1
+  _offsetDamageText: {x: 0, y: 0.2}
 --- !u!114 &114952379819708352
 MonoBehaviour:
   m_ObjectHideFlags: 1

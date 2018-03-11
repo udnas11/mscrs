@@ -19,6 +19,10 @@ public class DamageReceiver : MonoBehaviour
     Transform[] _onHitEffects;
     [SerializeField]
     string _soundID;
+    [SerializeField]
+    bool _showDamageText = true;
+    [SerializeField]
+    Vector2 _offsetDamageText;
     #endregion
 
 
@@ -29,10 +33,8 @@ public class DamageReceiver : MonoBehaviour
 
     #region pub methods
     public bool IsDead { get { return _healthEntity.IsDead; } }
-
-    //public void TakeDamage(int damageCount, int deathAnimationIndex, bool triggerHitAnimation)
-    //public void TakeDamage(int damageCount, DamagingTrigger.DamageTriggerProperties properties)
-    public void TakeDamage(int damageCount, DamagingTrigger damageTrigger)
+    
+    public void TakeDamage(int damageCount, bool isCrit, DamagingTrigger damageTrigger)
     {
         DamagingTrigger.DamageTriggerProperties properties = damageTrigger.Properties;
         _healthEntity.TakeDamage(damageCount, properties.DeathAnimation, properties.TriggerHitAnimation);
@@ -47,6 +49,12 @@ public class DamageReceiver : MonoBehaviour
             AudioController.Play(properties.CustomHitSound, transform.position);
         else if (string.IsNullOrEmpty(_soundID) == false)
             AudioController.Play(_soundID, transform.position);
+
+        if (_showDamageText)
+        {
+            var text = Instantiate(AssetDatabaseSO.Instance.DamageTextPrefab) as DamageText;
+            text.Init(damageCount, _offsetDamageText, isCrit ? Color.yellow : Color.red, transform);
+        }
     }
 
     public void TakePushForce(Vector2 pushForce, float physicsDuration)

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: GenericSettings
   m_EditorClassIdentifier: 
   CritChance: 0.35
-  CritMultiplier: 3
+  CritMultiplier: 2
   CritSlowmotionCurve:
     serializedVersion: 2
     m_Curve:

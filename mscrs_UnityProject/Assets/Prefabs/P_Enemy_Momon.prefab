@@ -479,6 +479,8 @@ MonoBehaviour:
   - {fileID: 4771147261315122, guid: 24e3204f26d8bdd4781418e949b26bf2, type: 2}
   - {fileID: 4771147261315122, guid: 43b2310e55da66c4f92c03363ec0cd8c, type: 2}
   _soundID: Enemy_DamageReceive
+  _showDamageText: 1
+  _offsetDamageText: {x: 0, y: 0.2}
 --- !u!114 &114235587726836848
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -135,6 +135,9 @@ public class SceneController : Singleton<SceneController>
             RespawnPlayer();
         if (GUI.Button(new Rect(Screen.width - 150, 25, 150, 25), "Reload Units Scene"))
             RestartUnitsScene();
+
+        if (GUI.Button(new Rect(0, Screen.height-25, 150, 25), "Exit Game"))
+            Application.Quit();
     }
     #endregion
 }
