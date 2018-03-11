@@ -38,17 +38,19 @@
 			}
 			
 			sampler2D _MainTex;
-			float _Saturation;
+			float _RedMultiplier;
 
 			fixed4 frag (v2f i) : SV_Target
 			{
 				fixed4 col = tex2D(_MainTex, i.uv);				
+				col.r = pow(col.r, _RedMultiplier);
+				//col.g = pow(col.g, _RedMultiplier);
+				//col.b = pow(col.b, _RedMultiplier);
+				/*
 				fixed pixelAvg = (col.r + col.g + col.b) / 3.0f;
 				fixed4 colGray = fixed4(pixelAvg, pixelAvg, pixelAvg, 1.0f);
-
-				fixed4 result = lerp(colGray, col, _Saturation);
-				//result = pow(result, lerp(1.0f, 1.0f, 1 - _Saturation));
-				return result;
+				*/
+				return col;
 			}
 			ENDCG
 		}

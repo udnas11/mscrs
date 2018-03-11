@@ -12,15 +12,15 @@ public class CameraEffectsController : MonoBehaviour
     [SerializeField]
     Shader _cameraShader;
     [SerializeField]
-    AnimationCurve _heartbeatCurve;
+    AnimationCurve _hurtAnim;
+    [SerializeField]
+    float _hurtAnimDuration = 1f;
     #endregion
 
 
     #region private protected vars
     Material _camMaterial;
     PlayerController _player;
-
-    float _playerHealth = 1f;
     #endregion
 
 
@@ -29,9 +29,22 @@ public class CameraEffectsController : MonoBehaviour
 
 
     #region private protected methods
-    void SetSaturation(float saturation)
+    void SetRedMultiplier(float saturation)
     {
-        _camMaterial.SetFloat("_Saturation", saturation);
+        _camMaterial.SetFloat("_RedMultiplier", saturation);
+    }
+
+    IEnumerator IAnimateHurt()
+    {
+        float timeStart = Time.time;
+        float timeEnd = timeStart + _hurtAnimDuration;
+        while (Time.time < timeEnd)
+        {
+            float t = Mathf.InverseLerp(timeStart, timeEnd, Time.time);
+            SetRedMultiplier(_hurtAnim.Evaluate(t));
+            yield return null;
+        }
+        SetRedMultiplier(1f);
     }
     #endregion
 
@@ -39,13 +52,12 @@ public class CameraEffectsController : MonoBehaviour
     #region events
     private void OnPlayerHealthChange(int current, int max)
     {
-        _playerHealth = (float)current / max;
+        StartCoroutine(IAnimateHurt());
     }
 
     private void OnPlayerSpawned(PlayerController inst)
     {
         _player.HealthEntity.OnHealthChanged -= OnPlayerHealthChange;
-        _playerHealth = 1f;
 
         _player = inst;
         _player.HealthEntity.OnHealthChanged += OnPlayerHealthChange;
@@ -62,7 +74,7 @@ public class CameraEffectsController : MonoBehaviour
     private void Awake()
     {
         _camMaterial = new Material(_cameraShader);
-        SetSaturation(1f);
+        SetRedMultiplier(1f);
     }
 
     private void Start()
@@ -71,12 +83,6 @@ public class CameraEffectsController : MonoBehaviour
         _player.HealthEntity.OnHealthChanged += OnPlayerHealthChange;
 
         SceneController.Instance.OnPlayerSpawned += OnPlayerSpawned;
-    }
-
-    private void Update()
-    {
-        float t = _heartbeatCurve.Evaluate(Time.time);
-        SetSaturation(Mathf.Lerp(_playerHealth, 1f, t));
     }
     #endregion
 }
