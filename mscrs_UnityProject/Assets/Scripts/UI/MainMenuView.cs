@@ -15,22 +15,19 @@ namespace MoonscarsUI
         [SerializeField]
         Button _startButton;
         [SerializeField]
-        Button _readmeButton;
+        Button _urlButton;
         [SerializeField]
         Button _quitButton;
-
-        [SerializeField]
-        GameObject _readmePanel;
 
 
         void OnStartClick()
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene("TestLevel", UnityEngine.SceneManagement.LoadSceneMode.Single);
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Disclaimer", UnityEngine.SceneManagement.LoadSceneMode.Single);
         }
 
-        void OnReadmeClick()
+        void OnURLClick()
         {
-            _readmePanel.SetActive(!_readmePanel.activeSelf);
+            Application.OpenURL("https://docs.google.com/presentation/d/1OfhmMNdyiu8P-Qrqz2zKHJmw-DlX8cwGqtNHj7O-7vw/edit#slide=id.p");
         }
 
         void OnQuitclick()
@@ -41,7 +38,7 @@ namespace MoonscarsUI
         private void Awake()
         {
             _startButton.onClick.AddListener(OnStartClick);
-            _readmeButton.onClick.AddListener(OnReadmeClick);
+            _urlButton.onClick.AddListener(OnURLClick);
             _quitButton.onClick.AddListener(OnQuitclick);
         }
     }
