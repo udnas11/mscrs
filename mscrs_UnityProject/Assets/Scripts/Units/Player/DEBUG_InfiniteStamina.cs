@@ -28,8 +28,11 @@ public class DEBUG_InfiniteStamina : MonoBehaviour
 
     private void OnGUI()
     {
-        if (GUI.Button(new Rect(Screen.width - 150, 75, 150, 25), "Toggle insta stamina"))
+        Color gui = GUI.color;
+        GUI.color = _active ? Color.green : Color.red;
+        if (GUI.Button(new Rect(Screen.width - 150, 50, 150, 50), "Toggle use stamina"))
             _active = !_active;
+        GUI.color = gui;
     }
 
 }

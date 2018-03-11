@@ -885,7 +885,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76dc360f05f53fa45a0ad8109db6a92c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaskDamageType: -2
+  MaskDamageType: -6
   _damage: 10
   _canCrit: 1
   _properties:
@@ -977,7 +977,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76dc360f05f53fa45a0ad8109db6a92c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaskDamageType: -6
+  MaskDamageType: -2
   _damage: 15
   _canCrit: 1
   _properties:
@@ -1004,7 +1004,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76dc360f05f53fa45a0ad8109db6a92c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaskDamageType: -6
+  MaskDamageType: -2
   _damage: 8
   _canCrit: 1
   _properties:
@@ -1132,7 +1132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76dc360f05f53fa45a0ad8109db6a92c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaskDamageType: -6
+  MaskDamageType: -2
   _damage: 8
   _canCrit: 1
   _properties:
@@ -1688,7 +1688,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76dc360f05f53fa45a0ad8109db6a92c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaskDamageType: -2
+  MaskDamageType: -6
   _damage: 35
   _canCrit: 1
   _properties:
