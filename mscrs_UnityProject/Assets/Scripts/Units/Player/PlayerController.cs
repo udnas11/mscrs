@@ -211,13 +211,13 @@ public class PlayerController : MonoBehaviour
         _playerAnimator = GetComponent<PlayerAnimatorController>();
         _rigidBody2d = GetComponent<Rigidbody2D>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
-        _healthEntity = GetComponent<HealthEntity>();
-
-        SetStamina(_staminaMaximum);
+        _healthEntity = GetComponent<HealthEntity>();        
     }
 
     private void Start()
     {
+        SetStamina(_staminaMaximum);
+
         PlayerInputHandler.Instance.OnHorizontalChange += OnHorizontalInputChange;
         PlayerInputHandler.Instance.OnJump += OnJumpInput;
         PlayerInputHandler.Instance.OnAttack1 += OnAttackInput;
