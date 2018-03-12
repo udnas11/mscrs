@@ -117,14 +117,14 @@ public class BaseAnimatorController : MonoBehaviour
     }
 
     private void OnGUI()
-    {
+    {/*
         Vector2 pos = Camera.main.WorldToScreenPoint(transform.position);
         pos.y = Screen.height - pos.y + 20;
         string label = "";
         foreach (var pair in _phaseStates)
             if (pair.Value)
                 label += pair.Key.ToString() + "\n";
-        GUI.Label(new Rect(pos, new Vector2(200, 200)), label);
+        GUI.Label(new Rect(pos, new Vector2(200, 200)), label);*/
     }
     #endregion
 }
