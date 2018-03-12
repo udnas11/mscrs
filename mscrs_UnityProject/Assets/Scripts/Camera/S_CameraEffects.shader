@@ -38,7 +38,7 @@
 			}
 			
 			sampler2D _MainTex;
-			float _RedMultiplier;
+			float _RedMultiplier = 1.0f;
 
 			fixed4 frag (v2f i) : SV_Target
 			{

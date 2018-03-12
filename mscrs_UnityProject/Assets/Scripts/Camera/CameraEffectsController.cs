@@ -84,5 +84,11 @@ public class CameraEffectsController : MonoBehaviour
 
         SceneController.Instance.OnPlayerSpawned += OnPlayerSpawned;
     }
+
+    private void OnApplicationFocus(bool focus)
+    {
+        if (focus)
+            SetRedMultiplier(1f);
+    }
     #endregion
 }
