@@ -1,0 +1,817 @@
+fileFormatVersion: 2
+guid: 453dbb8a25aa7a745ba8855a44678736
+timeCreated: 1520850783
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: T_Tentacle_attack_0
+    21300002: T_Tentacle_attack_1
+    21300004: T_Tentacle_attack_2
+    21300006: T_Tentacle_attack_3
+    21300008: T_Tentacle_attack_4
+    21300010: T_Tentacle_attack_5
+    21300012: T_Tentacle_attack_6
+    21300014: T_Tentacle_attack_7
+    21300016: T_Tentacle_attack_8
+    21300018: T_Tentacle_attack_9
+    21300020: T_Tentacle_attack_10
+    21300022: T_Tentacle_attack_11
+    21300024: T_Tentacle_attack_12
+    21300026: T_Tentacle_attack_13
+    21300028: T_Tentacle_attack_14
+    21300030: T_Tentacle_attack_15
+    21300032: T_Tentacle_attack_16
+    21300034: T_Tentacle_attack_17
+    21300036: T_Tentacle_attack_18
+    21300038: T_Tentacle_attack_19
+    21300040: T_Tentacle_attack_20
+    21300042: T_Tentacle_attack_21
+    21300044: T_Tentacle_attack_22
+    21300046: T_Tentacle_attack_23
+    21300048: T_Tentacle_attack_24
+    21300050: T_Tentacle_attack_25
+    21300052: T_Tentacle_attack_26
+    21300054: T_Tentacle_attack_27
+    21300056: T_Tentacle_attack_28
+    21300058: T_Tentacle_attack_29
+    21300060: T_Tentacle_attack_30
+    21300062: T_Tentacle_attack_31
+    21300064: T_Tentacle_attack_32
+    21300066: T_Tentacle_attack_33
+    21300068: T_Tentacle_attack_34
+    21300070: T_Tentacle_attack_35
+    21300072: T_Tentacle_attack_36
+    21300074: T_Tentacle_attack_37
+    21300076: T_Tentacle_attack_38
+    21300078: T_Tentacle_attack_39
+    21300080: T_Tentacle_attack_40
+    21300082: T_Tentacle_attack_41
+    21300084: T_Tentacle_attack_42
+    21300086: T_Tentacle_attack_43
+    21300088: T_Tentacle_attack_44
+    21300090: T_Tentacle_attack_45
+    21300092: T_Tentacle_Empty
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 9
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: T_Tentacle_attack_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1682
+        width: 322
+        height: 112
+      alignment: 9
+      pivot: {x: 0.25, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Tentacle_attack_1
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 1682
+        width: 322
+        height: 112
+      alignment: 9
+      pivot: {x: 0.25, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Tentacle_attack_2
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 1682
+        width: 322
+        height: 112
+      alignment: 9
+      pivot: {x: 0.25, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Tentacle_attack_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1570
+        width: 322
+        height: 112
+      alignment: 9
+      pivot: {x: 0.25, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Tentacle_attack_4
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 1570
+        width: 322
+        height: 112
+      alignment: 9
+      pivot: {x: 0.25, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Tentacle_attack_5
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 1570
+        width: 322
+        height: 112
+      alignment: 9
+      pivot: {x: 0.25, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Tentacle_attack_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1458
+        width: 322
+        height: 112
+      alignment: 9
+      pivot: {x: 0.25, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Tentacle_attack_7
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 1458
+        width: 322
+        height: 112
+      alignment: 9
+      pivot: {x: 0.25, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Tentacle_attack_8
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 1458
+        width: 322
+        height: 112
+      alignment: 9
+      pivot: {x: 0.25, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Tentacle_attack_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1346
+        width: 322
+        height: 112
+      alignment: 9
+      pivot: {x: 0.25, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Tentacle_attack_10
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 1346
+        width: 322
+        height: 112
+      alignment: 9
+      pivot: {x: 0.25, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Tentacle_attack_11
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 1346
+        width: 322
+        height: 112
+      alignment: 9
+      pivot: {x: 0.25, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Tentacle_attack_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1234
+        width: 322
+        height: 112
+      alignment: 9
+      pivot: {x: 0.25, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Tentacle_attack_13
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 1234
+        width: 322
+        height: 112
+      alignment: 9
+      pivot: {x: 0.25, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Tentacle_attack_14
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 1234
+        width: 322
+        height: 112
+      alignment: 9
+      pivot: {x: 0.25, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Tentacle_attack_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1122
+        width: 322
+        height: 112
+      alignment: 9
+      pivot: {x: 0.25, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Tentacle_attack_16
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 1122
+        width: 322
+        height: 112
+      alignment: 9
+      pivot: {x: 0.25, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Tentacle_attack_17
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 1122
+        width: 322
+        height: 112
+      alignment: 9
+      pivot: {x: 0.25, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Tentacle_attack_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1010
+        width: 322
+        height: 112
+      alignment: 9
+      pivot: {x: 0.25, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Tentacle_attack_19
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 1010
+        width: 322
+        height: 112
+      alignment: 9
+      pivot: {x: 0.25, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Tentacle_attack_20
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 1010
+        width: 322
+        height: 112
+      alignment: 9
+      pivot: {x: 0.25, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Tentacle_attack_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 898
+        width: 322
+        height: 112
+      alignment: 9
+      pivot: {x: 0.25, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Tentacle_attack_22
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 898
+        width: 322
+        height: 112
+      alignment: 9
+      pivot: {x: 0.25, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Tentacle_attack_23
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 898
+        width: 322
+        height: 112
+      alignment: 9
+      pivot: {x: 0.25, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Tentacle_attack_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 786
+        width: 322
+        height: 112
+      alignment: 9
+      pivot: {x: 0.25, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Tentacle_attack_25
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 786
+        width: 322
+        height: 112
+      alignment: 9
+      pivot: {x: 0.25, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Tentacle_attack_26
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 786
+        width: 322
+        height: 112
+      alignment: 9
+      pivot: {x: 0.25, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Tentacle_attack_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 674
+        width: 322
+        height: 112
+      alignment: 9
+      pivot: {x: 0.25, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Tentacle_attack_28
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 674
+        width: 322
+        height: 112
+      alignment: 9
+      pivot: {x: 0.25, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Tentacle_attack_29
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 674
+        width: 322
+        height: 112
+      alignment: 9
+      pivot: {x: 0.25, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Tentacle_attack_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 562
+        width: 322
+        height: 112
+      alignment: 9
+      pivot: {x: 0.25, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Tentacle_attack_31
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 562
+        width: 322
+        height: 112
+      alignment: 9
+      pivot: {x: 0.25, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Tentacle_attack_32
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 562
+        width: 322
+        height: 112
+      alignment: 9
+      pivot: {x: 0.25, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Tentacle_attack_33
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 450
+        width: 322
+        height: 112
+      alignment: 9
+      pivot: {x: 0.25, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Tentacle_attack_34
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 450
+        width: 322
+        height: 112
+      alignment: 9
+      pivot: {x: 0.25, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Tentacle_attack_35
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 450
+        width: 322
+        height: 112
+      alignment: 9
+      pivot: {x: 0.25, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Tentacle_attack_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 338
+        width: 322
+        height: 112
+      alignment: 9
+      pivot: {x: 0.25, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Tentacle_attack_37
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 338
+        width: 322
+        height: 112
+      alignment: 9
+      pivot: {x: 0.25, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Tentacle_attack_38
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 338
+        width: 322
+        height: 112
+      alignment: 9
+      pivot: {x: 0.25, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Tentacle_attack_39
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 226
+        width: 322
+        height: 112
+      alignment: 9
+      pivot: {x: 0.25, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Tentacle_attack_40
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 226
+        width: 322
+        height: 112
+      alignment: 9
+      pivot: {x: 0.25, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Tentacle_attack_41
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 226
+        width: 322
+        height: 112
+      alignment: 9
+      pivot: {x: 0.25, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Tentacle_attack_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 114
+        width: 322
+        height: 112
+      alignment: 9
+      pivot: {x: 0.25, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Tentacle_attack_43
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 114
+        width: 322
+        height: 112
+      alignment: 9
+      pivot: {x: 0.25, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Tentacle_attack_44
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 114
+        width: 322
+        height: 112
+      alignment: 9
+      pivot: {x: 0.25, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Tentacle_attack_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2
+        width: 322
+        height: 112
+      alignment: 9
+      pivot: {x: 0.25, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: T_Tentacle_Empty
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 39
+        width: 31
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

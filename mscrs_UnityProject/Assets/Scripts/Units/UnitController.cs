@@ -49,8 +49,9 @@ public class UnitController : MonoBehaviour
     #region public methods
     public virtual void Attack(Vector2 targetPos)
     {
-        float dist = Vector2.Distance(targetPos, transform.position);
-        _unitPawn.Attack(targetPos, dist > 0.6f ? 0 : 1);
+        _unitPawn.Attack(targetPos);
+        //float dist = Vector2.Distance(targetPos, transform.position);
+        //_unitPawn.Attack(targetPos, dist > 0.6f ? 0 : 1);
     }
 
     public virtual void SetMoveTarget(Vector3 target)
