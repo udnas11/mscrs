@@ -8,7 +8,7 @@ using UnityRandom = UnityEngine.Random;
 
 public class UnitTentacleController : UnitController
 {
-	#region public serialised vars
+    #region public serialised vars
     #endregion
 
 
@@ -29,5 +29,15 @@ public class UnitTentacleController : UnitController
 
 
     #region mono events
+    protected override void Update()
+    {
+        base.Update();
+
+        Vector2 deltaPos = SceneController.Instance.PlayerControllerInstance.transform.position - transform.position;
+        if (Mathf.Abs(deltaPos.x) < 1f && Mathf.Abs(deltaPos.y) < 0.25f)
+        {
+            _unitPawn.Jump();
+        }
+    }
     #endregion
 }

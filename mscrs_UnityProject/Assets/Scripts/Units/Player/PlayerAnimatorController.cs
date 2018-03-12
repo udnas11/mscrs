@@ -23,11 +23,6 @@ public class PlayerAnimatorController : BaseAnimatorController
 
 
     #region pub set methods
-    public void Jump()
-    {
-        TriggerOnce("doJump");
-    }    
-
     public override void Attack()
     {
         base.Attack();

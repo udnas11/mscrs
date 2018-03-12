@@ -38,7 +38,7 @@ public class UnitPawn : MonoBehaviour
 
     public void SetFlipLeft(bool newState)
     {
-        if (_unitAnimatorController.GetPhaseState(BaseAnimatorController.EAnimationPhase.Attacking))
+        if (_unitAnimatorController.GetPhaseState(BaseAnimatorController.EAnimationPhase.Attacking) || _unitAnimatorController.GetPhaseState(BaseAnimatorController.EAnimationPhase.Jump))
             return;
 
         if (_flipLeft != newState)
@@ -70,6 +70,11 @@ public class UnitPawn : MonoBehaviour
     public void PlayGotHitAnimation()
     {
         _unitAnimatorController.GetHit();
+    }
+
+    public void Jump()
+    {
+        _unitAnimatorController.Jump();
     }
     #endregion
 

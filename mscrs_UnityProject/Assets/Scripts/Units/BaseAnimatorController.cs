@@ -61,6 +61,11 @@ public class BaseAnimatorController : MonoBehaviour
         TriggerOnce("doGetHit");
     }
 
+    public virtual void Jump()
+    {
+        TriggerOnce("doJump");
+    }
+
     public bool GetPhaseState(EAnimationPhase state)
     {
         bool value;
