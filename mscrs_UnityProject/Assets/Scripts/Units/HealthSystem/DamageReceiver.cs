@@ -55,6 +55,9 @@ public class DamageReceiver : MonoBehaviour
             var text = Instantiate(AssetDatabaseSO.Instance.DamageTextPrefab) as DamageText;
             text.Init(damageCount, _offsetDamageText, isCrit ? Color.yellow : Color.red, transform);
         }
+
+        if (isCrit)
+            AudioController.Play("Crit", transform.position);
     }
 
     public void TakePushForce(Vector2 pushForce, float physicsDuration)
