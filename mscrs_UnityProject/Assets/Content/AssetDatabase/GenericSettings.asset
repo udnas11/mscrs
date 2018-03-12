@@ -43,4 +43,4 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
-  CritSlowmotionDuration: 0.3
+  CritSlowmotionDuration: 0.4

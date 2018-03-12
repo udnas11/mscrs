@@ -522,7 +522,7 @@ MonoBehaviour:
     AttackRange: 2
     AttackMinimumRange: 0.1
   _behaviourRaycastTarget: {fileID: 4650425355565058}
-  _gibsPrefab: {fileID: 114689919781034436, guid: c8cda92fda87e8441b05dee78dd25431,
+  _gibsPrefab: {fileID: 114689919781034436, guid: 1862add6951603b41bfff493a4d9cc68,
     type: 2}
   _startState: {fileID: 11400000, guid: c9b6013fb175f2b44842c328c5dc1d7c, type: 2}
   _deadState: {fileID: 11400000, guid: 35d24de5126ea4c48bc9b5b9c96875d8, type: 2}

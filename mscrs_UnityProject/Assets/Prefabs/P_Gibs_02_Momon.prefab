@@ -465,7 +465,7 @@ MonoBehaviour:
   - {fileID: 50062450101526092}
   - {fileID: 50034738672155628}
   - {fileID: 50749393828620486}
-  _autodestroyTime: 5
+  _autodestroyTime: 7
   _fromCenterImpulse: 4
   _lateralImpulse: {x: 6, y: 3}
   _torqueRange: {x: -0.05, y: 0.05}
