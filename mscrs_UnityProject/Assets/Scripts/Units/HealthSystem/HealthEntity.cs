@@ -83,10 +83,10 @@ public class HealthEntity : MonoBehaviour
     }
 
     private void OnGUI()
-    {
+    {/*
         Vector2 pos = Camera.main.WorldToScreenPoint(transform.position);
         pos.y = Screen.height - pos.y;
-        GUI.Label(new Rect(pos, new Vector2(50, 20)), _currentHP.ToString() + "/" + _maxHP.ToString());
+        GUI.Label(new Rect(pos, new Vector2(50, 20)), _currentHP.ToString() + "/" + _maxHP.ToString());*/
     }
     #endregion
 }

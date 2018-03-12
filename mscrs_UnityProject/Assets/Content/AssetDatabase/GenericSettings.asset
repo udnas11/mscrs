@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e0ed99c1a6a2b54c82f32d5b148451c, type: 3}
   m_Name: GenericSettings
   m_EditorClassIdentifier: 
-  CritChance: 0.35
+  CritChance: 0.15
   CritMultiplier: 2
   CritSlowmotionCurve:
     serializedVersion: 2
