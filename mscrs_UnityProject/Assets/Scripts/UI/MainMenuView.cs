@@ -27,7 +27,7 @@ namespace MoonscarsUI
 
         void OnURLClick()
         {
-            Application.OpenURL("https://docs.google.com/presentation/d/1OfhmMNdyiu8P-Qrqz2zKHJmw-DlX8cwGqtNHj7O-7vw/edit#slide=id.p");
+            Application.OpenURL("https://docs.google.com/presentation/d/1iFLv4k--R-AFMvZN_9haiPR4uiIVRZ4XsHGe1I2g28s/edit?usp=sharing");
         }
 
         void OnQuitclick()
@@ -40,6 +40,7 @@ namespace MoonscarsUI
             _startButton.onClick.AddListener(OnStartClick);
             _urlButton.onClick.AddListener(OnURLClick);
             _quitButton.onClick.AddListener(OnQuitclick);
+
         }
     }
 }
