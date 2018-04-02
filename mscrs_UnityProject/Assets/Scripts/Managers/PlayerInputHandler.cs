@@ -129,6 +129,12 @@ public class PlayerInputHandler : Singleton<PlayerInputHandler>
             if (OnRoll != null)
                 OnRoll();
         }
+
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            PlayerPrefs.DeleteAll();
+            PlayerPrefs.Save();
+        }
     }
     #endregion
 }

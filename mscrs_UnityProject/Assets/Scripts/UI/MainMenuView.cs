@@ -41,6 +41,7 @@ namespace MoonscarsUI
             _urlButton.onClick.AddListener(OnURLClick);
             _quitButton.onClick.AddListener(OnQuitclick);
 
+            UnityEngine.Analytics.Analytics.CustomEvent("build_2");
         }
     }
 }
