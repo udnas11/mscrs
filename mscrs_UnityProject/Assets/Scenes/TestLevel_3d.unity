@@ -112,52 +112,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &9716768
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4630946251112662, guid: 409511605f5899342bbdb1258ae65e3c, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -1.095
-      objectReference: {fileID: 0}
-    - target: {fileID: 4630946251112662, guid: 409511605f5899342bbdb1258ae65e3c, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -1.746
-      objectReference: {fileID: 0}
-    - target: {fileID: 4630946251112662, guid: 409511605f5899342bbdb1258ae65e3c, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4630946251112662, guid: 409511605f5899342bbdb1258ae65e3c, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4630946251112662, guid: 409511605f5899342bbdb1258ae65e3c, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4630946251112662, guid: 409511605f5899342bbdb1258ae65e3c, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4630946251112662, guid: 409511605f5899342bbdb1258ae65e3c, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4630946251112662, guid: 409511605f5899342bbdb1258ae65e3c, type: 2}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1153659839953148, guid: 409511605f5899342bbdb1258ae65e3c, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 409511605f5899342bbdb1258ae65e3c, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &34951712
 GameObject:
   m_ObjectHideFlags: 0
@@ -355,13 +309,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 227372642}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.434, z: 0.51}
+  m_LocalRotation: {x: 0, y: 0.92387956, z: -0.38268343, w: 0}
+  m_LocalPosition: {x: 0, y: 1.65, z: 0.93}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1531509105}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 45, y: 180, z: 0}
 --- !u!108 &227372644
 Light:
   m_ObjectHideFlags: 0
@@ -370,11 +324,11 @@ Light:
   m_GameObject: {fileID: 227372642}
   m_Enabled: 1
   serializedVersion: 8
-  m_Type: 2
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Type: 0
+  m_Color: {r: 0.29411763, g: 0.7955375, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
-  m_SpotAngle: 30
+  m_SpotAngle: 87.4
   m_CookieSize: 10
   m_Shadows:
     m_Type: 1
@@ -7795,7 +7749,7 @@ Light:
   m_Type: 2
   m_Color: {r: 1, g: 0.8482759, b: 0, a: 1}
   m_Intensity: 1
-  m_Range: 0.7
+  m_Range: 1.53
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -8528,7 +8482,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _unitSceneName: TestLevel_units
   _playerSpawnPos: {fileID: 867793373}
-  _loadUnits: 1
+  _loadUnits: 0
   _loadPlayer: 1
   PlayerControllerInstance: {fileID: 0}
 --- !u!1 &1892155078
@@ -8687,7 +8641,7 @@ Light:
   m_Type: 2
   m_Color: {r: 1, g: 0.8482759, b: 0, a: 1}
   m_Intensity: 1
-  m_Range: 0.7
+  m_Range: 1.53
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
