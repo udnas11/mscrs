@@ -1646,7 +1646,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 867793372}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -21.98, y: -2.18, z: 0}
+  m_LocalPosition: {x: -10.33, y: -1.01, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1862602133}
@@ -6825,7 +6825,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c276199457eead94c8f748800e04ece2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cameraShader: {fileID: 4800000, guid: 6609935b5f828b04a98065cf6cd787aa, type: 3}
+  _cameraShaderPlayerAura: {fileID: 4800000, guid: ffebdd5a81df6fc48804e16d80e7d024,
+    type: 3}
+  _playerAuraRange: 0.5
+  _cameraShaderHurt: {fileID: 4800000, guid: 6609935b5f828b04a98065cf6cd787aa, type: 3}
   _hurtAnim:
     serializedVersion: 2
     m_Curve:

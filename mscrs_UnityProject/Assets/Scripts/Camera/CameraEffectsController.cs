@@ -9,8 +9,13 @@ using UnityRandom = UnityEngine.Random;
 public class CameraEffectsController : MonoBehaviour
 {
     #region public serialised vars
+    [SerializeField, Header("Player Aura")]
+    Shader _cameraShaderPlayerAura;
     [SerializeField]
-    Shader _cameraShader;
+    float _playerAuraRange;
+
+    [SerializeField, Header("Hurt")]
+    Shader _cameraShaderHurt;
     [SerializeField]
     AnimationCurve _hurtAnim;
     [SerializeField]
@@ -19,8 +24,11 @@ public class CameraEffectsController : MonoBehaviour
 
 
     #region private protected vars
-    Material _camMaterial;
+    Material _camMaterialHurt;
+    Material _camMaterialPlayerAura;
+    //RenderTexture _texturePass;
     PlayerController _player;
+    Camera _cam;
     #endregion
 
 
@@ -31,7 +39,13 @@ public class CameraEffectsController : MonoBehaviour
     #region private protected methods
     void SetRedMultiplier(float saturation)
     {
-        _camMaterial.SetFloat("_RedMultiplier", saturation);
+        _camMaterialHurt.SetFloat("_RedMultiplier", saturation);
+    }
+
+    void SetPlayerPos(Vector2 viewPos)
+    {
+        _camMaterialPlayerAura.SetFloat("_Range", _playerAuraRange);
+        _camMaterialPlayerAura.SetVector("_Origin", viewPos);
     }
 
     IEnumerator IAnimateHurt()
@@ -68,12 +82,19 @@ public class CameraEffectsController : MonoBehaviour
     #region mono events
     private void OnRenderImage(RenderTexture source, RenderTexture destination)
     {
-        Graphics.Blit(source, destination, _camMaterial);
+        /*
+        if (_texturePass == null)
+            _texturePass = new RenderTexture(source);
+            */
+        Graphics.Blit(source, source, _camMaterialPlayerAura);
+        Graphics.Blit(source, destination, _camMaterialHurt);
     }
 
     private void Awake()
     {
-        _camMaterial = new Material(_cameraShader);
+        _cam = GetComponent<Camera>();
+        _camMaterialPlayerAura = new Material(_cameraShaderPlayerAura);
+        _camMaterialHurt = new Material(_cameraShaderHurt);
         SetRedMultiplier(1f);
     }
 
@@ -83,6 +104,13 @@ public class CameraEffectsController : MonoBehaviour
         _player.HealthEntity.OnHealthChanged += OnPlayerHealthChange;
 
         SceneController.Instance.OnPlayerSpawned += OnPlayerSpawned;
+    }
+
+    private void Update()
+    {
+        Vector3 worldSpace = _player.transform.position;
+        Vector2 viewSpace = _cam.WorldToViewportPoint(worldSpace);
+        SetPlayerPos(viewSpace);
     }
 
     private void OnApplicationFocus(bool focus)

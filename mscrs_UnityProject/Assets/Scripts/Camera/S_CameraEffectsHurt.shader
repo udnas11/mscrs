@@ -1,4 +1,4 @@
-﻿Shader "Hidden/S_CameraEffect"
+﻿Shader "Hidden/S_CameraEffectHurt"
 {
 	Properties
 	{
