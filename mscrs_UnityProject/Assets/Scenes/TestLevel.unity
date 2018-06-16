@@ -152,10 +152,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 1153659839953148, guid: 409511605f5899342bbdb1258ae65e3c, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 409511605f5899342bbdb1258ae65e3c, type: 2}
   m_IsPrefabParent: 0
@@ -380,8 +376,18 @@ MonoBehaviour:
   _bumpTextureScale: {x: 0, y: 0}
   _bumpTextureOffset: {x: 0, y: 0}
   _bumpMask: {fileID: 0}
-  _bumpMultiplier: 0
+  _bumpMultiplier: {x: 0, y: 0}
   _bumpSpeed: {x: 0, y: 0}
+  _bumpTextureDistress: {fileID: 0}
+  _bumpTextureScaleDistress: {x: 0, y: 0}
+  _bumpMultiplierDistress: {x: 0, y: 0}
+  _distressCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _distressDuration: 0
   _scale: 0
   _exposure: 1
   _saturation: 0
@@ -1647,7 +1653,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 867793372}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -21.98, y: -2.18, z: 0}
+  m_LocalPosition: {x: -22.02, y: -2.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1862602133}
@@ -2609,7 +2615,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -2077621436
+  randomSeed: 553860778
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -7219,6 +7225,7 @@ GameObject:
   - component: {fileID: 1911358159}
   - component: {fileID: 1911358161}
   - component: {fileID: 1911358160}
+  - component: {fileID: 1911358162}
   m_Layer: 0
   m_Name: Water2
   m_TagString: Untagged
@@ -7256,8 +7263,43 @@ MonoBehaviour:
   _bumpTextureScale: {x: 7.94, y: 8}
   _bumpTextureOffset: {x: 0, y: 0}
   _bumpMask: {fileID: 2800000, guid: 89e74b28517687641afe3eb85fc1417d, type: 3}
-  _bumpMultiplier: 0.077
+  _bumpMultiplier: {x: 0, y: 0.077}
   _bumpSpeed: {x: -1.86, y: 0.76}
+  _bumpTextureDistress: {fileID: 2800000, guid: fe4fedeac0b875247b05a6ba3958080c,
+    type: 3}
+  _bumpTextureScaleDistress: {x: 9, y: 18}
+  _bumpMultiplierDistress: {x: 0.02, y: 0.1}
+  _distressCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 8.286046
+      tangentMode: 65
+    - serializedVersion: 2
+      time: 0.12068482
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.42366308
+      value: 0.1623048
+      inSlope: -0.8218052
+      outSlope: -0.8218052
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  _distressDuration: 0.6
   _scale: 1.25
   _exposure: 1.11
   _saturation: 0.696
@@ -7305,6 +7347,17 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &1911358162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1911358158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0ef2dbdf3984444484cb7cb0c9b0ecc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1935998442
 GameObject:
   m_ObjectHideFlags: 0
